@@ -1,0 +1,192 @@
+﻿
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+    <title>End to end report</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/report.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <script type="text/template" id="result-list-template">
+        <table id="testResults" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Method</th>
+                    <th>Error</th>
+                    <th>Duration</th>
+                    <th>Browser</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% _.each(results, function(result)  { %>
+
+                <tr id='<%= result.get("Uuid") %>'
+                    <% if (expand===result.get("Uuid")) {%>
+                    class='result-row highlight'
+                    <% } else {%>
+                    class='result-row'
+                    <%}%>
+                    >
+                    <td> <span class="<%= result.getGlyphIcon() %>"></span></td>
+                    <td title='<%= result.get("Type")%>.<%=result.getMethodName() %>'><%= result.getMethodName() %></td>
+                    <td title=' <%= result.getError(false) %>'> <%= result.getError(true) %></td>
+                    <td title="<%= result.get('TimeMillis') %>ms"><%= result.getDuration() %></td>
+                    <td><img src='images/<%= result.getBrowser() %>.png' /></td>
+
+                    <% if (expand===result.get('Uuid')) {%>
+                <tr><td colspan="5" id="detail"></td></tr>
+                <% }%>
+                </tr>
+                <%}); %>
+
+
+
+            </tbody>
+        </table>
+    </script>
+
+    <script type="text/template" id="result-detail-template">
+        <div class="row-fluid">
+            <% if ( result && result != null ) {%>
+            <% if ( result.get('Error') ) {%>
+            <div class="col-md-12">
+                Stacktrace :
+                <pre><code> <%= _.escape(result.get('Error')['StackTrace']) %> </code></pre>
+            </div>
+            <% }%>
+
+            <div class="col-md-4">
+                <p>Test logs :</p>
+                <ul>
+                    <% _.each(result.getLogMessages(), function(msg)  { %>
+                    <li><%= msg.Message %> </li>
+                    <%});%>
+
+                </ul>
+
+            </div>
+            <div class="col-md-8">
+
+                <% _.each(result.getScreenshots(), function(screenshot)  { %>
+                <span><%= screenshot.Title %>  -  <%= screenshot.Url %></span>
+                <img src="..\<%= screenshot.Path %>" alt='<%= screenshot.Title %>' />
+                <%});%>
+            </div>
+            <% }%>
+        </div>
+    </script>
+
+
+
+    <script type="text/template" id="header-title-template">
+        <a class="navbar-brand" href="#"><%= title %></a>
+    </script>
+
+
+
+    <script type="text/template" id="result-summary-template">
+        <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <h4>All</h4>
+                <span class="text-muted"><%= total %> total</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <h4>Passed</h4>
+                <span class="text-muted"><%= passed %> passed</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <h4>Failed</h4>
+                <span class="text-muted"><%= failed %> failed</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <h4>Skipped</h4>
+                <span class="text-muted"><%= skipped %> skipped</span>
+            </div>
+        </div>
+    </script>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="header-title"></div>
+
+
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://bedcsscmssl01:4444/grid/console">Grid hub</a></li>
+                    <li><a href="http://bedcsscmskb01:5601/#/dashboard/Monitoring?_g=(refreshInterval:(display:'10%20seconds',section:1,value:10000),time:(from:now-1h,mode:quick,to:now))&_a=(filters:!(),panels:!((col:7,id:average-time-per-command,row:4,size_x:6,size_y:5,type:visualization),(col:4,id:average-test-time-slash-browser,row:1,size_x:3,size_y:3,type:visualization),(col:1,id:average-time-per-command-per-browser,row:4,size_x:6,size_y:5,type:visualization),(col:7,id:Number-of-request-per-command,row:1,size_x:3,size_y:3,type:visualization),(col:10,id:click-time-slash-browser,row:1,size_x:3,size_y:3,type:visualization),(col:1,id:Grid-load,row:1,size_x:3,size_y:3,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:Monitoring)">Monitoring</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <!--<form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>-->
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li id="left-menu-all" class="active left-menu"><a href="#/show/all">Overview </a></li>
+                    <li id="left-menu-passed" class="left-menu"><a href="#/show/passed">Passed</a></li>
+                    <li id="left-menu-failed" class="left-menu"><a href="#/show/failed">Failed</a></li>
+                    <li id="left-menu-skipped" class="left-menu"><a href="#/show/skipped">Skipped</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">Dashboard</h1>
+                <div id="summary"></div>
+
+                <h2 class="sub-header">Results</h2>
+
+                <div id="result-container"></div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/backbone-min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="data.js"></script>
+    <script language="javascript" type="text/javascript" src="js/report.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc?wsdl" docRef="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+</discovery>

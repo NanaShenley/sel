@@ -1,0 +1,180 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestSettings" GeneratedClassName="TestDefaults">
+  <Profiles />
+  <Settings>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="TimeOut" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:59</Value>
+    </Setting>
+    <Setting Name="HeadTeacher" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Grosg1@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="HeadTeacherPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="SystemManger" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SystemManager@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="SystemMangerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="SchoolAdministrator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SchoolAdmin@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="SchoolAdministratorPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="AssessmentCoordinator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AssessCoord@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="AssessmentCoordinatorPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="CurricularManager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CurrManager@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="CurricularManagerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="SeniorManagementTeam" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SeniorManager@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="SeniorManagementTeamPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="SENCoordinator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SENCoord@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="SENCoordinatorPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="PersonnelOfficer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Personnel@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="PersonnelOfficerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="ClassTeacher" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Teacher@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="ClassTeacherPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="AdmissionsOfficer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admissions@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="AdmissionsOfficerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="ReturnsManager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Returns@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="ReturnsManagerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd01.</Value>
+    </Setting>
+    <Setting Name="TimeOutDebug" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:05:00</Value>
+    </Setting>
+    <Setting Name="ApplicationServerPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">iSIMSApplicationServerFarm1/DataEntityIO.svc/Transport</Value>
+    </Setting>
+    <Setting Name="SecurityServerPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">iSIMSAuthorisationServerFarm1/iSIMSSTS.UnsignedUserName.svc</Value>
+    </Setting>
+    <Setting Name="TestUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">testuser@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="TestUserPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="Path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">iSIMSMVCClientFarm1</Value>
+    </Setting>
+    <Setting Name="SchoolAdministratorUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SchoolAdmin@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="PersonnelOfficerUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Personnel@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="SchoolID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">72262E2D-B292-E511-B386-000C29A7BA92</Value>
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">testuser@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="AjaxElementTimeOut" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:04:30</Value>
+    </Setting>
+    <Setting Name="ObjectTimeOut" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">75</Value>
+    </Setting>
+    <Setting Name="WaitLoading" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:05</Value>
+    </Setting>
+    <Setting Name="PathAvatar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Resource\avatar.png</Value>
+    </Setting>
+    <Setting Name="PathDocument" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Resource\document.txt</Value>
+    </Setting>
+    <Setting Name="ElementTimeOut" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:10</Value>
+    </Setting>
+    <Setting Name="LabFiveURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://lab-five.sims8.com/</Value>
+    </Setting>
+    <Setting Name="LabFiveDatabaseConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=lab-five.sims8.com;Initial Catalog=SIMS8_Farm1_Business_A;User ID=sa;Password=Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="LabSims8URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://lab-sims8.sims8.com/</Value>
+    </Setting>
+    <Setting Name="LabSims8DatabaseConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=lab-sims8.sims8.com;Initial Catalog=SIMS8_Farm1_Business_A;User ID=sa;Password=Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="DatabaseConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=lab-two.sims8.com;Initial Catalog=SIMS8_Farm1_Business_A;User ID=sa;Password=Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="SeleniumAutoStart" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Proxy" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultSystemUnderTest" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lab-five</Value>
+    </Setting>
+    <Setting Name="BrowserResponseTimeout" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:08:00</Value>
+    </Setting>
+    <Setting Name="SchoolName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Water's Edge Primary School</Value>
+    </Setting>
+    <Setting Name="TenantId" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1019999</Value>
+    </Setting>
+    <Setting Name="LabTwoURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://lab-two.sims8.com/</Value>
+    </Setting>
+    <Setting Name="LabTwoDatabaseConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=lab-two.sims8.com;Initial Catalog=SIMS8_Farm1_Business_A;User ID=sa;Password=Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="EnterpriseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C2K</Value>
+    </Setting>
+    <Setting Name="EnterpriseUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">testuser@capita.co.uk</Value>
+    </Setting>
+    <Setting Name="EnterprisePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://lab-two.sims8.com/</Value>
+    </Setting>
+    <Setting Name="MethodOfExecution" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Local</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

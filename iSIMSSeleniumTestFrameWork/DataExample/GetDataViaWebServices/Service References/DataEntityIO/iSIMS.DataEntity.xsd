@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/iSIMS.DataEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iSIMS.DataEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="SortDirectionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SortDirectionEnum" nillable="true" type="tns:SortDirectionEnum" />
+  <xs:simpleType name="DataEntityChangeBatchCollection.DeletionScopeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DeleteAllOrNone" />
+      <xs:enumeration value="DeleteAllPossible" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DataEntityChangeBatchCollection.DeletionScopeEnum" nillable="true" type="tns:DataEntityChangeBatchCollection.DeletionScopeEnum" />
+</xs:schema>

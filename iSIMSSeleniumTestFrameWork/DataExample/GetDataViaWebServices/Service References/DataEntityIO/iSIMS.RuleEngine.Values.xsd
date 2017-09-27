@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/iSIMS.RuleEngine.Values" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iSIMS.RuleEngine.Values" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:simpleType name="CurrentDateTimeValue.CurrentDateTimeBoundaryEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CurrentTime" />
+      <xs:enumeration value="StartOfDay" />
+      <xs:enumeration value="EndOfDay" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CurrentDateTimeValue.CurrentDateTimeBoundaryEnum" nillable="true" type="tns:CurrentDateTimeValue.CurrentDateTimeBoundaryEnum" />
+  <xs:simpleType name="DateDiffValue.enumDeltaValueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Year" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DateDiffValue.enumDeltaValueType" nillable="true" type="tns:DateDiffValue.enumDeltaValueType" />
+  <xs:simpleType name="DateTimeDiffValue.enumDeltaValueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Second" />
+      <xs:enumeration value="Minute" />
+      <xs:enumeration value="Hour" />
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Year" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DateTimeDiffValue.enumDeltaValueType" nillable="true" type="tns:DateTimeDiffValue.enumDeltaValueType" />
+  <xs:simpleType name="AgeFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="YearMonths" />
+      <xs:enumeration value="MonthsYear" />
+      <xs:enumeration value="Default" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AgeFormat" nillable="true" type="tns:AgeFormat" />
+  <xs:complexType name="NeedToImplementSerialiser">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Children" nillable="true" type="q1:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="RuleSource" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NeedToImplementSerialiser" nillable="true" type="tns:NeedToImplementSerialiser" />
+</xs:schema>

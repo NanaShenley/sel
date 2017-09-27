@@ -1,0 +1,52 @@
+﻿using System;
+/*************************************************************************
+* 
+* Copyright © Capita Children's Services 2015
+* All Rights Reserved.
+* Proprietary and confidential
+* Written by Steve Gray <steve.gray@capita.co.uk> and Francois Reynaud<Francois.Reynaud@capita.co.uk> 2015
+* 
+* NOTICE:  All Source Code and information contained herein remains
+* the property of Capita Children's Services. The intellectual and technical concepts contained
+* herein are proprietary to Capita Children's Services 2015 and may be covered by U.K, U.S and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Capita Children's Services.
+*
+* Source Code distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  
+*/
+using System.Collections.Generic;
+using System.Reflection;
+using WebDriverRunner.Filters;
+using WebDriverRunner.internals;
+
+namespace WebDriverRunnerTests
+{
+    public class Helper
+    {
+
+        public static IFilter<MethodInfo> ByClass(params string[] name)
+        {
+            var classes = new List<IFilter<MethodInfo>>();
+            foreach (var clazz in name)
+            {
+                classes.Add(new ClassFilter(clazz));
+            }
+            IFilter<MethodInfo> orClasses = new Or<MethodInfo>(classes);
+            return new And<MethodInfo>(orClasses, new DefaultTestMethodFilter(true, Selene.Support.Attributes.Variant.AllPrimary, Guid.Empty));
+        }
+
+
+
+        public static Configuration Create(IFilter<MethodInfo> filter)
+        {
+            var config = new Configuration();
+            config.MethodFilter = filter;
+            config.Dlls.Add("WebDriverRunnerTests.dll");
+            return config;
+        }
+    }
+}

@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataEntityIO" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="compressedSignedHttps_x0028_SSLSignature_x0029__IDataEntityIO_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+              <sp:RequestSecurityTokenTemplate>
+                <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+              </sp:RequestSecurityTokenTemplate>
+              <wsp:Policy>
+                <sp:RequireInternalReference />
+              </wsp:Policy>
+            </sp:IssuedToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust13>
+        <wsam:Addressing>
+          <wsp:Policy>
+            <wsam:AnonymousResponses />
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="compressedUnsignedHttps_IDataEntityIO_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsam:Addressing>
+          <wsp:Policy>
+            <wsam:AnonymousResponses />
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://www.capita.co.uk/InternationalSIMS" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Windows.Media" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.RuleEngine.Query" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.DataEntity" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.RuleEngine" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.RuleEngine.Values" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Text.RegularExpressions" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.RuleEngine.Aggregates" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.DataModel" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.Common" />
+      <xsd:import namespace="iSIMSResearch" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.Common.PublishAndSubscribe" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.Common.Workflow" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.DataModel.Validation" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.DataModel.Import" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.ApplicationServer.Services.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataEntityIO_RunQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunQuery" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RunQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RunQuery_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q1:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RenderReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenderReport" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RenderReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenderReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RenderReport_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q2:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RunNamedQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunNamedQuery" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RunNamedQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunNamedQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_RunNamedQuery_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q3:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadEntity" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadEntity_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q4:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_GetDocumentStoreURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentStoreURL" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_GetDocumentStoreURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentStoreURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_GetDocumentStoreURL_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q5:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ListDocumentsFromDocumentStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListDocumentsFromDocumentStore" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ListDocumentsFromDocumentStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListDocumentsFromDocumentStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ListDocumentsFromDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q6:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_GetDocumentStoreDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentStoreDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_GetDocumentStoreDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentStoreDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_GetDocumentStoreDocuments_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q7:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadDocumentFromDocumentStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadDocumentFromDocumentStore" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadDocumentFromDocumentStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadDocumentFromDocumentStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadDocumentFromDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q8:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveDocumentToDocumentStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDocumentToDocumentStore" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveDocumentToDocumentStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDocumentToDocumentStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveDocumentToDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q9:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveFileToDocumentStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFileToDocumentStore" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveFileToDocumentStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFileToDocumentStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveFileToDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q10:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_CopyDocumentInDocumentStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocumentInDocumentStore" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_CopyDocumentInDocumentStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocumentInDocumentStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_CopyDocumentInDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q11:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_DeleteDocumentStoreDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentStoreDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_DeleteDocumentStoreDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentStoreDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_DeleteDocumentStoreDocuments_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q12:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadUser" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_ReadUser_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q13:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveEntityCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEntityCollection" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveEntityCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEntityCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_SaveEntityCollection_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q14:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveDataPackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueSaveDataPackage" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveDataPackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueSaveDataPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveDataPackage_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q15:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveWorkflowRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueSaveWorkflowRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveWorkflowRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueSaveWorkflowRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveWorkflowRequest_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q16:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueItem" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueItem_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q17:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueGetPendingItemCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueGetPendingItemCount" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueGetPendingItemCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueGetPendingItemCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueGetPendingItemCount_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q18:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueCancelRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueCancelRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueCancelRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueCancelRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueCancelRequest_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q19:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueClearLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueClearLog" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueClearLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueClearLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueClearLog_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q20:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveEntityCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueueSaveEntityCollection" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveEntityCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueueSaveEntityCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_QueueSaveEntityCollection_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q21:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_EvaluateDeleteEntities_InputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateDeleteEntities" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_EvaluateDeleteEntities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateDeleteEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntityIO_EvaluateDeleteEntities_iSIMSFaultExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://www.capita.co.uk/InternationalSIMS" name="detail" element="q22:iSIMSFaultExceptionDetail" />
+  </wsdl:message>
+  <wsdl:portType name="IDataEntityIO">
+    <wsdl:operation name="RunQuery">
+      <wsdl:input wsam:Action="RunQuery" message="tns:IDataEntityIO_RunQuery_InputMessage" />
+      <wsdl:output wsam:Action="RunQueryResponse" message="tns:IDataEntityIO_RunQuery_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_RunQuery_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenderReport">
+      <wsdl:input wsam:Action="RenderReport" message="tns:IDataEntityIO_RenderReport_InputMessage" />
+      <wsdl:output wsam:Action="RenderReportResponse" message="tns:IDataEntityIO_RenderReport_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_RenderReport_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RunNamedQuery">
+      <wsdl:input wsam:Action="RunNamedQuery" message="tns:IDataEntityIO_RunNamedQuery_InputMessage" />
+      <wsdl:output wsam:Action="RunNamedQueryResponse" message="tns:IDataEntityIO_RunNamedQuery_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_RunNamedQuery_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadEntity">
+      <wsdl:input wsam:Action="ReadEntity" message="tns:IDataEntityIO_ReadEntity_InputMessage" />
+      <wsdl:output wsam:Action="ReadEntityResponse" message="tns:IDataEntityIO_ReadEntity_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_ReadEntity_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentStoreURL">
+      <wsdl:input wsam:Action="GetDocumentStoreURL" message="tns:IDataEntityIO_GetDocumentStoreURL_InputMessage" />
+      <wsdl:output wsam:Action="GetDocumentStoreURLResponse" message="tns:IDataEntityIO_GetDocumentStoreURL_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_GetDocumentStoreURL_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDocumentsFromDocumentStore">
+      <wsdl:input wsam:Action="ListDocumentsFromDocumentStore" message="tns:IDataEntityIO_ListDocumentsFromDocumentStore_InputMessage" />
+      <wsdl:output wsam:Action="ListDocumentsFromDocumentStoreResponse" message="tns:IDataEntityIO_ListDocumentsFromDocumentStore_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_ListDocumentsFromDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentStoreDocuments">
+      <wsdl:input wsam:Action="GetDocumentStoreFiles" message="tns:IDataEntityIO_GetDocumentStoreDocuments_InputMessage" />
+      <wsdl:output wsam:Action="GetDocumentStoreFilesResponse" message="tns:IDataEntityIO_GetDocumentStoreDocuments_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_GetDocumentStoreDocuments_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadDocumentFromDocumentStore">
+      <wsdl:input wsam:Action="ReadDocumentFromDocumentStore" message="tns:IDataEntityIO_ReadDocumentFromDocumentStore_InputMessage" />
+      <wsdl:output wsam:Action="ReadDocumentFromDocumentStoreResponse" message="tns:IDataEntityIO_ReadDocumentFromDocumentStore_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_ReadDocumentFromDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentToDocumentStore">
+      <wsdl:input wsam:Action="SaveDocumentToDocumentStore" message="tns:IDataEntityIO_SaveDocumentToDocumentStore_InputMessage" />
+      <wsdl:output wsam:Action="SaveDocumentToDocumentStoreResponse" message="tns:IDataEntityIO_SaveDocumentToDocumentStore_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_SaveDocumentToDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFileToDocumentStore">
+      <wsdl:input wsam:Action="SaveFileToDocumentStore" message="tns:IDataEntityIO_SaveFileToDocumentStore_InputMessage" />
+      <wsdl:output wsam:Action="SaveFileToDocumentStoreResponse" message="tns:IDataEntityIO_SaveFileToDocumentStore_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_SaveFileToDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocumentInDocumentStore">
+      <wsdl:input wsam:Action="CopyDocumentInDocumentStore" message="tns:IDataEntityIO_CopyDocumentInDocumentStore_InputMessage" />
+      <wsdl:output wsam:Action="CopyDocumentInDocumentStoreResponse" message="tns:IDataEntityIO_CopyDocumentInDocumentStore_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_CopyDocumentInDocumentStore_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumentStoreDocuments">
+      <wsdl:input wsam:Action="DeleteDocumentStoreDocuments" message="tns:IDataEntityIO_DeleteDocumentStoreDocuments_InputMessage" />
+      <wsdl:output wsam:Action="DeleteDocumentStoreDocumentsResponse" message="tns:IDataEntityIO_DeleteDocumentStoreDocuments_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_DeleteDocumentStoreDocuments_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadUser">
+      <wsdl:input wsam:Action="ReadUser" message="tns:IDataEntityIO_ReadUser_InputMessage" />
+      <wsdl:output wsam:Action="ReadUserResponse" message="tns:IDataEntityIO_ReadUser_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_ReadUser_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEntityCollection">
+      <wsdl:input wsam:Action="SaveEntityCollection" message="tns:IDataEntityIO_SaveEntityCollection_InputMessage" />
+      <wsdl:output wsam:Action="SaveEntityCollectionResponse" message="tns:IDataEntityIO_SaveEntityCollection_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_SaveEntityCollection_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveDataPackage">
+      <wsdl:input wsam:Action="QueueSaveDataPackage" message="tns:IDataEntityIO_QueueSaveDataPackage_InputMessage" />
+      <wsdl:output wsam:Action="QueueSaveDataPackageResponse" message="tns:IDataEntityIO_QueueSaveDataPackage_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_QueueSaveDataPackage_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveWorkflowRequest">
+      <wsdl:input wsam:Action="QueueSaveWorkflowRequest" message="tns:IDataEntityIO_QueueSaveWorkflowRequest_InputMessage" />
+      <wsdl:output wsam:Action="QueueSaveWorkflowRequestResponse" message="tns:IDataEntityIO_QueueSaveWorkflowRequest_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_QueueSaveWorkflowRequest_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueItem">
+      <wsdl:input wsam:Action="QueueItem" message="tns:IDataEntityIO_QueueItem_InputMessage" />
+      <wsdl:output wsam:Action="QueueItemResponse" message="tns:IDataEntityIO_QueueItem_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_QueueItem_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueGetPendingItemCount">
+      <wsdl:input wsam:Action="QueueGetPendingItemCount" message="tns:IDataEntityIO_QueueGetPendingItemCount_InputMessage" />
+      <wsdl:output wsam:Action="QueueGetPendingItemCountResponse" message="tns:IDataEntityIO_QueueGetPendingItemCount_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_QueueGetPendingItemCount_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueCancelRequest">
+      <wsdl:input wsam:Action="QueueCancelRequest" message="tns:IDataEntityIO_QueueCancelRequest_InputMessage" />
+      <wsdl:output wsam:Action="QueueCancelRequestResponse" message="tns:IDataEntityIO_QueueCancelRequest_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_QueueCancelRequest_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueClearLog">
+      <wsdl:input wsam:Action="QueueClearLog" message="tns:IDataEntityIO_QueueClearLog_InputMessage" />
+      <wsdl:output wsam:Action="QueueClearLogResponse" message="tns:IDataEntityIO_QueueClearLog_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_QueueClearLog_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveEntityCollection">
+      <wsdl:input wsam:Action="QueueSaveEntityCollection" message="tns:IDataEntityIO_QueueSaveEntityCollection_InputMessage" />
+      <wsdl:output wsam:Action="QueueSaveEntityCollectionResponse" message="tns:IDataEntityIO_QueueSaveEntityCollection_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_QueueSaveEntityCollection_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateDeleteEntities">
+      <wsdl:input wsam:Action="EvaluateDeleteEntities" message="tns:IDataEntityIO_EvaluateDeleteEntities_InputMessage" />
+      <wsdl:output wsam:Action="EvaluateDeleteEntitiesResponse" message="tns:IDataEntityIO_EvaluateDeleteEntities_OutputMessage" />
+      <wsdl:fault wsam:Action="http://www.capita.co.uk/InternationalSIMS/iSIMSException" name="iSIMSFaultExceptionDetailFault" message="tns:IDataEntityIO_EvaluateDeleteEntities_iSIMSFaultExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="compressedSignedHttps_x0028_SSLSignature_x0029__IDataEntityIO" type="tns:IDataEntityIO">
+    <wsp:PolicyReference URI="#compressedSignedHttps_x0028_SSLSignature_x0029__IDataEntityIO_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RunQuery">
+      <soap12:operation soapAction="RunQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenderReport">
+      <soap12:operation soapAction="RenderReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RunNamedQuery">
+      <soap12:operation soapAction="RunNamedQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadEntity">
+      <soap12:operation soapAction="ReadEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentStoreURL">
+      <soap12:operation soapAction="GetDocumentStoreURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListDocumentsFromDocumentStore">
+      <soap12:operation soapAction="ListDocumentsFromDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentStoreDocuments">
+      <soap12:operation soapAction="GetDocumentStoreFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadDocumentFromDocumentStore">
+      <soap12:operation soapAction="ReadDocumentFromDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentToDocumentStore">
+      <soap12:operation soapAction="SaveDocumentToDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFileToDocumentStore">
+      <soap12:operation soapAction="SaveFileToDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocumentInDocumentStore">
+      <soap12:operation soapAction="CopyDocumentInDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumentStoreDocuments">
+      <soap12:operation soapAction="DeleteDocumentStoreDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadUser">
+      <soap12:operation soapAction="ReadUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEntityCollection">
+      <soap12:operation soapAction="SaveEntityCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveDataPackage">
+      <soap12:operation soapAction="QueueSaveDataPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveWorkflowRequest">
+      <soap12:operation soapAction="QueueSaveWorkflowRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueItem">
+      <soap12:operation soapAction="QueueItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueGetPendingItemCount">
+      <soap12:operation soapAction="QueueGetPendingItemCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueCancelRequest">
+      <soap12:operation soapAction="QueueCancelRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueClearLog">
+      <soap12:operation soapAction="QueueClearLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveEntityCollection">
+      <soap12:operation soapAction="QueueSaveEntityCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateDeleteEntities">
+      <soap12:operation soapAction="EvaluateDeleteEntities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="compressedUnsignedHttps_IDataEntityIO" type="tns:IDataEntityIO">
+    <wsp:PolicyReference URI="#compressedUnsignedHttps_IDataEntityIO_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RunQuery">
+      <soap12:operation soapAction="RunQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RenderReport">
+      <soap12:operation soapAction="RenderReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RunNamedQuery">
+      <soap12:operation soapAction="RunNamedQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadEntity">
+      <soap12:operation soapAction="ReadEntity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentStoreURL">
+      <soap12:operation soapAction="GetDocumentStoreURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListDocumentsFromDocumentStore">
+      <soap12:operation soapAction="ListDocumentsFromDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentStoreDocuments">
+      <soap12:operation soapAction="GetDocumentStoreFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadDocumentFromDocumentStore">
+      <soap12:operation soapAction="ReadDocumentFromDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentToDocumentStore">
+      <soap12:operation soapAction="SaveDocumentToDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFileToDocumentStore">
+      <soap12:operation soapAction="SaveFileToDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocumentInDocumentStore">
+      <soap12:operation soapAction="CopyDocumentInDocumentStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumentStoreDocuments">
+      <soap12:operation soapAction="DeleteDocumentStoreDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadUser">
+      <soap12:operation soapAction="ReadUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEntityCollection">
+      <soap12:operation soapAction="SaveEntityCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveDataPackage">
+      <soap12:operation soapAction="QueueSaveDataPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveWorkflowRequest">
+      <soap12:operation soapAction="QueueSaveWorkflowRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueItem">
+      <soap12:operation soapAction="QueueItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueGetPendingItemCount">
+      <soap12:operation soapAction="QueueGetPendingItemCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueCancelRequest">
+      <soap12:operation soapAction="QueueCancelRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueClearLog">
+      <soap12:operation soapAction="QueueClearLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueueSaveEntityCollection">
+      <soap12:operation soapAction="QueueSaveEntityCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateDeleteEntities">
+      <soap12:operation soapAction="EvaluateDeleteEntities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="iSIMSFaultExceptionDetailFault">
+        <soap12:fault use="literal" name="iSIMSFaultExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataEntityIO">
+    <wsdl:port name="compressedSignedHttps_x0028_SSLSignature_x0029__IDataEntityIO" binding="tns:compressedSignedHttps_x0028_SSLSignature_x0029__IDataEntityIO">
+      <soap12:address location="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSApplicationServer/DataEntityIO.svc/Transport" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://w7pc6655.css.ad.capita.co.uk:95/iSIMSApplicationServer/DataEntityIO.svc/Transport</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="compressedUnsignedHttps_IDataEntityIO" binding="tns:compressedUnsignedHttps_IDataEntityIO">
+      <soap12:address location="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSApplicationServer/DataEntityIO.svc/None" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://w7pc6655.css.ad.capita.co.uk:95/iSIMSApplicationServer/DataEntityIO.svc/None</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

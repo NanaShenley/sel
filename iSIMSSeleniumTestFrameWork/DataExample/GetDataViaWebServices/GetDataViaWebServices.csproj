@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{430F297C-EF93-4779-B013-04E1E5BD5C53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetDataViaWebServices</RootNamespace>
+    <AssemblyName>GetDataViaWebServices</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Selene.Support, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Selene.Support.1.0.0.4\lib\net45\Selene.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Selenium.Support.2.53.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Service References\DataEntityIO\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UnsignedUserName\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StudentQuery.cs" />
+    <Compile Include="WebServiceBase.cs" />
+    <Compile Include="WsExampleTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\DataEntityIO\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\Arrays2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\GetDataViaWebServices.DataEntityIO.CallStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataEntityIO\GetDataViaWebServices.DataEntityIO.DataEntityCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataEntityIO\GetDataViaWebServices.DataEntityIO.DataEntityCollectionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataEntityIO\GetDataViaWebServices.DataEntityIO.SecuritySummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataEntityIO\InternationalSIMS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\InternationalSIMS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.ApplicationServer.Services.DTO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.ApplicationServer.Services.DTO2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.Common.PublishAndSubscribe.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.Common.PublishAndSubscribe2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.Common.Workflow.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.Common.Workflow2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.Common2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataEntity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataEntity2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataModel.Import.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataModel.Import2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataModel.Validation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataModel.Validation2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.DataModel2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine.Aggregates.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine.Aggregates2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine.Query.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine.Query2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine.Values.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine.Values2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMS.RuleEngine2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMSResearch.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\iSIMSResearch2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\service.wsdl" />
+    <None Include="Service References\DataEntityIO\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\service2.wsdl" />
+    <None Include="Service References\DataEntityIO\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\System.Text.RegularExpressions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\System.Text.RegularExpressions2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\System.Windows.Media.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\System.Windows.Media2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\System.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataEntityIO\System2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnsignedUserName\GetDataViaWebServices.UnsignedUserName.RequestSecurityTokenResponseCollectionType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnsignedUserName\iSIMSSTS.wsdl" />
+    <None Include="Service References\UnsignedUserName\iSIMSSTS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnsignedUserName\iSIMSSTS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnsignedUserName\SecurityTokenService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataEntityIO\" />
+    <WCFMetadataStorage Include="Service References\UnsignedUserName\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnsignedUserName\iSIMSSTS.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnsignedUserName\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnsignedUserName\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnsignedUserName\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataEntityIO\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataEntityIO\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataEntityIO\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Areas\Common\SharedComponents.csproj">
+      <Project>{FED7A3A0-20C0-4CBC-8F02-FF63DAA0FFCB}</Project>
+      <Name>SharedComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WebDriverRunner\WebDriverRunner.csproj">
+      <Project>{3C348E84-D848-4AB1-A1B7-30A943F91EC3}</Project>
+      <Name>WebDriverRunner</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

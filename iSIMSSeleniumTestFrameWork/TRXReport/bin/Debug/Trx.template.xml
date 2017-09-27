@@ -1,0 +1,41 @@
+﻿﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3d114918-f8d4-4fe5-a95f-e0052702be4a" name="skorde@W7PC6653 2015-04-24 17:02:24" runUser="CSS\skorde" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="3caed31e-2207-45ec-890c-b2ad61e1514a">
+    <Deployment userDeploymentRoot="D:\" useDefaultDeploymentRoot="false" runDeploymentRoot="skorde_W7PC6653 2015-04-24 17_02_24" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2015-04-24T17:02:24.3864017+01:00" queuing="2015-04-24T17:02:24.7684017+01:00" start="2015-04-24T17:02:24.8344017+01:00" finish="2015-04-24T17:02:25.1534017+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="{{allCount}}" executed="{{allCount}}" passed="{{passedCount}}" error="{{skippedCount}}" failed="{{failedCount}}" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="{{allCount}}" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+
+    {{#each all}}
+    <UnitTest name="{{Method}}" storage="" id="{{Uuid}}">
+      <Execution id="413b5018-3877-4cc4-bed8-0df3b6b9a575" />
+      <TestMethodBaseAttribute codeBase="" adapterTypeName="" className="CalcDivideTest.DivideTest, CalcDivideTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethodBaseAttribute1" />
+    </UnitTest>
+    {{/each}}
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    {{#each all}}
+    <TestEntry testId="{{Uuid}}" executionId="413b5018-3877-4cc4-bed8-0df3b6b9a575" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    {{/each}}
+  </TestEntries>
+  <Results>
+    {{#each all}}
+    <UnitTestResult executionId="413b5018-3877-4cc4-bed8-0df3b6b9a575" testId="{{Uuid}}" testName="{{Method}}" computerName="W7PC6653" duration="00:00:00.0218582" startTime="2015-04-24T17:02:24.8634017+01:00" endTime="2015-04-24T17:02:25.1144017+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="413b5018-3877-4cc4-bed8-0df3b6b9a575">
+    </UnitTestResult>
+    {{/each}}
+  </Results>
+</TestRun>

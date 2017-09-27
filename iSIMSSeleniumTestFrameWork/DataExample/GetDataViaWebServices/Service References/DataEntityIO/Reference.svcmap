@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b643b94-3ebf-45ad-89c2-4e5b6b0ac045" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="3f99ac64-7846-4f57-95bc-597c614b0a84" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="821f8c93-f941-4635-accd-9b982b16aa7e" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="System.Windows.Media.xsd" MetadataType="Schema" ID="91d41919-ca36-4298-b629-413f84a125ab" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="InternationalSIMS.xsd" MetadataType="Schema" ID="0654dd51-9871-43f6-a8b8-9c2a71b30bbd" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.RuleEngine.Query.xsd" MetadataType="Schema" ID="43e0c8ef-e03c-4aee-ab0c-57a7771f0889" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="767ece5c-4532-4156-b6a2-adc00ec33157" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.DataEntity.xsd" MetadataType="Schema" ID="fdce50c6-d3cb-4c72-b670-4b84d11c1693" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.RuleEngine.xsd" MetadataType="Schema" ID="8aef2fe8-9841-48af-843d-f143b652ae29" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.RuleEngine.Values.xsd" MetadataType="Schema" ID="0a2068fd-bad9-40c1-9be9-f00d9cea71b1" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="System.Text.RegularExpressions.xsd" MetadataType="Schema" ID="d409eba6-b02b-4742-b41e-9d4bdc3d9fa0" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.RuleEngine.Aggregates.xsd" MetadataType="Schema" ID="e63fdb5b-657d-46e5-b571-4624fbfd97c5" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.DataModel.xsd" MetadataType="Schema" ID="2b8df1bd-9314-462f-b127-dc8777a1dfa3" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="abd4006d-e13f-4d02-9e90-578a66a3dee9" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.Common.xsd" MetadataType="Schema" ID="851b8238-a170-4f80-b133-e503462514ca" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMSResearch.xsd" MetadataType="Schema" ID="600c872a-698c-4d93-bd90-a086d5244800" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.Common.PublishAndSubscribe.xsd" MetadataType="Schema" ID="b2b837c7-d916-41d8-9c81-b4ee1ab817f9" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.Common.Workflow.xsd" MetadataType="Schema" ID="28be3055-46e9-4445-89c3-38c6d1028c72" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.DataModel.Validation.xsd" MetadataType="Schema" ID="99a49200-cfa5-43a0-9db8-25c5cf7056ae" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.DataModel.Import.xsd" MetadataType="Schema" ID="6bce94a5-7450-495a-9578-730692ef4899" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="iSIMS.ApplicationServer.Services.DTO.xsd" MetadataType="Schema" ID="cc985fa6-3e84-484c-8dff-da3e38c9ae55" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="dc8379ac-1a21-4b67-a7d1-f6024a816d5f" SourceId="1" SourceUrl="https://lab-two.sims8.com/iSIMSApplicationServerFarm1/DataEntityIO.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

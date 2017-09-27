@@ -1,0 +1,19 @@
+Run Using Local Selenium Server
+--dll="D:\WIP\sims_8\Source\iSIMSSeleniumTestFrameWork\iSIMSAddStudent\bin\Debug\iSIMSSearchStudent.dll" --hub=http://localhost:4444/wd/hub  --reporter="D:\WIP\sims_8\Source\iSIMSSeleniumTestFrameWork\HtmlReport\bin\Debug\HtmlReport.dll" --maxThreads=15 --output="c:/report"
+
+-- RunUsing the hub
+ --dll="../../../iSIMSAddStudent/bin/debug/iSIMSSearchStudent.dll" --hub=http://bedcsscmssl01:4444/wd/hub  --reporter="C:\WIP\SIMS 8 UK\Src\iSIMSSeleniumTestFrameWork\HtmlReport\bin\Debug\HtmlReport.dll" --maxThreads=15 --output="c:/report"
+
+
+all options
+    dll="Set the dll to be tests. Can be passed multiple times."
+	hub="Set the hub to be used. Defaults to DefaultHub"
+    maxThreads="Number of concurrent threads to run.Defaults to DefaultMaxThreads"
+    browser="Set a browser to test.Can be passed multiple times.If none specified, defaults to DefaultBrowsers"
+    suiteTimeoutInMinutes= "Set a suite Timeout.If none specified, defaults to DefaultSuiteTimeout"
+    reporter="Add a reporter that will be called at the end of the suite run to produce a report.Can be called multiple times. Defaults to DefaultReporters"
+    output="Sets the base forder where all the artifacts will be produced.Reports, screenshots etc.Defaults to"
+	include="Sets the group of test to run. Can be called multiple time."
+	h = help
+	help = help
+	? = help

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d7d711c8-73c8-4005-b934-71722f0f3805" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecurityTokenService.wsdl" MetadataType="Wsdl" ID="aa3a6d7d-666a-41ae-9db6-5c9b26c8580a" SourceId="1" SourceUrl="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc?wsdl" />
+    <MetadataFile FileName="iSIMSSTS.wsdl" MetadataType="Wsdl" ID="386cfcbe-c279-4e91-bf79-c2393bbb27ee" SourceId="1" SourceUrl="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="iSIMSSTS.xsd" MetadataType="Schema" ID="ec45c3ef-dec0-4f4c-a845-6b93b92f8b67" SourceId="1" SourceUrl="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc?xsd=xsd0" />
+    <MetadataFile FileName="iSIMSSTS.disco" MetadataType="Disco" ID="b63c357d-e9ff-418f-8c44-77b400e283a4" SourceId="1" SourceUrl="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc?disco" />
+    <MetadataFile FileName="iSIMSSTS1.xsd" MetadataType="Schema" ID="bd8fd3c2-32f0-44ab-af0c-bbc1d462d9d6" SourceId="1" SourceUrl="https://w7pc6655.css.ad.capita.co.uk:95/iSIMSSecurityServer/iSIMSSTS.UnsignedUserName.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

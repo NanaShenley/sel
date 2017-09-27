@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27DD4843-AD6A-437F-89B5-3636591468E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PageObjectModel</RootNamespace>
+    <AssemblyName>PageObjectModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Selene.Support">
+      <HintPath>..\..\..\packages\Selene.Support.1.0.0.4\lib\net45\Selene.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="SeSugar">
+      <HintPath>..\..\..\packages\SeSugar.1.0.0.15\lib\net45\SeSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="SeSugar.Interfaces">
+      <HintPath>..\..\..\packages\SeSugar.Interfaces.1.0.0.15\lib\net45\SeSugar.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Selenium.Support.2.53.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseComponent.cs" />
+    <Compile Include="Base\BaseDialogComponent.cs" />
+    <Compile Include="Base\CheckBoxElement.cs" />
+    <Compile Include="Base\CheckBoxGroupElement.cs" />
+    <Compile Include="Base\GridComponent.cs" />
+    <Compile Include="Base\ListItemComponent.cs" />
+    <Compile Include="Base\Search.cs" />
+    <Compile Include="Base\SearchList.cs" />
+    <Compile Include="Base\SearchTable.cs" />
+    <Compile Include="Base\TableElement.cs" />
+    <Compile Include="Base\TableRowElement.cs" />
+    <Compile Include="Base\WebixComponent.cs" />
+    <Compile Include="Components\Admission\Dialogs\AddNewApplicationDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\AddressDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\ConfirmRequiredAddNewApplicantDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\ConfirmRequiredChangeStatus.cs" />
+    <Compile Include="Components\Admission\Dialogs\ConfirmRequiredSchoolIntakeDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\ContactDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\ContactTripletDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\RegistrationDetailsDialog.cs" />
+    <Compile Include="Components\Admission\Pages\ApplicationPage.cs" />
+    <Compile Include="Components\Admission\Pages\ApplicationTriplet.cs" />
+    <Compile Include="Components\Admission\Pages\DeleteConfirmationPage.cs" />
+    <Compile Include="Components\Admission\Pages\LookupTriplet.cs" />
+    <Compile Include="Components\Admission\Pages\LookupWithCategoryPage.cs" />
+    <Compile Include="Components\Admission\Pages\LookupWithProviderPage.cs" />
+    <Compile Include="Components\Admission\Pages\SchoolIntakePage.cs" />
+    <Compile Include="Components\Admission\Pages\SchoolIntakeTriplet.cs" />
+    <Compile Include="Components\Common\Dialogs\AddAttachmentDialog .cs" />
+    <Compile Include="Components\Common\Dialogs\ConfirmRequiredDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\DeleteConfirmationDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\ViewDocumentDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\WarningConfirmationDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\WarningDialog.cs" />
+    <Compile Include="Components\HomePages\AboutPopover.cs" />
+    <Compile Include="Components\HomePages\HomePage.cs" />
+    <Compile Include="Components\HomePages\LeftMenu.cs" />
+    <Compile Include="Components\HomePages\QuickLinksBar.cs" />
+    <Compile Include="Components\HomePages\ShellAction.cs" />
+    <Compile Include="Components\HomePages\SubMenuActions.cs" />
+    <Compile Include="Components\HomePages\TabActions.cs" />
+    <Compile Include="Components\HomePages\TaskMenuActions.cs" />
+    <Compile Include="Components\HomePages\TaskMenuBar.cs" />
+    <Compile Include="Components\HomePages\TaskSearch.cs" />
+    <Compile Include="Components\LoginPages\ChangePasswordPage.cs" />
+    <Compile Include="Components\LoginPages\SelectSchool.cs" />
+    <Compile Include="Components\LoginPages\SelectTenantPage.cs" />
+    <Compile Include="Components\LoginPages\SignInPage.cs" />
+    <Compile Include="Helper\ElementAccessor.cs" />
+    <Compile Include="Helper\ElementLocator.cs" />
+    <Compile Include="Helper\ElementRetriever.cs" />
+    <Compile Include="Helper\Navigator.cs" />
+    <Compile Include="Helper\Retry.cs" />
+    <Compile Include="Helper\Setting.cs" />
+    <Compile Include="Helper\SimsBy.cs" />
+    <Compile Include="Helper\Wait.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\TestSettings\TestSettings.csproj">
+      <Project>{624080ae-2133-4ec6-9f6e-ced0b8713073}</Project>
+      <Name>TestSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WebDriverRunner\WebDriverRunner.csproj">
+      <Project>{3c348e84-d848-4ab1-a1b7-30a943f91ec3}</Project>
+      <Name>WebDriverRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\SharedComponents.csproj">
+      <Project>{fed7a3a0-20c0-4cbc-8f02-ff63daa0ffcb}</Project>
+      <Name>SharedComponents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

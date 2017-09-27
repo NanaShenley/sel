@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestSettings" GeneratedClassName="BrowserStack">
+  <Profiles />
+  <Settings>
+    <Setting Name="BrowserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Chrome</Value>
+    </Setting>
+    <Setting Name="BrowserVersion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">61.00</Value>
+    </Setting>
+    <Setting Name="OsName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Windows</Value>
+    </Setting>
+    <Setting Name="OsVersion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="ProjectName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Sims 8</Value>
+    </Setting>
+    <Setting Name="ScreenResolution" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1920x1080</Value>
+    </Setting>
+    <Setting Name="BrowserStackUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">edwinnwofor1</Value>
+    </Setting>
+    <Setting Name="BrowserStackKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GyhrNBaDHzkZtoscHTSy</Value>
+    </Setting>
+    <Setting Name="BrowserStackHub" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://hub-cloud.browserstack.com/wd/hub/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

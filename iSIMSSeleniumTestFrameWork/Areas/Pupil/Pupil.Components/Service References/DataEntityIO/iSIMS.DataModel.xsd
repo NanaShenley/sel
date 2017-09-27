@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/iSIMS.DataModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iSIMS.DataModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AggregateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AVG" />
+      <xs:enumeration value="COUNT" />
+      <xs:enumeration value="MAX" />
+      <xs:enumeration value="MIN" />
+      <xs:enumeration value="SUM" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AggregateType" nillable="true" type="tns:AggregateType" />
+  <xs:simpleType name="DataCommitStageEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Prepare" />
+      <xs:enumeration value="PreWrite" />
+      <xs:enumeration value="PreCommit" />
+      <xs:enumeration value="PostSave" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DataCommitStageEnum" nillable="true" type="tns:DataCommitStageEnum" />
+  <xs:simpleType name="EntitySourceEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BusinessDatabase" />
+      <xs:enumeration value="Queue" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Authorisation" />
+      <xs:enumeration value="Authentication" />
+      <xs:enumeration value="Audit" />
+      <xs:enumeration value="SSRS" />
+      <xs:enumeration value="TaskScheduler" />
+      <xs:enumeration value="AnalysisDatabase" />
+      <xs:enumeration value="IntegrationDatabase" />
+      <xs:enumeration value="DataExchange" />
+      <xs:enumeration value="DocumentStore" />
+      <xs:enumeration value="DataMartDatabase" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntitySourceEnum" nillable="true" type="tns:EntitySourceEnum" />
+  <xs:simpleType name="StopListType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="System" />
+      <xs:enumeration value="FromExisting" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StopListType" nillable="true" type="tns:StopListType" />
+  <xs:simpleType name="ReferenceProperty.enumReferenceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotApplicable" />
+      <xs:enumeration value="Single" />
+      <xs:enumeration value="Many" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReferenceProperty.enumReferenceType" nillable="true" type="tns:ReferenceProperty.enumReferenceType" />
+  <xs:simpleType name="ServerComputedProperty.ServerComputedPropertyProvider">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Database" />
+      <xs:enumeration value="DocumentProvider" />
+      <xs:enumeration value="ImageProvider" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ServerComputedProperty.ServerComputedPropertyProvider" nillable="true" type="tns:ServerComputedProperty.ServerComputedPropertyProvider" />
+  <xs:simpleType name="StaticScript.enumScriptSequence">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PreSchema" />
+      <xs:enumeration value="PostSchema" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StaticScript.enumScriptSequence" nillable="true" type="tns:StaticScript.enumScriptSequence" />
+  <xs:simpleType name="EntityDeletionBehaviour.DeletionBehaviour">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DenyDeletion" />
+      <xs:enumeration value="AllowDeletion" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityDeletionBehaviour.DeletionBehaviour" nillable="true" type="tns:EntityDeletionBehaviour.DeletionBehaviour" />
+  <xs:simpleType name="PropertyDeletionBehaviour.DeletionBehaviour">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DenyDeletionWhereChildrenExist" />
+      <xs:enumeration value="DissassociateChildren" />
+      <xs:enumeration value="DeleteChildren" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PropertyDeletionBehaviour.DeletionBehaviour" nillable="true" type="tns:PropertyDeletionBehaviour.DeletionBehaviour" />
+</xs:schema>

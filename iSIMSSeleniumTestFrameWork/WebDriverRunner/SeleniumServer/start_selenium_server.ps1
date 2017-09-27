@@ -1,0 +1,2 @@
+$PSScriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
+Start-Process -FilePath 'java.exe' -ArgumentList '-jar selenium-server-standalone-2.53.1.jar','-Dwebdriver.ie.driver=..\..\Packages\Selenium.WebDriver.IEDriver.2.47.0.0\driver\IEDriverServer.exe','-Dwebdriver.chrome.driver=..\..\Packages\Selenium.WebDriver.ChromeDriver.2.32.0\driver\win32\chromedriver.exe' -WorkingDirectory $PSScriptRoot

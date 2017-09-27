@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="iSIMSResearch" elementFormDefault="qualified" targetNamespace="iSIMSResearch" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.capita.co.uk/InternationalSIMS" />
+  <xs:complexType name="ValidationErrorCollection">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" maxOccurs="unbounded" name="ValidationError" nillable="true" type="q1:ValidationError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationErrorCollection" nillable="true" type="tns:ValidationErrorCollection" />
+</xs:schema>

@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B1A1520-61CD-4B23-AB1A-FCDC6D694C2D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>POM</RootNamespace>
+    <AssemblyName>POM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SeSugar, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Packages\SeSugar.1.0.0.15\lib\net45\SeSugar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SeSugar.Interfaces, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Packages\SeSugar.Interfaces.1.0.0.15\lib\net45\SeSugar.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Selenium.Support.2.53.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseComponent.cs" />
+    <Compile Include="Base\BaseDialogComponent.cs" />
+    <Compile Include="Base\CheckBoxElement.cs" />
+    <Compile Include="Base\CheckBoxGroupElement.cs" />
+    <Compile Include="Base\GridComponent.cs" />
+    <Compile Include="Base\ListItemComponent.cs" />
+    <Compile Include="Base\SearchList.cs" />
+    <Compile Include="Base\SearchTable.cs" />
+    <Compile Include="Base\Search.cs" />
+    <Compile Include="Base\TableElement.cs" />
+    <Compile Include="Base\TableRowElement.cs" />
+    <Compile Include="Base\WebixComponent.cs" />
+    <Compile Include="Components\Admission\Dialogs\ConfirmRequiredChangeStatus.cs" />
+    <Compile Include="Components\Admission\Dialogs\ConfirmRequiredSchoolIntakeDialog.cs" />
+    <Compile Include="Components\Admission\Pages\LookupTriplet.cs" />
+    <Compile Include="Components\Admission\Pages\LookupWithProviderPage.cs" />
+    <Compile Include="Components\Admission\Pages\LookupWithCategoryPage.cs" />
+    <Compile Include="Components\Attendance\Dialogs\AttendancePatternDialog.cs" />
+    <Compile Include="Components\Attendance\Dialogs\WarningConfirmDialog.cs" />
+    <Compile Include="Components\Attendance\Pages\EditMarksPage.cs" />
+    <Compile Include="Components\Attendance\Pages\EditMarksSearchPage.cs" />
+    <Compile Include="Components\Attendance\Pages\EditMarksTriplet.cs" />
+    <Compile Include="Components\Attendance\Pages\TakeRegisterDetailPage.cs" />
+    <Compile Include="Components\Attendance\Pages\TakeRegisterSearchPage.cs" />
+    <Compile Include="Components\Attendance\Pages\TakeRegisterTriplet.cs" />
+    <Compile Include="Components\Common\Dialogs\ConfirmRequiredDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\DeleteConfirmationDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\WarningDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\AddNewApplicationDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\AddressDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\ConfirmRequiredAddNewApplicantDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\ContactDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\ContactTripletDialog.cs" />
+    <Compile Include="Components\Admission\Dialogs\RegistrationDetailsDialog.cs" />
+    <Compile Include="Components\Admission\Pages\ApplicationPage.cs" />
+    <Compile Include="Components\Admission\Pages\ApplicationTriplet.cs" />
+    <Compile Include="Components\Admission\Pages\DeleteConfirmationPage.cs" />
+    <Compile Include="Components\Admission\Pages\SchoolIntakePage.cs" />
+    <Compile Include="Components\Admission\Pages\SchoolIntakeTriplet.cs" />
+    <Compile Include="Components\Conduct\Dialogs\AddSuspensionDialog.cs" />
+    <Compile Include="Components\Conduct\Dialogs\MeetingDialog.cs" />
+    <Compile Include="Components\Conduct\Pages\AchievementEventRecordPage.cs" />
+    <Compile Include="Components\Conduct\Pages\BehaviourEventRecordPage.cs" />
+    <Compile Include="Components\Conduct\Pages\AchievementEventSearchPage.cs" />
+    <Compile Include="Components\Conduct\Pages\BehaviourEventSearchPage.cs" />
+    <Compile Include="Components\Conduct\Pages\AchievementEventTriplet.cs" />
+    <Compile Include="Components\Conduct\Pages\BehaviourEventTriplet.cs" />
+    <Compile Include="Components\Conduct\Pages\ConductConfigurationPage.cs" />
+    <Compile Include="Components\Conduct\Pages\ConductSummaryPage.cs" />
+    <Compile Include="Components\Conduct\Pages\Exclusions\ExclusionDetail.cs" />
+    <Compile Include="Components\Conduct\Pages\Exclusions\ExclusionRecordPage.cs" />
+    <Compile Include="Components\Conduct\Pages\Exclusions\ExclusionSearchResults.cs" />
+    <Compile Include="Components\Conduct\Pages\Exclusions\ExclusionSearchPage.cs" />
+    <Compile Include="Components\Conduct\Pages\Exclusions\ExclusionTriplet.cs" />
+    <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardDetail.cs" />
+    <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardRecordPage.cs" />
+    <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardSearchPage.cs" />
+    <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardSearchResults.cs" />
+    <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardTriplet.cs" />
+    <Compile Include="Components\Conduct\Pages\SuspensionRecordPage.cs" />
+    <Compile Include="Components\Conduct\Pages\SuspensionSearchPage.cs" />
+    <Compile Include="Components\Conduct\Pages\SuspensionTriplet.cs" />
+    <Compile Include="Components\HomePages\AboutPopover.cs" />
+    <Compile Include="Components\HomePages\HomePage.cs" />
+    <Compile Include="Components\HomePages\LeftMenu.cs" />
+    <Compile Include="Components\HomePages\QuickLinksBar.cs" />
+    <Compile Include="Components\HomePages\ShellAction.cs" />
+    <Compile Include="Components\HomePages\SubMenuActions.cs" />
+    <Compile Include="Components\HomePages\TabActions.cs" />
+    <Compile Include="Components\HomePages\TaskMenuActions.cs" />
+    <Compile Include="Components\HomePages\TaskMenuBar.cs" />
+    <Compile Include="Components\HomePages\TaskSearch.cs" />
+    <Compile Include="Components\LoginPages\ChangePasswordPage.cs" />
+    <Compile Include="Components\LoginPages\SelectSchool.cs" />
+    <Compile Include="Components\LoginPages\SelectTenantPage.cs" />
+    <Compile Include="Components\LoginPages\SignInPage.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AccommodationTypeDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddAddressDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddAddressPopup.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddAddressTripletDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\AddAttachmentDialog .cs" />
+    <Compile Include="Components\Pupil\Dialogs\DoctorsDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\EditStaffContactDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\DoNotDiscloseConfirmDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\PupilPickerDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\SchoolHistoryDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddContactAddressDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddDoctorDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddEhcpDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\HistoryAttendanceModeDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\QuickAddAchievementDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\QuickAddBehaviourDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\PEPContributorsDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\EditMedicalPracticeDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\HistoryClassDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\HistoryYearGroupDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\LinkedPupilsDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\ContactDetailsDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\MedicalDetailsDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\PupilSummaryDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddNewPupilDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddPeopleInvolvedDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddPupilContactDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddAssociatedPupilsSearchDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\CareArrangementsDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\EditContactAddressDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\EditContactDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\NoteDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\CopyContactDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\CopyContactSearchDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\CloneContactSearchDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddPupilContactSearchDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddAssociatedPupilsTripletDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\CopyContactTripletDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\CloneContactTripletDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddPupilContactTripletDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddSenReviewDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\AddSenStatementDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\LeaverBackgroundProcessSubmitDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\DidYouMeanDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\GenerateNewUPNDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\MedicalPracticeDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\MedicalPracticeSearchDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\MedicalPracticeTripletDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\PupilDataItemDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\PupilIdentifierColumnDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\RegistrationDetailDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\SelectOfficerDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\SelectPeopleDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\SelectSchoolSearchDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\SelectSchoolTripletDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\SharedAddressDetailsMatchesDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\SharedContactDetailsMatchesDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\UnExpectedProblemDialog.cs" />
+    <Compile Include="Components\Common\Dialogs\ViewDocumentDialog.cs" />
+    <Compile Include="Components\Pupil\Dialogs\WarningConfirmDialog.cs" />
+    <Compile Include="Components\Pupil\Pages\BulkUpdatePage.cs" />
+    <Compile Include="Components\Pupil\Pages\BulkUpdateTriplet.cs" />
+    <Compile Include="Components\Common\Dialogs\WarningConfirmationDialog.cs" />
+    <Compile Include="Components\Pupil\Pages\ClassLogPage.cs" />
+    <Compile Include="Components\Pupil\Pages\DeletePupilRecordPage.cs" />
+    <Compile Include="Components\Pupil\Pages\DeletePupilRecordSearchPage.cs" />
+    <Compile Include="Components\Pupil\Pages\DeletePupilRecordTriplet.cs" />
+    <Compile Include="Components\Pupil\Dialogs\CloneContactDialog.cs" />
+    <Compile Include="Components\Pupil\Pages\LinkedPeopleAndOrganisationPage.cs" />
+    <Compile Include="Components\Pupil\Pages\ManageLeaversPage.cs" />
+    <Compile Include="Components\Pupil\Pages\ManageLeaversTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\NameChangeHistoryPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PreviousAddressPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilLeavingDetailsPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilContactPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilLogDetailPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilLogTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilPremiumRecordSearchPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilPremiumRecordPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilRecordPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilContactSearchPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilPickerSearchPage.cs" />
+    <Compile Include="Components\Common\PupilSearchPage.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilContactTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\PupilPremiumRecordTriplet.cs" />
+    <Compile Include="Components\Common\PupilSearchTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\SenNeedTypePage.cs" />
+    <Compile Include="Components\Pupil\Pages\SenNeedTypeTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\SenProvisionTypePage.cs" />
+    <Compile Include="Components\Pupil\Pages\SenProvisionTypeTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\SenRecordDetailPage.cs" />
+    <Compile Include="Components\Pupil\Pages\SenRecordTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\SenStatusPage.cs" />
+    <Compile Include="Components\Pupil\Pages\SenStatusTriplet.cs" />
+    <Compile Include="Components\Pupil\Pages\StaffRecordPage.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddAddressDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddAddressTripletDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddAttchmentDialog .cs" />
+    <Compile Include="Components\Staff\Dialogs\AddBackgroundCheckDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddContractDetailDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddImpairmentDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddNewStaffDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddStaffContactDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddStaffContactSearchDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddStaffContactTripletDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddStaffContractAllowanceDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddStaffExperiencedDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AddStaffRoleDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\AllowanceTripletDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\BackgroundUpdateDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\BankBuildingSocialDetailDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\ConfirmDeleteDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\ConfirmRequiredDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\EditContractDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\FindStaffTripletDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\FindTrainingCourseEventDetailsDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\FindTrainingCourseEventDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\PayScaleDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\PayScaleOnContractDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\PaySpineDialogTriplet.cs" />
+    <Compile Include="Components\Staff\Dialogs\PostTypeTripletDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\SelectPayScaleDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\ServiceDetailDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\StaffAbsenceDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\SupperannuationSchemeTripletDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\TrainingCourseEventDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\UnExpectedProblemDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\ViewDocumentDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\WarningDeleteDialog.cs" />
+    <Compile Include="Components\Staff\Dialogs\WarningSaveDataDialog.cs" />
+    <Compile Include="Components\Staff\Pages\AdditionalPaymentCategoryDetailsPage.cs" />
+    <Compile Include="Components\Staff\Pages\AdditionalPaymentCategoryTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\AllowanceDetailsPage.cs" />
+    <Compile Include="Components\Staff\Pages\AllowanceTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\ApplySalaryUpdatePage.cs" />
+    <Compile Include="Components\Staff\Pages\ApplySalaryUpdateSearchPage.cs" />
+    <Compile Include="Components\Staff\Pages\ApplySalaryUpdateTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\DeleteConfirmationPage.cs" />
+    <Compile Include="Components\Staff\Pages\DeleteStaffRecordSearchPage.cs" />
+    <Compile Include="Components\Staff\Pages\DeleteStaffRecordTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\IndividualAbsenceReportPage.cs" />
+    <Compile Include="Components\Staff\Pages\ManageClassesTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\ManageClassPage.cs" />
+    <Compile Include="Components\Staff\Pages\NationalInsuranceRatesPage.cs" />
+    <Compile Include="Components\Staff\Pages\NationalInsuranceRateTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\NewAllowancePage.cs" />
+    <Compile Include="Components\Staff\Pages\PaySpinePage.cs" />
+    <Compile Include="Components\Staff\Pages\PaySpineTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\SalaryUpdatePage.cs" />
+    <Compile Include="Components\Staff\Pages\ServiceTermPage.cs" />
+    <Compile Include="Components\Staff\Pages\ServiceTermTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\StaffCheckClearanceLevelPage.cs" />
+    <Compile Include="Components\Staff\Pages\StaffCheckClearanceLevelTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\StaffCheckTypePage.cs" />
+    <Compile Include="Components\Staff\Pages\StaffCheckTypeTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\StaffLeavingDetailPage.cs" />
+    <Compile Include="Components\Staff\Pages\StaffRecordPage.cs" />
+    <Compile Include="Components\Staff\Pages\StaffRecordSearchPage.cs" />
+    <Compile Include="Components\Staff\Pages\StaffRecordTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\StaffRolePage.cs" />
+    <Compile Include="Components\Staff\Pages\StaffRoleTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\SuperannuationSchemesPage.cs" />
+    <Compile Include="Components\Staff\Pages\SuperannuationSchemesTriplet.cs" />
+    <Compile Include="Components\Staff\Pages\TrainingCourseDetailsPage.cs" />
+    <Compile Include="Components\Staff\Pages\TrainingCourseTriplet.cs" />
+    <Compile Include="Helper\ElementAccessor.cs" />
+    <Compile Include="Helper\ElementLocator.cs" />
+    <Compile Include="Helper\ElementRetriever.cs" />
+    <Compile Include="Helper\Navigator.cs" />
+    <Compile Include="Helper\Retry.cs" />
+    <Compile Include="Helper\Setting.cs" />
+    <Compile Include="Helper\SimsBy.cs" />
+    <Compile Include="Helper\Wait.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\TestSettings\TestSettings.csproj">
+      <Project>{624080ae-2133-4ec6-9f6e-ced0b8713073}</Project>
+      <Name>TestSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WebDriverRunner\WebDriverRunner.csproj">
+      <Project>{3c348e84-d848-4ab1-a1b7-30a943f91ec3}</Project>
+      <Name>WebDriverRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\SharedComponents.csproj">
+      <Project>{fed7a3a0-20c0-4cbc-8f02-ff63daa0ffcb}</Project>
+      <Name>SharedComponents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\Conduct\Dialogs\ReportCards\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

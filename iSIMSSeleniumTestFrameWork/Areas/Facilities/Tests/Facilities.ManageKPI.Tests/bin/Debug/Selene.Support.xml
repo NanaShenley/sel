@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Selene.Support</name>
+    </assembly>
+    <members>
+        <member name="T:Selene.Support.Attributes.NotDoneAttribute">
+            <summary>
+            Indicates that a UI test is for WIP work, and should not be executed nor have its outcome reported when run within the CD pipeline.
+            </summary>
+        </member>
+        <member name="T:Selene.Support.Attributes.VariantAttribute">
+            <summary>
+            Indicates that a test is relevant for the given Variant codes.
+            </summary>
+        </member>
+        <member name="T:Selene.Support.Attributes.Variant">
+            <summary>
+            Flags indicating for which variant a test applies.
+            </summary>
+        </member>
+        <member name="F:Selene.Support.Attributes.Variant.None">
+            <summary>
+            No variant. Same behaviour as "All".
+            </summary>
+        </member>
+    </members>
+</doc>

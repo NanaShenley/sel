@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tests>
+	<project>
+		<team>Staff</team>
+		<directory>Staff.NonDestructive</directory>
+		<assembly>Staff.NonDestructive.dll</assembly>
+	</project>
+  <project>
+    <team>SharedServices</team>
+    <directory>SharedServices.NonDestructive</directory>
+    <assembly>SharedServices.NonDestructive.dll</assembly>
+  </project>
+</tests>

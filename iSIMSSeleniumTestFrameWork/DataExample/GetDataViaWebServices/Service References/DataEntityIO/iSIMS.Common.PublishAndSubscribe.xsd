@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/iSIMS.Common.PublishAndSubscribe" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iSIMS.Common.PublishAndSubscribe" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PublicationVersionStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Fault" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PublicationVersionStatusEnum" nillable="true" type="tns:PublicationVersionStatusEnum" />
+</xs:schema>

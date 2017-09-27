@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.capita.co.uk/InternationalSIMS" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/iSIMS.Common" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="RunQuery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="dataQuery" nillable="true" type="q1:DataQuery" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dataQueryParameters" nillable="true" type="q2:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q3="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q3:SecuritySummary" />
+        <xs:element xmlns:q4="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q4:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunQueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="RunQueryResult" nillable="true" type="q5:DataEntityCollectionDTO" />
+        <xs:element xmlns:q6="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q6:SecuritySummary" />
+        <xs:element xmlns:q7="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q7:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenderReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/iSIMS.Common" minOccurs="0" name="documentProcessorType" type="q8:DocumentProcessorTypeEnum" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parameters" nillable="true" type="q9:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q10="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q10:SecuritySummary" />
+        <xs:element xmlns:q11="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q11:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenderReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RenderReportResult" nillable="true" type="q12:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q13="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q13:SecuritySummary" />
+        <xs:element xmlns:q14="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q14:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunNamedQuery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dataQueryName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dataQueryParameters" nillable="true" type="q15:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q16="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q16:SecuritySummary" />
+        <xs:element xmlns:q17="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q17:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunNamedQueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="RunNamedQueryResult" nillable="true" type="q18:DataEntityCollectionDTO" />
+        <xs:element xmlns:q19="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q19:SecuritySummary" />
+        <xs:element xmlns:q20="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q20:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadEntity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="entityID" type="q21:guid" />
+        <xs:element minOccurs="0" name="entityName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="attachedData" nillable="true" type="q22:ArrayOfstring" />
+        <xs:element xmlns:q23="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q23:SecuritySummary" />
+        <xs:element xmlns:q24="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q24:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadEntityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="ReadEntityResult" nillable="true" type="q25:DataEntityCollectionDTO" />
+        <xs:element xmlns:q26="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="securitySummary" nillable="true" type="q26:SecuritySummary" />
+        <xs:element xmlns:q27="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q27:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStoreURL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentStorePropertyName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="documentStoreEntityID" type="q28:guid" />
+        <xs:element xmlns:q29="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q29:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStoreURLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentStoreURLResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q30:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListDocumentsFromDocumentStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentStorePropertyName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q31="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="documentStoreEntityID" type="q31:guid" />
+        <xs:element xmlns:q32="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q32:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListDocumentsFromDocumentStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListDocumentsFromDocumentStoreResult" nillable="true" type="q33:ArrayOfstring" />
+        <xs:element xmlns:q34="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q34:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStoreDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentStoreSite" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="libraryLocation" nillable="true" type="xs:string" />
+        <xs:element xmlns:q35="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q35:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentStoreDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="GetDocumentStoreDocumentsResult" nillable="true" type="q36:DataEntityCollection" />
+        <xs:element xmlns:q37="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q37:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadDocumentFromDocumentStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentUrl" nillable="true" type="xs:string" />
+        <xs:element xmlns:q38="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q38:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadDocumentFromDocumentStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadDocumentFromDocumentStoreResult" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q39="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q39:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDocumentToDocumentStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentStorePropertyName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="documentStoreEntityID" type="q40:guid" />
+        <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentContent" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q41="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q41:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDocumentToDocumentStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveDocumentToDocumentStoreResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q42:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFileToDocumentStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentUrl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="content" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q43="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q43:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFileToDocumentStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveFileToDocumentStoreResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q44="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q44:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyDocumentInDocumentStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourceDocumentUrl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="targetDocumentUrl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deleteSource" type="xs:boolean" />
+        <xs:element xmlns:q45="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q45:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyDocumentInDocumentStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyDocumentInDocumentStoreResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q46="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q46:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentStoreDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="filesToDelete" nillable="true" type="q47:ArrayOfstring" />
+        <xs:element xmlns:q48="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q48:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentStoreDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q49:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q50:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="ReadUserResult" nillable="true" type="q51:DataEntityCollectionDTO" />
+        <xs:element xmlns:q52="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q52:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEntityCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="changeBatchCollection" nillable="true" type="q53:DataEntityDTOChangeBatchCollection" />
+        <xs:element xmlns:q54="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q54:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEntityCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q55:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueSaveDataPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="packageConfig" nillable="true" type="q56:DataPackageConfiguration" />
+        <xs:element xmlns:q57="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="queueMetadata" nillable="true" type="q57:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q58="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q58:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueSaveDataPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="QueueSaveDataPackageResult" nillable="true" type="q59:guid" />
+        <xs:element xmlns:q60="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q60:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueSaveWorkflowRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="narrative" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowTypeName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q61="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="workflowParameters" nillable="true" type="q61:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q62="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="queueMetadata" nillable="true" type="q62:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q63="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q63:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueSaveWorkflowRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="QueueSaveWorkflowRequestResult" nillable="true" type="q64:guid" />
+        <xs:element xmlns:q65="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q65:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="queueItem" nillable="true" type="q66:QueueItemRequest" />
+        <xs:element xmlns:q67="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="queueMetadata" nillable="true" type="q67:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q68="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q68:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="QueueItemResult" nillable="true" type="q69:guid" />
+        <xs:element xmlns:q70="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q70:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueGetPendingItemCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q71:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueGetPendingItemCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueueGetPendingItemCountResult" type="xs:int" />
+        <xs:element xmlns:q72="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q72:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueCancelRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="requestId" type="q73:guid" />
+        <xs:element xmlns:q74="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q74:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueCancelRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueueCancelRequestResult" type="xs:boolean" />
+        <xs:element xmlns:q75="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q75:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueClearLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="cutoffPoint" type="q76:duration" />
+        <xs:element xmlns:q77="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q77:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueClearLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueueClearLogResult" type="xs:boolean" />
+        <xs:element xmlns:q78="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q78:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueSaveEntityCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="changeBatchCollection" nillable="true" type="q79:DataEntityDTOChangeBatchCollection" />
+        <xs:element xmlns:q80="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="queueMetadata" nillable="true" type="q80:ArrayOfKeyValueOfstringanyType" />
+        <xs:element xmlns:q81="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q81:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueSaveEntityCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="QueueSaveEntityCollectionResult" nillable="true" type="q82:guid" />
+        <xs:element xmlns:q83="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q83:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EvaluateDeleteEntities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="entities" nillable="true" type="q84:DataEntityCollectionDTO" />
+        <xs:element xmlns:q85="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q85:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EvaluateDeleteEntitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EvaluateDeleteEntitiesResult" nillable="true" type="q86:ArrayOfKeyValueOfstringint" />
+        <xs:element xmlns:q87="http://www.capita.co.uk/InternationalSIMS" minOccurs="0" name="callStatus" nillable="true" type="q87:CallStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

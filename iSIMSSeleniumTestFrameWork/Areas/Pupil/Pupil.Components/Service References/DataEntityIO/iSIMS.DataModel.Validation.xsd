@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/iSIMS.DataModel.Validation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iSIMS.DataModel.Validation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="RuleScopeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Field" />
+      <xs:enumeration value="Entity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RuleScopeEnum" nillable="true" type="tns:RuleScopeEnum" />
+</xs:schema>

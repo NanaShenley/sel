@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C9DDB71-DD90-4EE8-81F2-C4E26C3DA75B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admissions.Policy.Tests</RootNamespace>
+    <AssemblyName>Admissions.Policy.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Selene.Support">
+      <HintPath>..\..\..\..\packages\Selene.Support.1.0.0.4\lib\net45\Selene.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="SeSugar">
+      <HintPath>..\..\..\..\packages\SeSugar.1.0.0.15\lib\net45\SeSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="SeSugar.Interfaces">
+      <HintPath>..\..\..\..\packages\SeSugar.Interfaces.1.0.0.15\lib\net45\SeSugar.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver">
+      <HintPath>..\..\..\..\packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\..\..\packages\Selenium.Support.2.53.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Criteria.cs" />
+    <Compile Include="Policies.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\FeatureBee\FeatureBee.csproj">
+      <Project>{23d234b2-ff36-465e-9c78-040ff6d3f737}</Project>
+      <Name>FeatureBee</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\TestSettings\TestSettings.csproj">
+      <Project>{624080ae-2133-4ec6-9f6e-ced0b8713073}</Project>
+      <Name>TestSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\WebDriverRunnerTests\WebDriverRunnerTests.csproj">
+      <Project>{3d5aaba1-c490-42ea-b9b9-7e50a8c5642a}</Project>
+      <Name>WebDriverRunnerTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\WebDriverRunner\WebDriverRunner.csproj">
+      <Project>{3c348e84-d848-4ab1-a1b7-30a943f91ec3}</Project>
+      <Name>WebDriverRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\SharedComponents.csproj">
+      <Project>{fed7a3a0-20c0-4cbc-8f02-ff63daa0ffcb}</Project>
+      <Name>SharedComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admissions.Component\Admissions.Component.csproj">
+      <Project>{19997c91-756d-4087-bef6-2b3b333f256f}</Project>
+      <Name>Admissions.Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admissions.data\Admissions.Data.csproj">
+      <Project>{215d6d72-4f81-41ae-8889-ba456640614a}</Project>
+      <Name>Admissions.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PageObjectModel\PageObjectModel.csproj">
+      <Project>{27dd4843-ad6a-437f-89b5-3636591468e0}</Project>
+      <Name>PageObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

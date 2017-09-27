@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SeSugar</name>
+    </assembly>
+    <members>
+        <member name="T:SeSugar.Automation.AutomationSugar">
+            <summary>
+            Provides methods for performing common UI Automation tasks within a UI Test.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.WaitFor(System.String)">
+            <summary>
+            Waits for the existence of an element in the DOM.
+            </summary>
+            <param name="automationId">The Automation Id of the element to wait for.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.WaitFor(OpenQA.Selenium.By)">
+            <summary>
+            Waits for the existence of an element in the DOM.
+            </summary>
+            <param name="thingToWaitFor">The Selenium By locator representing the element to wait for.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.ClickOn(System.String)">
+            <summary>
+            Waits for an element to become clickable, and then clicks it.
+            </summary>
+            <param name="automationId">The Automation Id of the element to click.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.ClickOn(OpenQA.Selenium.By)">
+            <summary>
+            Waits for an element to become clickable, and then clicks it.
+            </summary>
+            <param name="thingToClick">The Selenium By locator representing the element to click.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.WaitUntilStale(System.String)">
+            <summary>
+             Waits for an element to be detatched from the DOM, i.e. for the element to become stale.
+            </summary>
+            <param name="automationId">The Automation Id of the element to expect the staleness of.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.WaitUntilStale(OpenQA.Selenium.By)">
+            <summary>
+            Waits for an element to be detatched from the DOM, i.e. for the element to become stale.
+            </summary>
+            <param name="thingToGo">The Selenium By locator representing the element to expect the staleness of.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.ClickOnAndWaitFor(System.String,System.String)">
+            <summary>
+            Clicks on an element once it becomes clickable, and then waits for another to exist within the DOM.
+            </summary>
+            <param name="automationIdToClick">The Automation Id of the element to click.</param>
+            <param name="automationIdToWaitFor">The Automation Id of the element to wait for.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.ClickOnAndWaitFor(OpenQA.Selenium.By,OpenQA.Selenium.By)">
+            <summary>
+            Clicks on an element once it becomes clickable, and then waits for another to exist within the DOM.
+            </summary>
+            <param name="thingToClick">The Selenium By locator representing the element to click.</param>
+            <param name="thingToWaitFor">The Selenium By locator representing the element to wait for.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.ClickOnAndWaitForUntilStale(System.String,System.String)">
+            <summary>
+            Clicks on an element once it becomes clickable, and then waits for another to be detatched from the DOM, i.e. for the element to become stale.
+            </summary>
+            <param name="automationIdToClick">The Automation Id of the element to click.</param>
+            <param name="automationIdToWaitFor">The Automation Id of the element to expect the staleness of.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.ClickOnAndWaitForUntilStale(OpenQA.Selenium.By,OpenQA.Selenium.By)">
+            <summary>
+            Clicks on an element once it becomes clickable, and then waits for another to be detatched from the DOM, i.e. for the element to become stale.
+            </summary>
+            <param name="thingToClick">The Selenium By locator representing the element to click.</param>
+            <param name="thingToGo">The Selenium By locator representing the element to expect the staleness of.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.WaitForAjaxCompletion">
+            <summary>
+            Waits until all AJAX requests are complete.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.SearchAndWaitForResults(OpenQA.Selenium.By)">
+            <summary>
+            Clicks the Search button on a triplet, and waits for results to appear.
+            </summary>
+            <param name="scopingElement">The Selenium By locator representing the element containing the search button.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.NavigateMenu(System.String,System.String,System.String)">
+            <summary>
+            Navigates to the page using the side menu
+            </summary>
+            <param name="topLevel">e.g.: Tasks or Lookups</param>
+            <param name="category">e.g.: Staff</param>
+            <param name="item">e.g: Service Terms</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.SuccessMessagePresent(OpenQA.Selenium.By)">
+            <summary>
+            Indicates whether the Success message is present within a containing element.
+            </summary>
+            <param name="componentIdentifier">The Selenium By locator representing the element containing the success message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.GetValidationMessages(OpenQA.Selenium.By)">
+            <summary>
+            Gets a list of validation errors for the given page component.
+            </summary>
+            <param name="componentIdentifier">The By selector for the component containing the validation errors.</param>
+            <returns>IEnumerable of validation errors for the given page component.</returns>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.ExpandAccordionPanel(System.String)">
+            <summary>
+            Expands an accordion panel if it is not already.
+            </summary>
+            <param name="automationId">The Automation Id of the accordion panel to expand.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.Log(System.String,OpenQA.Selenium.By)">
+            <summary>
+            Logs a message to the registred ILogger.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="locator">The Selenium By locator to log to provide extra information.</param>
+        </member>
+        <member name="M:SeSugar.Automation.AutomationSugar.Clean(OpenQA.Selenium.By)">
+            <summary>
+            Formats a Selenium By selector suitable for logging.
+            </summary>
+            <param name="locator"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SeSugar.Automation.Retry">
+            <summary>
+            Provides methods for retrying an action in the event of an exception being thrown.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Automation.Retry.Do(System.Action,System.Int32,System.Int32,System.Action)">
+            <summary>
+            Retry executing an action should an exception be thrown.
+            </summary>
+            <param name="action">An action containing the logic to try repeatedly.</param>
+            <param name="retryInterval">The interval between execution attempts of the given action.</param>
+            <param name="retryCount">The number of times to execute the action.</param>
+            <param name="catchAction">An optional action to execute in the event of an exception.</param>
+        </member>
+        <member name="M:SeSugar.Automation.Retry.Do``1(System.Func{``0},System.Int32,System.Int32,System.Action)">
+            <summary>
+            Retry executing an action should an exception be thrown.
+            </summary>
+            <param name="action">An action containing the logic to try repeatedly.</param>
+            <param name="retryInterval">The interval between execution attempts of the given action.</param>
+            <param name="retryCount">The number of times to execute the action.</param>
+            <param name="catchAction">An optional action to execute in the event of an exception.</param>
+        </member>
+        <member name="T:SeSugar.Automation.SimsBy">
+            <summary>
+            Provides extended Selenium By locators.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Automation.SimsBy.AutomationId(System.String)">
+            <summary>
+            Returns a Selenium By locator for a SIMS8 Automation Id.
+            </summary>
+            <param name="value">The Automation Id.</param>
+            <returns>A Selenium By locator for a SIMS8 Automation Id.</returns>
+        </member>
+        <member name="T:SeSugar.Data.CoreQueries">
+            <summary>
+            Provides a core set of SIMS 8 queries for completing common tasks.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetPolicyAclId(System.String)">
+            <summary>
+            Gets the Default Policy ACL ID. Tenant aware.
+            </summary>
+            <param name="entity">The entity to retieve the ACL ID for.</param>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetPolicyAclId(System.String,System.Int32)">
+            <summary>
+            Gets the Default Policy ACL ID.
+            </summary>
+            <param name="entity">The entity to retieve the ACL ID for.</param>
+            <param name="tenantId">The Tenant Id.</param>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetSchoolId">
+            <summary>
+            Gets the ID of the currently registered School. Tenant aware.
+            </summary>
+            <returns>The School Id</returns>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetSchoolId(System.Int32)">
+            <summary>
+            Gets the ID of the currently registered School. 
+            <param name="tenantId">The Tenant Id.</param>
+            </summary>
+            <returns>The School Id</returns>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetLookupItem(System.String,System.String,System.String)">
+            <summary>
+            Gets the Id of a Lookup item. If both Code and Description are provided, only the Code is respected. Tenant aware.
+            </summary>
+            <param name="entityName">The lookup entity.</param>
+            <param name="code">The Lookup code.</param>
+            <param name="description">The Lookup description.</param>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetLookupItem(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Gets the Id of a Lookup item. If both Code and Description are provided, only the Code is respected. 
+            </summary>
+            <param name="entityName">The lookup entity.</param>
+            <param name="tenantId">The Tenant Id.</param>
+            <param name="code">The Lookup code.</param>
+            <param name="description">The Lookup description.</param>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetColumnUniqueString(System.String,System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Generates a unique string checked against the specified database table and column.
+            </summary>
+            <param name="table">The database table the column belongs to.</param>
+            <param name="column">The column to generate a unique string for.</param>
+            <param name="length">The length of the string to generate.</param>
+            <param name="prefix">Optional. A prefix to prepend to the generated string.</param>
+            <param name="toUpper">Optional. Transforms the generated part of the string to uppercase.</param>
+            <returns>A unique string checked against the specified database table and column.</returns>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.GetColumnUniqueString(System.String,System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Generates a unique string checked against the specified database table and column.
+            </summary>
+            <param name="table">The database table the column belongs to.</param>
+            <param name="column">The column to generate a unique string for.</param>
+            <param name="length">The length of the string to generate.</param>
+            <param name="tenantId">The Tenant Id.</param>
+            <param name="prefix">Optional. A prefix to prepend to the generated string.</param>
+            <param name="toUpper">Optional. Transforms the generated part of the string to uppercase.</param>
+            <returns>A unique string checked against the specified database table and column.</returns>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.ValueExistsInColumn(System.Object,System.String,System.String)">
+            <summary>
+            Checks whether a value is present in a column across database table rows. Tenant aware.
+            </summary>
+            <param name="value">The value to test.</param>
+            <param name="table">The database table the column belongs to.</param>
+            <param name="column">The column to check the presence of a value for.</param>
+            <returns>Bool indicating existence of the provided value.</returns>
+        </member>
+        <member name="M:SeSugar.Data.CoreQueries.ValueExistsInColumn(System.Object,System.String,System.String,System.Int32)">
+            <summary>
+            Checks whether a value is present in a column across database table rows.
+            </summary>
+            <param name="value">The value to test.</param>
+            <param name="table">The database table the column belongs to.</param>
+            <param name="column">The column to check the presence of a value for.</param>
+            <param name="tenantId">The Tenant Id.</param>
+            <returns>Bool indicating existence of the provided value.</returns>
+        </member>
+        <member name="T:SeSugar.Data.DataAccessExtensions">
+            <summary>
+            Provides extension methods for generating SQL statements.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.DataAccessExtensions.GetInsertSql(System.Object,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Generates an INSERT SQL statement from this object.
+            </summary>
+            <param name="data">The object to generate the INSERT SQL statement from.</param>
+            <param name="table">The database table to which the data will be inserted.</param>
+            <param name="properties">The list of properties to use in the INSERT SQL statement.</param>
+            <returns>An INSERT SQL statement with parameter placeholders eg. "INSERT INTO dbo.Table (Field) VALUES (@Field)".</returns>
+        </member>
+        <member name="M:SeSugar.Data.DataAccessExtensions.GetDeleteSql(System.Object,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Generates a DELETE SQL statement from this object.
+            </summary>
+            <param name="data">The object to generate the DELETE SQL statement from.</param>
+            <param name="table">The database table from which the data will be removed.</param>
+            <param name="properties">The list of properties to use in the DELETE SQL statement.</param>
+            <returns>A DELETE SQL statement with parameter placeholders eg. "DELETE FROM dbo.Table WHERE (ID = @ID)".</returns>
+        </member>
+        <member name="T:SeSugar.Data.DataAccessHelpers">
+            <summary>
+            Provides helper methods which encapsulate common Database IO tasks.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.DataAccessHelpers.GetConnection(System.Transactions.Transaction)">
+            <summary>
+            Gets and opens a connection to the database specified in the settings file.
+            </summary>
+            <param name="transaction">The transation to use for all operations for this connection instance (optional).</param>
+        </member>
+        <member name="M:SeSugar.Data.DataAccessHelpers.GetValue``1(System.String,System.Object)">
+            <summary>
+            Retrieves a single value from the database specified in the settings file.
+            </summary>
+            <typeparam name="TProp">The type to cast the value to.</typeparam>
+            <param name="sqlCommand">The parameterised SQL statement to get the value.</param>
+            <param name="parameters">The parameter(s) to apply when executing the SQL command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SeSugar.Data.DataAccessHelpers.GetEntities``1(System.String,System.Object)">
+            <summary>
+            Retrieves a collection of entities from the database specified in the settings file.
+            </summary>
+            <typeparam name="TEntity">The type to cast each entity to. The properties MUST match the SELECTed columns in the SQL statement.</typeparam>
+            <param name="sqlCommand">The parameterised SQL statement to get the value. eg. SELECT LegalForename FROM dbo.Staff WHERE (Id = @Id).</param>
+            <param name="parameters">The parameter(s) to apply when executing the SQL command. eg. new {Id = 1}</param>
+            <returns></returns>
+        </member>
+        <member name="M:SeSugar.Data.DataAccessHelpers.Execute(System.String,System.Object)">
+            <summary>
+            Executes an SQL statement.
+            </summary>
+            <param name="sqlCommand">The parameterised SQL statement to get the value. eg. SELECT LegalForename FROM dbo.Staff WHERE (Id = @Id).</param>
+            <param name="parameters">The parameter(s) to apply when executing the SQL command. eg. new {Id = 1}</param>
+            <returns>The number of affected rows.</returns>
+        </member>
+        <member name="T:SeSugar.Data.DataPackage">
+            <summary>
+            Represents a collection of data objects to insert to the database.
+            </summary>
+        </member>
+        <member name="P:SeSugar.Data.DataPackage.Items">
+            <summary>
+            The data objects to insert into the database.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.DataPackage.Add(System.String,System.Object)">
+            <summary>
+            Registers a data object to this DataPackage.
+            </summary>
+            <param name="table">The table the data is to be added to and removed from.</param>
+            <param name="data">The test data to be inserted to the table.</param>
+        </member>
+        <member name="T:SeSugar.Data.DataPackageExtensions">
+            <summary>
+            Provides extension methods to create DataPackages using a fluent syntax.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.DataPackageExtensions.BuildDataPackage(System.Object)">
+            <summary>
+            Initialises an empty DataPackage.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.DataPackageExtensions.AddData(SeSugar.Data.DataPackage,System.String,System.Object)">
+            <summary>
+            Registers a data object to this DataPackage.
+            </summary>
+            <param name="package">The package to register the data object in.</param>
+            <param name="table">The table the data is to be added to and removed from.</param>
+            <param name="data">The test data to be inserted to the table.</param>        
+        </member>
+        <member name="T:SeSugar.Data.DataPackageItem">
+            <summary>
+            Represents the data to insert into a database for testing.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.DataPackageItem.#ctor(System.Object,System.String)">
+            <summary>
+            Creates a new DataPackageItem
+            </summary>
+            <param name="data">The data to add.</param>
+            <param name="table">The table the data is to be added to and removed from.</param>
+        </member>
+        <member name="P:SeSugar.Data.DataPackageItem.Params">
+            <summary>
+            A Parameters object with properties to use as parameters when inserting/deleting data. Property names MUST match SQL parameter placeholders.
+            </summary>
+        </member>
+        <member name="P:SeSugar.Data.DataPackageItem.Table">
+            <summary>
+            The table the data is to be added to and removed from.
+            </summary>
+        </member>
+        <member name="P:SeSugar.Data.DataPackageItem.InsertSql">
+            <summary>
+            INSERT SQL statement to add data with parameter placeholders eg. "INSERT INTO dbo.Table (Field) VALUES (@Param)".
+            </summary>
+        </member>
+        <member name="P:SeSugar.Data.DataPackageItem.DeleteSql">
+            <summary>
+            DELETE SQL statement to delete data with parameter placeholders eg. "DELETE FROM dbo.Table WHERE (ID = @Param)".
+            </summary>
+        </member>
+        <member name="T:SeSugar.Data.DataSetup">
+            <summary>
+            Inserts and Deletes data from the database. Usage: The class implements IDisposable - use in a "using" statement to wrap test logic.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Data.DataSetup.#ctor(System.Boolean,System.Boolean,SeSugar.Data.DataPackage[])">
+            <summary>
+            Inserts and Deletes data from the database. Usage: The class implements IDisposable - use in a "using" statement to wrap test logic.
+            </summary>
+            <param name="package">The test data to insert.</param>
+        </member>
+        <member name="M:SeSugar.Data.DataSetup.Dispose">
+            <summary>
+            Removes the test data.
+            </summary>
+        </member>
+        <member name="T:SeSugar.Environment">
+            <summary>
+            Provides access to test session wide environment object instances.
+            </summary>
+        </member>
+        <member name="P:SeSugar.Environment.WebContext">
+            <summary>
+            The WebContext containing in instance of the current IWebDriver.
+            </summary>
+        </member>
+        <member name="P:SeSugar.Environment.Settings">
+            <summary>
+            The instance of the registered ISettings settings provider.
+            </summary>
+        </member>
+        <member name="P:SeSugar.Environment.Logger">
+            <summary>
+            The instance of the registered ILogger.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Environment.Initialise(SeSugar.Interfaces.IWebContext,SeSugar.Interfaces.ISettings,SeSugar.Interfaces.ILogger)">
+            <summary>
+            Intialises the Environment container.
+            </summary>
+            <param name="webContext">The WebContext instance.</param>
+            <param name="settings">The ISettings instance.</param>
+            <param name="logger">The ILogger instance.</param>
+        </member>
+        <member name="T:SeSugar.Utilities">
+            <summary>
+            Provides assorted utility methods for carrying out common tasks.
+            </summary>
+        </member>
+        <member name="M:SeSugar.Utilities.GenerateRandomString(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Generates a random alphabetic string.
+            </summary>
+            <param name="length">The length of the string to generate.</param>
+            <param name="prefix">The string to use as prefix for the generated string.</param>
+            <returns>A random alphabetic string.</returns>
+        </member>
+    </members>
+</doc>

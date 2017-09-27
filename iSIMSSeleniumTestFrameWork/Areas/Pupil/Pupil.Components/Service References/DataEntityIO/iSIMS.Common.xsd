@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/iSIMS.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iSIMS.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CallStatus.enumCallResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Fault" />
+      <xs:enumeration value="AuthenticationFailure" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CallStatus.enumCallResult" nillable="true" type="tns:CallStatus.enumCallResult" />
+  <xs:simpleType name="DocumentProcessorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+      <xs:enumeration value="StatutoryReturn" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DocumentProcessorTypeEnum" nillable="true" type="tns:DocumentProcessorTypeEnum" />
+</xs:schema>

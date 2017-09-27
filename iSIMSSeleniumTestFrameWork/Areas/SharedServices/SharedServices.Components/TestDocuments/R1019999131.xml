@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResultData>
+  <Header>
+    <Year>2013</Year>
+    <DENumber>1019999</DENumber>
+  </Header>
+  <Student>
+    <UPN>H010999914025</UPN>
+    <Surname>Acton</Surname>
+    <Forename>Jordan</Forename>
+    <Gender>M</Gender>
+    <DOB>20040211</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>L010999914085</UPN>
+    <Surname>Adams</Surname>
+    <Forename>Laura</Forename>
+    <Gender>F</Gender>
+    <DOB>20070303</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>X010999914026</UPN>
+    <Surname>Andrews</Surname>
+    <Forename>Jasmine</Forename>
+    <Gender>F</Gender>
+    <DOB>20031206</DOB>
+    <Ethnicity>BA</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>L010999914027</UPN>
+    <Surname>Baker</Surname>
+    <Forename>Jade</Forename>
+    <Gender>F</Gender>
+    <DOB>20040401</DOB>
+    <Ethnicity>TR</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>A010999914030</UPN>
+    <Surname>Baranowski</Surname>
+    <Forename>Tomasz</Forename>
+    <Gender>M</Gender>
+    <DOB>20040201</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>A010999914028</UPN>
+    <Surname>Barnett</Surname>
+    <Forename>Gary</Forename>
+    <Gender>M</Gender>
+    <DOB>20040214</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>P010999914029</UPN>
+    <Surname>Barnett</Surname>
+    <Forename>Gemma</Forename>
+    <Gender>F</Gender>
+    <DOB>20040214</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>A010999914086</UPN>
+    <Surname>Bond</Surname>
+    <Forename>Steven</Forename>
+    <Gender>M</Gender>
+    <DOB>20061010</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>P010999914031</UPN>
+    <Surname>Cale</Surname>
+    <Forename>Billy</Forename>
+    <Gender>M</Gender>
+    <DOB>20040428</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>P010999914087</UPN>
+    <Surname>Carter</Surname>
+    <Forename>Hannah</Forename>
+    <Gender>F</Gender>
+    <DOB>20070428</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>D010999914032</UPN>
+    <Surname>Chapman</Surname>
+    <Forename>Susie</Forename>
+    <Gender>F</Gender>
+    <DOB>20040604</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>D010999914088</UPN>
+    <Surname>Churchill</Surname>
+    <Forename>Martin</Forename>
+    <Gender>M</Gender>
+    <DOB>20060914</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>T010999914089</UPN>
+    <Surname>Cookson</Surname>
+    <Forename>Harry</Forename>
+    <Gender>M</Gender>
+    <DOB>20061027</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>D010999914090</UPN>
+    <Surname>Dixon</Surname>
+    <Forename>Stephanie</Forename>
+    <Gender>F</Gender>
+    <DOB>20060923</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>T010999914091</UPN>
+    <Surname>Francis</Surname>
+    <Forename>Adam</Forename>
+    <Gender>M</Gender>
+    <DOB>20061109</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>T010999914033</UPN>
+    <Surname>Franklin</Surname>
+    <Forename>Chris</Forename>
+    <Gender>M</Gender>
+    <DOB>20040101</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>G010999914034</UPN>
+    <Surname>Gerard</Surname>
+    <Forename>Tina</Forename>
+    <Gender>F</Gender>
+    <DOB>20040331</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>J010999914184</UPN>
+    <Surname>Godwin</Surname>
+    <Forename>Kate</Forename>
+    <Gender>F</Gender>
+    <DOB>20070118</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>W010999914035</UPN>
+    <Surname>Harris</Surname>
+    <Forename>Sean</Forename>
+    <Gender>M</Gender>
+    <DOB>20040601</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>G010999914092</UPN>
+    <Surname>Harvey</Surname>
+    <Forename>Elizabeth</Forename>
+    <Gender>F</Gender>
+    <DOB>20070116</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>W010999914093</UPN>
+    <Surname>Hill</Surname>
+    <Forename>David</Forename>
+    <Gender>M</Gender>
+    <DOB>20070518</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>K010999914094</UPN>
+    <Surname>Jackson</Surname>
+    <Forename>Chloe</Forename>
+    <Gender>F</Gender>
+    <DOB>20061021</DOB>
+    <Ethnicity>MG</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>K010999914036</UPN>
+    <Surname>Keating</Surname>
+    <Forename>Brian</Forename>
+    <Gender>M</Gender>
+    <DOB>20040325</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>Z010999914037</UPN>
+    <Surname>Leigh</Surname>
+    <Forename>Leanne</Forename>
+    <Gender>F</Gender>
+    <DOB>20040304</DOB>
+    <Ethnicity>RO</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>N010999914096</UPN>
+    <Surname>Morgan</Surname>
+    <Forename>Paul</Forename>
+    <Gender>M</Gender>
+    <DOB>20070112</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>Z010999914095</UPN>
+    <Surname>Morgan</Surname>
+    <Forename>Ryan</Forename>
+    <Gender>M</Gender>
+    <DOB>20070112</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>C010999914097</UPN>
+    <Surname>Morris</Surname>
+    <Forename>Julia</Forename>
+    <Gender>F</Gender>
+    <DOB>20070515</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>N010999914038</UPN>
+    <Surname>O'Dell</Surname>
+    <Forename>Charlotte</Forename>
+    <Gender>F</Gender>
+    <DOB>20031223</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>R010999914098</UPN>
+    <Surname>Ostark</Surname>
+    <Forename>Zhivka</Forename>
+    <Gender>F</Gender>
+    <DOB>20070301</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>C010999914039</UPN>
+    <Surname>Palmer</Surname>
+    <Forename>Simon</Forename>
+    <Gender>M</Gender>
+    <DOB>20031016</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>F010999914099</UPN>
+    <Surname>Richards</Surname>
+    <Forename>Stephen</Forename>
+    <Gender>M</Gender>
+    <DOB>20070317</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>Y010999914100</UPN>
+    <Surname>Rogers</Surname>
+    <Forename>Gary</Forename>
+    <Gender>M</Gender>
+    <DOB>20061127</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>M010999914101</UPN>
+    <Surname>Rowe</Surname>
+    <Forename>Selina</Forename>
+    <Gender>F</Gender>
+    <DOB>20070326</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>N010999914040</UPN>
+    <Surname>Smith</Surname>
+    <Forename>Daniel</Forename>
+    <Gender>M</Gender>
+    <DOB>20040207</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>C010999914041</UPN>
+    <Surname>Smith</Surname>
+    <Forename>Jade</Forename>
+    <Gender>F</Gender>
+    <DOB>20040207</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>B010999914102</UPN>
+    <Surname>Stock</Surname>
+    <Forename>Peter</Forename>
+    <Gender>M</Gender>
+    <DOB>20061027</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>R010999914042</UPN>
+    <Surname>Taylor</Surname>
+    <Forename>Sarah</Forename>
+    <Gender>F</Gender>
+    <DOB>20030923</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>Q010999914103</UPN>
+    <Surname>Westwood</Surname>
+    <Forename>Megan</Forename>
+    <Gender>F</Gender>
+    <DOB>20070110</DOB>
+    <Ethnicity>BC</Ethnicity>
+    <NCYear>4</NCYear>
+    <RegGroup>P4</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>03</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>E6</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>F010999914043</UPN>
+    <Surname>White</Surname>
+    <Forename>Helen</Forename>
+    <Gender>F</Gender>
+    <DOB>20040308</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Student>
+    <UPN>V010999914044</UPN>
+    <Surname>Wise</Surname>
+    <Forename>James</Forename>
+    <Gender>M</Gender>
+    <DOB>20040527</DOB>
+    <Ethnicity>WH</Ethnicity>
+    <NCYear>7</NCYear>
+    <RegGroup>P7</RegGroup>
+    <EnrolmentStatus>S</EnrolmentStatus>
+    <SpecialUnit />
+    <Results>
+      <Result>
+        <AspectCode>1</AspectCode>
+        <AspectName>Communication English</AspectName>
+        <ResultGrade>01</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>2</AspectCode>
+        <AspectName>Using Mathematics</AspectName>
+        <ResultGrade>E5</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>3</AspectCode>
+        <AspectName>Communication Irish</AspectName>
+        <ResultGrade>XX</ResultGrade>
+        <ResultDate>XX</ResultDate>
+      </Result>
+      <Result>
+        <AspectCode>4</AspectCode>
+        <AspectName>Using ICT</AspectName>
+        <ResultGrade>QQ</ResultGrade>
+        <ResultDate>20150515</ResultDate>
+      </Result>
+    </Results>
+  </Student>
+  <Footer>
+    <StudentCount>40</StudentCount>
+  </Footer>
+</ResultData>

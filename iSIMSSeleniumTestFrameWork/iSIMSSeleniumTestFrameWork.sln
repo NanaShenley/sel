@@ -1,0 +1,1102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverRunner", "WebDriverRunner\WebDriverRunner.csproj", "{3C348E84-D848-4AB1-A1B7-30A943F91EC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86238416-C0F9-4A4E-836B-1C5F2B4BB75F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRunner", "TestRunner\TestRunner.csproj", "{5F0709B4-FCEA-4653-AC29-36069F470A79}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABEB312C-DC8E-48D8-8CD8-331A01EBF32A} = {ABEB312C-DC8E-48D8-8CD8-331A01EBF32A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverRunnerTests", "WebDriverRunnerTests\WebDriverRunnerTests.csproj", "{3D5AABA1-C490-42EA-B9B9-7E50A8C5642A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlReport", "HtmlReport\HtmlReport.csproj", "{ABEB312C-DC8E-48D8-8CD8-331A01EBF32A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarXMLReport", "SonarXMLReport\SonarXMLReport.csproj", "{6FC6155A-D9CE-4963-A082-9E917D32E147}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B2925EEC-0EEC-4CB5-A080-6C0383B7B729}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestRunner", "TestRunner", "{AC7834E9-1A41-4FB0-A573-93B2412F771F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{4C6675B2-3119-4725-B928-D3C65E6B9DB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Areas", "Areas", "{FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pupil", "Pupil", "{CF3233CC-242E-4AD5-B8E4-8D8216FDF0F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D52008B9-D4E4-47CC-BFF6-3D1F0A31B94C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.PupilRecords.Tests", "Areas\Pupil\Tests\Pupil.PupilRecords.Tests\Pupil.PupilRecords.Tests.csproj", "{5E95A1C1-647B-4F9A-B447-041E3C6435A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.Components", "Areas\Pupil\Pupil.Components\Pupil.Components.csproj", "{570C51F3-FD88-4006-A662-DC4C47485800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedComponents", "Areas\Common\SharedComponents.csproj", "{FED7A3A0-20C0-4CBC-8F02-FF63DAA0FFCB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assessment", "Assessment", "{77465EDE-DF67-4711-8A84-A3C07D1E799D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{77812481-ACED-46EE-BC18-A3AE1F3E8682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Components", "Areas\Assessment\Assessment.Components\Assessment.Components.csproj", "{EDD8D91B-9AB4-428F-9358-D4BD6E0A7C7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Staff", "Staff", "{C70CED82-A857-43A3-85F4-BAB8DA1DE13C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5B411DA5-8432-42D4-8538-8948B218AE7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Staff.Components", "Areas\Staff\Staff.Components\Staff.Components.csproj", "{E8865745-A1AE-4524-A57F-C18C7BE23C0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Attendance", "Attendance", "{9F68FE52-E02D-45C0-A90C-5E86926B9202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.Components", "Areas\Attendance\Attendance.Components\Attendance.Components.csproj", "{F3FF0D7E-5E05-40DD-A56D-BCC89F5016E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communications", "Communications", "{A36BBAB4-71CD-4600-8C0A-08828321E157}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3EE487D3-2AD2-4D54-8D4D-3CB05C012334}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataExchange", "DataExchange", "{72840A0B-EC58-4718-A3B1-F10B67C5A758}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0B2779F9-72F9-468D-AAB7-A29180D9C7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExchange.Tests", "Areas\DataExchange\Tests\DataExchange.Tests\DataExchange.Tests.csproj", "{DE3FA479-CF10-4B0C-A86B-7B2727FB669C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExchange.Components", "Areas\DataExchange\DataExchange.Components\DataExchange.Components.csproj", "{6A2B9611-0679-4733-9633-37E27C6DCCED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facilities", "Facilities", "{9F10122D-DD3D-4CF4-B600-1C96626F86F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facilities.Tests", "Areas\Facilities\Tests\Facilities.Tests\Facilities.Tests.csproj", "{F0A9DBFA-6C1D-49BF-BC1D-9AA1FF40BBB3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986} = {D484E4DF-00C1-4BA0-8E88-5E7B82FC8986}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facilities.Components", "Areas\Facilities\Facilities.Components\Facilities.Components.csproj", "{1CC2043B-3115-40BF-8E8A-10490D91DD24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedServices", "SharedServices", "{3B802FB8-8D24-4195-A5D8-D808A127B5E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{239C4D54-7FCE-4FC6-9BF2-0A1A3A3A9523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices.Tests", "Areas\SharedServices\Tests\SharedServices.Tests\SharedServices.Tests.csproj", "{13986018-E22F-49B2-9F1B-D5E96BF2BF2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices.Components", "Areas\SharedServices\SharedServices.Components\SharedServices.Components.csproj", "{A3B84830-FE43-4BEA-AB88-AF502A75F9CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6D032405-FEE0-4C89-92B4-463052DACAD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.PupilLog.Tests", "Areas\Pupil\Tests\Pupil.PupilLog.Tests\Pupil.PupilLog.Tests.csproj", "{59B44D4D-B190-4AAE-AD2F-7ADBE82F01E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.BulkUpdate.Tests", "Areas\Pupil\Tests\Pupil.BulkUpdate.Tests\Pupil.BulkUpdate.Tests.csproj", "{238DC86D-83F7-446B-BE92-5118345972A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataExample", "DataExample", "{EF3AF0C9-AEA5-4E67-822B-3B53AB5CE711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetDataViaWebServices", "DataExample\GetDataViaWebServices\GetDataViaWebServices.csproj", "{430F297C-EF93-4779-B013-04E1E5BD5C53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetDataViaNdbUnit", "DataExample\GetDataViaNdbUnit\GetDataViaNdbUnit.csproj", "{B35B4DCC-7878-43EB-8E7B-CFF71577BC9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRXReport", "TRXReport\TRXReport.csproj", "{B466810C-8A68-4CF1-873B-8F428769ECFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleReport", "ConsoleReport\ConsoleReport.csproj", "{B4E8421C-1F6E-4DD4-9710-99480AE1BD1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Test", "AddressBook.Test\AddressBook.Test.csproj", "{FF305476-17EE-43E8-9C5D-A6DB1632C3D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStashReporter", "LogStashReporter\LogStashReporter.csproj", "{107BA364-35B3-4983-892A-3593A83DD88A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.AttendancePattern.Tests", "Areas\Attendance\Tests\Attendance.AttendancePattern.Tests\Attendance.AttendancePattern.Tests.csproj", "{5799CC47-6D4F-4EE1-AFFE-2EEB4F2CD90A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.EditMarks.Tests", "Areas\Attendance\Tests\Attendance.EditMarks.Tests\Attendance.EditMarks.Tests.csproj", "{EDE27C53-D241-4A21-A309-A50D027660FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.ExceptionalCircumstances.Tests", "Areas\Attendance\Tests\Attendance.ExceptionalCircumstances.Tests\Attendance.ExceptionalCircumstances.Tests.csproj", "{4B2DCEC6-5173-46EF-9164-57A91432CF43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.Smoke.Tests", "Areas\Pupil\Tests\Pupil.Smoke.Tests\Pupil.Smoke.Tests.csproj", "{BD0B9604-4934-41FC-AC5F-5A6B795E5DA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.CurrentPupil.Test", "AddressBook.CurrentPupil.Test\AddressBook.CurrentPupil.Test.csproj", "{F7E9C10E-107D-4D09-9A2B-AB3F431B4F3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.PupilContact.Test", "AddressBook.PupilContact.Test\AddressBook.PupilContact.Test.csproj", "{6A2E0EFF-7BEF-4279-AC68-CAAC9F04055C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.CurrentStaff.Test", "AddressBook.CurrentStaff.Test\AddressBook.CurrentStaff.Test.csproj", "{C60F673A-A9B4-4BF0-A892-7E55E68F2955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSettings", "TestSettings\TestSettings.csproj", "{624080AE-2133-4EC6-9F6E-CED0B8713073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facilities.ManageKPI.Tests", "Areas\Facilities\Tests\Facilities.ManageKPI.Tests\Facilities.ManageKPI.Tests.csproj", "{DF3740B2-0A1D-4BFD-BFC0-4662D7895010}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986} = {D484E4DF-00C1-4BA0-8E88-5E7B82FC8986}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.DEA.Tests", "Assessment.DEA.Tests\Assessment.DEA.Tests.csproj", "{A862E729-4109-48CD-8EC8-2387B4887B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSiteandBuildingTests", "Areas\Facilities\Tests\SchoolSiteandBuildingTests\SchoolSiteandBuildingTests.csproj", "{B1169595-365F-435E-A491-566492AD3C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agents.Components", "Agents.Components\Agents.Components.csproj", "{A339DDC7-9436-4FAC-9F53-A93EAE3606AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageAgents.Test", "ManageAgents.Test\ManageAgents.Test.csproj", "{D1A250AE-24E6-4151-8B51-F39D6A3DFA6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.EarlyYearsProvisions.Tests", "Areas\Attendance\Tests\Attendance.EarlyYearsProvisions.Tests\Attendance.EarlyYearsProvisions.Tests.csproj", "{91F93402-B45F-474B-99FB-4BEBECA98869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Staff.Tests", "Areas\Staff\Tests\Staff.Tests\Staff.Tests.csproj", "{49C9404B-E2CD-4322-B07F-BA4DB44F56E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Staff.POM", "Areas\Staff\Staff.POM\Staff.POM.csproj", "{67CFDEBF-EC66-48AA-BE88-4CDD9FCA1523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.POM", "Areas\Attendance\Attendance.POM\Attendance.POM.csproj", "{928FBD8B-B4E8-4688-9982-BBE269E5D321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication_OldScreens.Tests", "Areas\Communication\Communication_OldScreens.Tests\Communication_OldScreens.Tests.csproj", "{0E89CA31-3C18-4CAA-A421-3D60F9D021FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communications.POM", "Areas\Communication\Communications.POM\Communications.POM.csproj", "{4DB2A95E-706A-4843-AF0B-04C2CA83F990}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.ApplyMarkOverDateRange.Tests", "Areas\Attendance\Tests\Attendance.ApplyMarkOverDateRange.Tests\Attendance.ApplyMarkOverDateRange.Tests.csproj", "{CD034815-6025-41F7-86CE-385B384F4794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageTemplate.Test", "ManageTemplate.Test\ManageTemplate.Test.csproj", "{4E19D62B-1841-4C85-8CE1-58A9531D5F1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Components", "Template.Components\Template.Components.csproj", "{A6D8E499-8E1B-49D4-A2D3-1DD402176D65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.ClassLog.Tests", "Areas\Pupil\Tests\Pupil.ClassLog.Tests\Pupil.ClassLog.Tests.csproj", "{7943FC81-2760-40EC-8E0F-D3771139FAA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POM", "Areas\Pupil\Pupil.POM\POM.csproj", "{0B1A1520-61CD-4B23-AB1A-FCDC6D694C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facilities.POM", "Areas\Facilities\Facilities.POM\Facilities.POM.csproj", "{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faclities.LogigearTests", "Areas\Facilities\Tests\Faclities.LogigearTests\Faclities.LogigearTests.csproj", "{C53CAB03-0C04-45A9-B02B-684C7BFC9F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.DealWithSpecificMarks.Tests", "Areas\Attendance\Tests\Attendance.DealWithSpecificMarks.Tests\Attendance.DealWithSpecificMarks.Tests.csproj", "{EC9F1031-502A-491E-A0FB-371BC65D9D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurriculumSchemeDetailsTest", "Areas\Facilities\Tests\CurriculumSchemeDetailsTest\CurriculumSchemeDetailsTest.csproj", "{18C8266D-17E2-4BA4-BB43-FCFD98099693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.Data", "Areas\Pupil\Pupil.Data\Pupil.Data.csproj", "{E078CE13-6BAB-4E50-BBAA-43434E46CD36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.PupilContacts.Tests", "Areas\Pupil\Tests\Pupil.PupilContact.Tests\Pupil.PupilContacts.Tests.csproj", "{8B0D6881-BF33-4CFF-A8CE-495BC6F69AB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.SENRecords.Tests", "Areas\Pupil\Tests\Pupil.PupilSENRecord.Tests\Pupil.SENRecords.Tests.csproj", "{5E1823FA-736C-411B-A263-95D7C47FBE1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conduct", "Conduct", "{BF11D695-1B7A-4BEA-B0FD-FD3587A36C1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pupils", "Pupils", "{ACDB1477-DD5F-4C08-8A79-52D246766E10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.CNR.CreateMarksheet.Tests", "Areas\Assessment\Tests\Assessment.Tests\Assessment.CNR.CreateMarksheet.Tests.csproj", "{DB367365-DD4E-45DE-9B34-0C93129F4F68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.CNR.OtherScreens.Tests", "Areas\Assessment\Tests\Assessment.CNR.OtherScreens.Tests\Assessment.CNR.OtherScreens.Tests.csproj", "{A9F557FA-6681-4FEC-8A31-B6D1B2FF8D30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.CNR.POSMarksheet.Tests", "Areas\Assessment\Tests\Assessment.CNR.POSMarksheet.Tests\Assessment.CNR.POSMarksheet.Tests.csproj", "{CB919A85-C7AE-43F3-9EA4-44C7D96BF10A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExchange.POM", "Areas\DataExchange\DataExchange.POM\DataExchange.POM.csproj", "{7473B6D6-C689-4E7C-AA7C-808EB926CEB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Census.Tests", "Areas\DataExchange\Tests\Census.Tests\Census.Tests.csproj", "{6640D5C8-F692-4D30-9398-57A72665F69C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Obsolete", "Obsolete", "{4CA069EA-522F-44C8-928D-E81BA489B336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureBee", "FeatureBee\FeatureBee.csproj", "{23D234B2-FF36-465E-9C78-040FF6D3F737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices.TestData", "SharedServices.TestData\SharedServices.TestData.csproj", "{E22AF092-2338-4BBC-93E6-D2A2586176CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BatchInitialise", "BatchInitialise", "{FDA7B0BF-64C1-4BD8-98B5-55F2D372089F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchInitialise", "BatchInitialise\BatchInitialise.csproj", "{3B911061-35E4-4134-9A92-5E2460BBA6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facilities.Data", "Areas\Facilities\Facilities.Data\Facilities.Data.csproj", "{A4109CF5-1BB4-4CFF-B708-D3EB3E7B4558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.PupilPremium.Tests", "Areas\Pupil\Tests\Pupil.PupilPremium.Tests\Pupil.PupilPremium.Tests.csproj", "{F6F83708-D4C6-4C36-A694-2E0420C0A783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentalReporting.Template.Test", "Communications\ParentalReporting.Template.Test\ParentalReporting.Template.Test.csproj", "{D409BB76-C7A8-463C-B8E0-A5CCC6D1C238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentalReporting.Components", "Communications\ParentalReporting.Components\ParentalReporting.Components.csproj", "{FF1A6388-2E7E-466C-B9B3-58ED77AFAE85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attendance.EarlyYearSessionPattern.Tests", "Attendance.EarlyYearSessionPattern.Tests\Attendance.EarlyYearSessionPattern.Tests.csproj", "{CEBECD95-538F-4842-A79B-F7952E5508B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Tests", "Areas\Facilities\Tests\Calendar.Tests\Calendar.Tests.csproj", "{2177AED1-54F8-4BAF-9764-0881AC84EED5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communications.Components", "Communications.Components", "{7370B44A-752E-4AE0-A9AD-7A6BDE5417D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Components", "Areas\Communications\Communications.Components\AddressBook.Components\AddressBook.Components.csproj", "{ED8332D6-0FDA-4D84-8283-2004BB4B0D8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Staff.NonDestructive", "Areas\Staff\Tests\Staff.NonDestructive\Staff.NonDestructive.csproj", "{147B614A-3C10-4744-A1FF-96EFF3D4CF49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.Conduct.Tests", "Areas\Pupil\Tests\Pupil.Conduct.Tests\Pupil.Conduct.Tests.csproj", "{0FEEDF43-581A-4C3C-894A-B2BC8F1840DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admissions", "Admissions", "{086D7C99-4826-47FA-B333-8538B3EEDA9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.Component", "Areas\Admissions\Admissions.Component\Admissions.Component.csproj", "{19997C91-756D-4087-BEF6-2B3B333F256F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27DD4843-AD6A-437F-89B5-3636591468E0} = {27DD4843-AD6A-437F-89B5-3636591468E0}
+		{215D6D72-4F81-41AE-8889-BA456640614A} = {215D6D72-4F81-41AE-8889-BA456640614A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.Data", "Areas\Admissions\Admissions.data\Admissions.Data.csproj", "{215D6D72-4F81-41AE-8889-BA456640614A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F0D7B941-CEE5-4061-8726-7DA04C4439A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.Application.Tests", "Areas\Admissions\Tests\Admissions.Application.Tests\Admissions.Application.Tests.csproj", "{B0F61B58-3E56-4F17-AC0A-84FA47EBF8FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel", "Areas\Admissions\PageObjectModel\PageObjectModel.csproj", "{27DD4843-AD6A-437F-89B5-3636591468E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.SchoolIntake.Tests", "Areas\Admissions\Tests\Admissions.SchoolIntake.Tests\Admissions.SchoolIntake.Tests.csproj", "{F1FF0ECE-E6A9-4D59-AA73-D9FFEC9A43B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.Smoke.Tests", "Areas\Admissions\Tests\Admissions.Smoke.Tests\Admissions.Smoke.Tests.csproj", "{66B594FF-909E-456B-AAA1-D9131E023A38}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27DD4843-AD6A-437F-89B5-3636591468E0} = {27DD4843-AD6A-437F-89B5-3636591468E0}
+		{215D6D72-4F81-41AE-8889-BA456640614A} = {215D6D72-4F81-41AE-8889-BA456640614A}
+		{19997C91-756D-4087-BEF6-2B3B333F256F} = {19997C91-756D-4087-BEF6-2B3B333F256F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.BulkUpdate.Tests", "Areas\Admissions\Tests\Admissions.BulkUpdate.Tests\Admissions.BulkUpdate.Tests.csproj", "{7F9BD023-CBAE-4617-9BE8-A11EC496F876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedServices.NonDestructive", "Areas\SharedServices\Tests\SharedServices.NonDestructive\SharedServices.NonDestructive.csproj", "{5BA40F49-FFE6-4ED6-99F8-61446DDCE268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.PupilAddress.Tests", "Areas\Pupil\Tests\PupilAddressTests2\Pupil.PupilAddress.Tests.csproj", "{29C2D23D-128C-484D-839B-238C45ABE41E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.Enquiries.Tests", "Areas\Admissions\Tests\Admissions.Enquiries.Tests\Admissions.Enquiries.Tests.csproj", "{111A05DC-4976-4F7D-8BEF-C28BAA5CC414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admissions.Policy.Tests", "Areas\Admissions\Tests\Admissions.Policy.Tests\Admissions.Policy.Tests.csproj", "{2C9DDB71-DD90-4EE8-81F2-C4E26C3DA75B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationLog.Test", "CommunicationLog.Test\CommunicationLog.Test.csproj", "{94EDBE3B-A163-4CBF-B865-4033DEA3C267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationLog.Components", "CommunicationLog.Components\CommunicationLog.Components.csproj", "{A5D45E35-3235-43E1-9C5E-7B682CD7348F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migration", "Migration", "{33BE4E2F-D7E0-4D5A-B919-130E0F142BFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8A492F0C-06B0-465C-AF65-71D6A059528A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migration.Tests", "Areas\Migration\Tests\Migration.Tests\Migration.Tests.csproj", "{52555B0F-07C7-479B-9E4A-7F9C45CA8DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migration.POM", "Areas\Migration\Migration.POM\Migration.POM.csproj", "{4C73AEBC-B240-4BA3-8116-2030D605103F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C348E84-D848-4AB1-A1B7-30A943F91EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C348E84-D848-4AB1-A1B7-30A943F91EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C348E84-D848-4AB1-A1B7-30A943F91EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C348E84-D848-4AB1-A1B7-30A943F91EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0709B4-FCEA-4653-AC29-36069F470A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0709B4-FCEA-4653-AC29-36069F470A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0709B4-FCEA-4653-AC29-36069F470A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0709B4-FCEA-4653-AC29-36069F470A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D5AABA1-C490-42EA-B9B9-7E50A8C5642A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5AABA1-C490-42EA-B9B9-7E50A8C5642A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5AABA1-C490-42EA-B9B9-7E50A8C5642A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5AABA1-C490-42EA-B9B9-7E50A8C5642A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEB312C-DC8E-48D8-8CD8-331A01EBF32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEB312C-DC8E-48D8-8CD8-331A01EBF32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEB312C-DC8E-48D8-8CD8-331A01EBF32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEB312C-DC8E-48D8-8CD8-331A01EBF32A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC6155A-D9CE-4963-A082-9E917D32E147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC6155A-D9CE-4963-A082-9E917D32E147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC6155A-D9CE-4963-A082-9E917D32E147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC6155A-D9CE-4963-A082-9E917D32E147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E95A1C1-647B-4F9A-B447-041E3C6435A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E95A1C1-647B-4F9A-B447-041E3C6435A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E95A1C1-647B-4F9A-B447-041E3C6435A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E95A1C1-647B-4F9A-B447-041E3C6435A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{570C51F3-FD88-4006-A662-DC4C47485800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{570C51F3-FD88-4006-A662-DC4C47485800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{570C51F3-FD88-4006-A662-DC4C47485800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{570C51F3-FD88-4006-A662-DC4C47485800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED7A3A0-20C0-4CBC-8F02-FF63DAA0FFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED7A3A0-20C0-4CBC-8F02-FF63DAA0FFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED7A3A0-20C0-4CBC-8F02-FF63DAA0FFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED7A3A0-20C0-4CBC-8F02-FF63DAA0FFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD8D91B-9AB4-428F-9358-D4BD6E0A7C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD8D91B-9AB4-428F-9358-D4BD6E0A7C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD8D91B-9AB4-428F-9358-D4BD6E0A7C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD8D91B-9AB4-428F-9358-D4BD6E0A7C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8865745-A1AE-4524-A57F-C18C7BE23C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8865745-A1AE-4524-A57F-C18C7BE23C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8865745-A1AE-4524-A57F-C18C7BE23C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8865745-A1AE-4524-A57F-C18C7BE23C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3FF0D7E-5E05-40DD-A56D-BCC89F5016E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3FF0D7E-5E05-40DD-A56D-BCC89F5016E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3FF0D7E-5E05-40DD-A56D-BCC89F5016E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3FF0D7E-5E05-40DD-A56D-BCC89F5016E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3FA479-CF10-4B0C-A86B-7B2727FB669C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3FA479-CF10-4B0C-A86B-7B2727FB669C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3FA479-CF10-4B0C-A86B-7B2727FB669C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3FA479-CF10-4B0C-A86B-7B2727FB669C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2B9611-0679-4733-9633-37E27C6DCCED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2B9611-0679-4733-9633-37E27C6DCCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2B9611-0679-4733-9633-37E27C6DCCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2B9611-0679-4733-9633-37E27C6DCCED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A9DBFA-6C1D-49BF-BC1D-9AA1FF40BBB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A9DBFA-6C1D-49BF-BC1D-9AA1FF40BBB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A9DBFA-6C1D-49BF-BC1D-9AA1FF40BBB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A9DBFA-6C1D-49BF-BC1D-9AA1FF40BBB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC2043B-3115-40BF-8E8A-10490D91DD24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC2043B-3115-40BF-8E8A-10490D91DD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC2043B-3115-40BF-8E8A-10490D91DD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC2043B-3115-40BF-8E8A-10490D91DD24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13986018-E22F-49B2-9F1B-D5E96BF2BF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13986018-E22F-49B2-9F1B-D5E96BF2BF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13986018-E22F-49B2-9F1B-D5E96BF2BF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13986018-E22F-49B2-9F1B-D5E96BF2BF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3B84830-FE43-4BEA-AB88-AF502A75F9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B84830-FE43-4BEA-AB88-AF502A75F9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B84830-FE43-4BEA-AB88-AF502A75F9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B84830-FE43-4BEA-AB88-AF502A75F9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B44D4D-B190-4AAE-AD2F-7ADBE82F01E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B44D4D-B190-4AAE-AD2F-7ADBE82F01E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B44D4D-B190-4AAE-AD2F-7ADBE82F01E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B44D4D-B190-4AAE-AD2F-7ADBE82F01E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{238DC86D-83F7-446B-BE92-5118345972A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{238DC86D-83F7-446B-BE92-5118345972A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{238DC86D-83F7-446B-BE92-5118345972A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{238DC86D-83F7-446B-BE92-5118345972A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430F297C-EF93-4779-B013-04E1E5BD5C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430F297C-EF93-4779-B013-04E1E5BD5C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430F297C-EF93-4779-B013-04E1E5BD5C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430F297C-EF93-4779-B013-04E1E5BD5C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35B4DCC-7878-43EB-8E7B-CFF71577BC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35B4DCC-7878-43EB-8E7B-CFF71577BC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35B4DCC-7878-43EB-8E7B-CFF71577BC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35B4DCC-7878-43EB-8E7B-CFF71577BC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B466810C-8A68-4CF1-873B-8F428769ECFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B466810C-8A68-4CF1-873B-8F428769ECFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B466810C-8A68-4CF1-873B-8F428769ECFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B466810C-8A68-4CF1-873B-8F428769ECFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E8421C-1F6E-4DD4-9710-99480AE1BD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E8421C-1F6E-4DD4-9710-99480AE1BD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E8421C-1F6E-4DD4-9710-99480AE1BD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E8421C-1F6E-4DD4-9710-99480AE1BD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF305476-17EE-43E8-9C5D-A6DB1632C3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF305476-17EE-43E8-9C5D-A6DB1632C3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF305476-17EE-43E8-9C5D-A6DB1632C3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF305476-17EE-43E8-9C5D-A6DB1632C3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{107BA364-35B3-4983-892A-3593A83DD88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{107BA364-35B3-4983-892A-3593A83DD88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{107BA364-35B3-4983-892A-3593A83DD88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{107BA364-35B3-4983-892A-3593A83DD88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5799CC47-6D4F-4EE1-AFFE-2EEB4F2CD90A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5799CC47-6D4F-4EE1-AFFE-2EEB4F2CD90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5799CC47-6D4F-4EE1-AFFE-2EEB4F2CD90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5799CC47-6D4F-4EE1-AFFE-2EEB4F2CD90A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE27C53-D241-4A21-A309-A50D027660FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE27C53-D241-4A21-A309-A50D027660FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE27C53-D241-4A21-A309-A50D027660FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE27C53-D241-4A21-A309-A50D027660FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2DCEC6-5173-46EF-9164-57A91432CF43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2DCEC6-5173-46EF-9164-57A91432CF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2DCEC6-5173-46EF-9164-57A91432CF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2DCEC6-5173-46EF-9164-57A91432CF43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0B9604-4934-41FC-AC5F-5A6B795E5DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0B9604-4934-41FC-AC5F-5A6B795E5DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0B9604-4934-41FC-AC5F-5A6B795E5DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0B9604-4934-41FC-AC5F-5A6B795E5DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E9C10E-107D-4D09-9A2B-AB3F431B4F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E9C10E-107D-4D09-9A2B-AB3F431B4F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E9C10E-107D-4D09-9A2B-AB3F431B4F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E9C10E-107D-4D09-9A2B-AB3F431B4F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2E0EFF-7BEF-4279-AC68-CAAC9F04055C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2E0EFF-7BEF-4279-AC68-CAAC9F04055C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2E0EFF-7BEF-4279-AC68-CAAC9F04055C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2E0EFF-7BEF-4279-AC68-CAAC9F04055C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C60F673A-A9B4-4BF0-A892-7E55E68F2955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60F673A-A9B4-4BF0-A892-7E55E68F2955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60F673A-A9B4-4BF0-A892-7E55E68F2955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C60F673A-A9B4-4BF0-A892-7E55E68F2955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{624080AE-2133-4EC6-9F6E-CED0B8713073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624080AE-2133-4EC6-9F6E-CED0B8713073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624080AE-2133-4EC6-9F6E-CED0B8713073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624080AE-2133-4EC6-9F6E-CED0B8713073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3740B2-0A1D-4BFD-BFC0-4662D7895010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3740B2-0A1D-4BFD-BFC0-4662D7895010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3740B2-0A1D-4BFD-BFC0-4662D7895010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3740B2-0A1D-4BFD-BFC0-4662D7895010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A862E729-4109-48CD-8EC8-2387B4887B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A862E729-4109-48CD-8EC8-2387B4887B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A862E729-4109-48CD-8EC8-2387B4887B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A862E729-4109-48CD-8EC8-2387B4887B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1169595-365F-435E-A491-566492AD3C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1169595-365F-435E-A491-566492AD3C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1169595-365F-435E-A491-566492AD3C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1169595-365F-435E-A491-566492AD3C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A339DDC7-9436-4FAC-9F53-A93EAE3606AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A339DDC7-9436-4FAC-9F53-A93EAE3606AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A339DDC7-9436-4FAC-9F53-A93EAE3606AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A339DDC7-9436-4FAC-9F53-A93EAE3606AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A250AE-24E6-4151-8B51-F39D6A3DFA6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A250AE-24E6-4151-8B51-F39D6A3DFA6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A250AE-24E6-4151-8B51-F39D6A3DFA6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A250AE-24E6-4151-8B51-F39D6A3DFA6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F93402-B45F-474B-99FB-4BEBECA98869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F93402-B45F-474B-99FB-4BEBECA98869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F93402-B45F-474B-99FB-4BEBECA98869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F93402-B45F-474B-99FB-4BEBECA98869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49C9404B-E2CD-4322-B07F-BA4DB44F56E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C9404B-E2CD-4322-B07F-BA4DB44F56E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C9404B-E2CD-4322-B07F-BA4DB44F56E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C9404B-E2CD-4322-B07F-BA4DB44F56E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CFDEBF-EC66-48AA-BE88-4CDD9FCA1523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CFDEBF-EC66-48AA-BE88-4CDD9FCA1523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CFDEBF-EC66-48AA-BE88-4CDD9FCA1523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CFDEBF-EC66-48AA-BE88-4CDD9FCA1523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928FBD8B-B4E8-4688-9982-BBE269E5D321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928FBD8B-B4E8-4688-9982-BBE269E5D321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928FBD8B-B4E8-4688-9982-BBE269E5D321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928FBD8B-B4E8-4688-9982-BBE269E5D321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E89CA31-3C18-4CAA-A421-3D60F9D021FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E89CA31-3C18-4CAA-A421-3D60F9D021FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E89CA31-3C18-4CAA-A421-3D60F9D021FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E89CA31-3C18-4CAA-A421-3D60F9D021FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB2A95E-706A-4843-AF0B-04C2CA83F990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB2A95E-706A-4843-AF0B-04C2CA83F990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB2A95E-706A-4843-AF0B-04C2CA83F990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB2A95E-706A-4843-AF0B-04C2CA83F990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD034815-6025-41F7-86CE-385B384F4794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD034815-6025-41F7-86CE-385B384F4794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD034815-6025-41F7-86CE-385B384F4794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD034815-6025-41F7-86CE-385B384F4794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E19D62B-1841-4C85-8CE1-58A9531D5F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E19D62B-1841-4C85-8CE1-58A9531D5F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E19D62B-1841-4C85-8CE1-58A9531D5F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E19D62B-1841-4C85-8CE1-58A9531D5F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D8E499-8E1B-49D4-A2D3-1DD402176D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D8E499-8E1B-49D4-A2D3-1DD402176D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D8E499-8E1B-49D4-A2D3-1DD402176D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D8E499-8E1B-49D4-A2D3-1DD402176D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7943FC81-2760-40EC-8E0F-D3771139FAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7943FC81-2760-40EC-8E0F-D3771139FAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7943FC81-2760-40EC-8E0F-D3771139FAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7943FC81-2760-40EC-8E0F-D3771139FAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B1A1520-61CD-4B23-AB1A-FCDC6D694C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B1A1520-61CD-4B23-AB1A-FCDC6D694C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B1A1520-61CD-4B23-AB1A-FCDC6D694C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B1A1520-61CD-4B23-AB1A-FCDC6D694C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C53CAB03-0C04-45A9-B02B-684C7BFC9F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53CAB03-0C04-45A9-B02B-684C7BFC9F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53CAB03-0C04-45A9-B02B-684C7BFC9F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53CAB03-0C04-45A9-B02B-684C7BFC9F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC9F1031-502A-491E-A0FB-371BC65D9D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9F1031-502A-491E-A0FB-371BC65D9D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC9F1031-502A-491E-A0FB-371BC65D9D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC9F1031-502A-491E-A0FB-371BC65D9D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18C8266D-17E2-4BA4-BB43-FCFD98099693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C8266D-17E2-4BA4-BB43-FCFD98099693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C8266D-17E2-4BA4-BB43-FCFD98099693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C8266D-17E2-4BA4-BB43-FCFD98099693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E078CE13-6BAB-4E50-BBAA-43434E46CD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E078CE13-6BAB-4E50-BBAA-43434E46CD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E078CE13-6BAB-4E50-BBAA-43434E46CD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E078CE13-6BAB-4E50-BBAA-43434E46CD36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0D6881-BF33-4CFF-A8CE-495BC6F69AB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0D6881-BF33-4CFF-A8CE-495BC6F69AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0D6881-BF33-4CFF-A8CE-495BC6F69AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0D6881-BF33-4CFF-A8CE-495BC6F69AB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1823FA-736C-411B-A263-95D7C47FBE1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1823FA-736C-411B-A263-95D7C47FBE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1823FA-736C-411B-A263-95D7C47FBE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1823FA-736C-411B-A263-95D7C47FBE1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB367365-DD4E-45DE-9B34-0C93129F4F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB367365-DD4E-45DE-9B34-0C93129F4F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB367365-DD4E-45DE-9B34-0C93129F4F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB367365-DD4E-45DE-9B34-0C93129F4F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F557FA-6681-4FEC-8A31-B6D1B2FF8D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F557FA-6681-4FEC-8A31-B6D1B2FF8D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F557FA-6681-4FEC-8A31-B6D1B2FF8D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F557FA-6681-4FEC-8A31-B6D1B2FF8D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB919A85-C7AE-43F3-9EA4-44C7D96BF10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB919A85-C7AE-43F3-9EA4-44C7D96BF10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB919A85-C7AE-43F3-9EA4-44C7D96BF10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB919A85-C7AE-43F3-9EA4-44C7D96BF10A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7473B6D6-C689-4E7C-AA7C-808EB926CEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7473B6D6-C689-4E7C-AA7C-808EB926CEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7473B6D6-C689-4E7C-AA7C-808EB926CEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7473B6D6-C689-4E7C-AA7C-808EB926CEB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6640D5C8-F692-4D30-9398-57A72665F69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6640D5C8-F692-4D30-9398-57A72665F69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6640D5C8-F692-4D30-9398-57A72665F69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6640D5C8-F692-4D30-9398-57A72665F69C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D234B2-FF36-465E-9C78-040FF6D3F737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D234B2-FF36-465E-9C78-040FF6D3F737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D234B2-FF36-465E-9C78-040FF6D3F737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D234B2-FF36-465E-9C78-040FF6D3F737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22AF092-2338-4BBC-93E6-D2A2586176CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22AF092-2338-4BBC-93E6-D2A2586176CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22AF092-2338-4BBC-93E6-D2A2586176CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22AF092-2338-4BBC-93E6-D2A2586176CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B911061-35E4-4134-9A92-5E2460BBA6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B911061-35E4-4134-9A92-5E2460BBA6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B911061-35E4-4134-9A92-5E2460BBA6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B911061-35E4-4134-9A92-5E2460BBA6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4109CF5-1BB4-4CFF-B708-D3EB3E7B4558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4109CF5-1BB4-4CFF-B708-D3EB3E7B4558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4109CF5-1BB4-4CFF-B708-D3EB3E7B4558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4109CF5-1BB4-4CFF-B708-D3EB3E7B4558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F83708-D4C6-4C36-A694-2E0420C0A783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F83708-D4C6-4C36-A694-2E0420C0A783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F83708-D4C6-4C36-A694-2E0420C0A783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F83708-D4C6-4C36-A694-2E0420C0A783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D409BB76-C7A8-463C-B8E0-A5CCC6D1C238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D409BB76-C7A8-463C-B8E0-A5CCC6D1C238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D409BB76-C7A8-463C-B8E0-A5CCC6D1C238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D409BB76-C7A8-463C-B8E0-A5CCC6D1C238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1A6388-2E7E-466C-B9B3-58ED77AFAE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1A6388-2E7E-466C-B9B3-58ED77AFAE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1A6388-2E7E-466C-B9B3-58ED77AFAE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1A6388-2E7E-466C-B9B3-58ED77AFAE85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBECD95-538F-4842-A79B-F7952E5508B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBECD95-538F-4842-A79B-F7952E5508B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBECD95-538F-4842-A79B-F7952E5508B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBECD95-538F-4842-A79B-F7952E5508B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2177AED1-54F8-4BAF-9764-0881AC84EED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2177AED1-54F8-4BAF-9764-0881AC84EED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2177AED1-54F8-4BAF-9764-0881AC84EED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2177AED1-54F8-4BAF-9764-0881AC84EED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED8332D6-0FDA-4D84-8283-2004BB4B0D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED8332D6-0FDA-4D84-8283-2004BB4B0D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED8332D6-0FDA-4D84-8283-2004BB4B0D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED8332D6-0FDA-4D84-8283-2004BB4B0D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147B614A-3C10-4744-A1FF-96EFF3D4CF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147B614A-3C10-4744-A1FF-96EFF3D4CF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147B614A-3C10-4744-A1FF-96EFF3D4CF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147B614A-3C10-4744-A1FF-96EFF3D4CF49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FEEDF43-581A-4C3C-894A-B2BC8F1840DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEEDF43-581A-4C3C-894A-B2BC8F1840DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEEDF43-581A-4C3C-894A-B2BC8F1840DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEEDF43-581A-4C3C-894A-B2BC8F1840DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19997C91-756D-4087-BEF6-2B3B333F256F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19997C91-756D-4087-BEF6-2B3B333F256F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19997C91-756D-4087-BEF6-2B3B333F256F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19997C91-756D-4087-BEF6-2B3B333F256F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215D6D72-4F81-41AE-8889-BA456640614A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215D6D72-4F81-41AE-8889-BA456640614A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215D6D72-4F81-41AE-8889-BA456640614A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215D6D72-4F81-41AE-8889-BA456640614A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F61B58-3E56-4F17-AC0A-84FA47EBF8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F61B58-3E56-4F17-AC0A-84FA47EBF8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F61B58-3E56-4F17-AC0A-84FA47EBF8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F61B58-3E56-4F17-AC0A-84FA47EBF8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27DD4843-AD6A-437F-89B5-3636591468E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DD4843-AD6A-437F-89B5-3636591468E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DD4843-AD6A-437F-89B5-3636591468E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DD4843-AD6A-437F-89B5-3636591468E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1FF0ECE-E6A9-4D59-AA73-D9FFEC9A43B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1FF0ECE-E6A9-4D59-AA73-D9FFEC9A43B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1FF0ECE-E6A9-4D59-AA73-D9FFEC9A43B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1FF0ECE-E6A9-4D59-AA73-D9FFEC9A43B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B594FF-909E-456B-AAA1-D9131E023A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B594FF-909E-456B-AAA1-D9131E023A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B594FF-909E-456B-AAA1-D9131E023A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B594FF-909E-456B-AAA1-D9131E023A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F9BD023-CBAE-4617-9BE8-A11EC496F876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F9BD023-CBAE-4617-9BE8-A11EC496F876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F9BD023-CBAE-4617-9BE8-A11EC496F876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F9BD023-CBAE-4617-9BE8-A11EC496F876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA40F49-FFE6-4ED6-99F8-61446DDCE268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA40F49-FFE6-4ED6-99F8-61446DDCE268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA40F49-FFE6-4ED6-99F8-61446DDCE268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA40F49-FFE6-4ED6-99F8-61446DDCE268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C2D23D-128C-484D-839B-238C45ABE41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C2D23D-128C-484D-839B-238C45ABE41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C2D23D-128C-484D-839B-238C45ABE41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C2D23D-128C-484D-839B-238C45ABE41E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{111A05DC-4976-4F7D-8BEF-C28BAA5CC414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{111A05DC-4976-4F7D-8BEF-C28BAA5CC414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{111A05DC-4976-4F7D-8BEF-C28BAA5CC414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{111A05DC-4976-4F7D-8BEF-C28BAA5CC414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C9DDB71-DD90-4EE8-81F2-C4E26C3DA75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C9DDB71-DD90-4EE8-81F2-C4E26C3DA75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C9DDB71-DD90-4EE8-81F2-C4E26C3DA75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C9DDB71-DD90-4EE8-81F2-C4E26C3DA75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94EDBE3B-A163-4CBF-B865-4033DEA3C267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94EDBE3B-A163-4CBF-B865-4033DEA3C267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94EDBE3B-A163-4CBF-B865-4033DEA3C267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94EDBE3B-A163-4CBF-B865-4033DEA3C267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D45E35-3235-43E1-9C5E-7B682CD7348F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D45E35-3235-43E1-9C5E-7B682CD7348F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D45E35-3235-43E1-9C5E-7B682CD7348F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D45E35-3235-43E1-9C5E-7B682CD7348F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52555B0F-07C7-479B-9E4A-7F9C45CA8DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52555B0F-07C7-479B-9E4A-7F9C45CA8DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52555B0F-07C7-479B-9E4A-7F9C45CA8DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52555B0F-07C7-479B-9E4A-7F9C45CA8DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C73AEBC-B240-4BA3-8116-2030D605103F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C73AEBC-B240-4BA3-8116-2030D605103F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C73AEBC-B240-4BA3-8116-2030D605103F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C73AEBC-B240-4BA3-8116-2030D605103F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C348E84-D848-4AB1-A1B7-30A943F91EC3} = {AC7834E9-1A41-4FB0-A573-93B2412F771F}
+		{5F0709B4-FCEA-4653-AC29-36069F470A79} = {AC7834E9-1A41-4FB0-A573-93B2412F771F}
+		{3D5AABA1-C490-42EA-B9B9-7E50A8C5642A} = {AC7834E9-1A41-4FB0-A573-93B2412F771F}
+		{ABEB312C-DC8E-48D8-8CD8-331A01EBF32A} = {4C6675B2-3119-4725-B928-D3C65E6B9DB3}
+		{6FC6155A-D9CE-4963-A082-9E917D32E147} = {4C6675B2-3119-4725-B928-D3C65E6B9DB3}
+		{B2925EEC-0EEC-4CB5-A080-6C0383B7B729} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{4C6675B2-3119-4725-B928-D3C65E6B9DB3} = {AC7834E9-1A41-4FB0-A573-93B2412F771F}
+		{CF3233CC-242E-4AD5-B8E4-8D8216FDF0F6} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{D52008B9-D4E4-47CC-BFF6-3D1F0A31B94C} = {CF3233CC-242E-4AD5-B8E4-8D8216FDF0F6}
+		{5E95A1C1-647B-4F9A-B447-041E3C6435A5} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{570C51F3-FD88-4006-A662-DC4C47485800} = {CF3233CC-242E-4AD5-B8E4-8D8216FDF0F6}
+		{FED7A3A0-20C0-4CBC-8F02-FF63DAA0FFCB} = {B2925EEC-0EEC-4CB5-A080-6C0383B7B729}
+		{77465EDE-DF67-4711-8A84-A3C07D1E799D} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{77812481-ACED-46EE-BC18-A3AE1F3E8682} = {77465EDE-DF67-4711-8A84-A3C07D1E799D}
+		{EDD8D91B-9AB4-428F-9358-D4BD6E0A7C7D} = {77465EDE-DF67-4711-8A84-A3C07D1E799D}
+		{C70CED82-A857-43A3-85F4-BAB8DA1DE13C} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{5B411DA5-8432-42D4-8538-8948B218AE7E} = {C70CED82-A857-43A3-85F4-BAB8DA1DE13C}
+		{E8865745-A1AE-4524-A57F-C18C7BE23C0F} = {4CA069EA-522F-44C8-928D-E81BA489B336}
+		{9F68FE52-E02D-45C0-A90C-5E86926B9202} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{F3FF0D7E-5E05-40DD-A56D-BCC89F5016E5} = {9F68FE52-E02D-45C0-A90C-5E86926B9202}
+		{A36BBAB4-71CD-4600-8C0A-08828321E157} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{3EE487D3-2AD2-4D54-8D4D-3CB05C012334} = {A36BBAB4-71CD-4600-8C0A-08828321E157}
+		{72840A0B-EC58-4718-A3B1-F10B67C5A758} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{0B2779F9-72F9-468D-AAB7-A29180D9C7C1} = {72840A0B-EC58-4718-A3B1-F10B67C5A758}
+		{DE3FA479-CF10-4B0C-A86B-7B2727FB669C} = {0B2779F9-72F9-468D-AAB7-A29180D9C7C1}
+		{6A2B9611-0679-4733-9633-37E27C6DCCED} = {72840A0B-EC58-4718-A3B1-F10B67C5A758}
+		{9F10122D-DD3D-4CF4-B600-1C96626F86F3} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C} = {9F10122D-DD3D-4CF4-B600-1C96626F86F3}
+		{F0A9DBFA-6C1D-49BF-BC1D-9AA1FF40BBB3} = {C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C}
+		{1CC2043B-3115-40BF-8E8A-10490D91DD24} = {9F10122D-DD3D-4CF4-B600-1C96626F86F3}
+		{3B802FB8-8D24-4195-A5D8-D808A127B5E6} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{239C4D54-7FCE-4FC6-9BF2-0A1A3A3A9523} = {3B802FB8-8D24-4195-A5D8-D808A127B5E6}
+		{13986018-E22F-49B2-9F1B-D5E96BF2BF2F} = {239C4D54-7FCE-4FC6-9BF2-0A1A3A3A9523}
+		{A3B84830-FE43-4BEA-AB88-AF502A75F9CC} = {3B802FB8-8D24-4195-A5D8-D808A127B5E6}
+		{6D032405-FEE0-4C89-92B4-463052DACAD9} = {9F68FE52-E02D-45C0-A90C-5E86926B9202}
+		{59B44D4D-B190-4AAE-AD2F-7ADBE82F01E5} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{238DC86D-83F7-446B-BE92-5118345972A6} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{430F297C-EF93-4779-B013-04E1E5BD5C53} = {EF3AF0C9-AEA5-4E67-822B-3B53AB5CE711}
+		{B35B4DCC-7878-43EB-8E7B-CFF71577BC9A} = {EF3AF0C9-AEA5-4E67-822B-3B53AB5CE711}
+		{B466810C-8A68-4CF1-873B-8F428769ECFA} = {4C6675B2-3119-4725-B928-D3C65E6B9DB3}
+		{B4E8421C-1F6E-4DD4-9710-99480AE1BD1E} = {4C6675B2-3119-4725-B928-D3C65E6B9DB3}
+		{FF305476-17EE-43E8-9C5D-A6DB1632C3D0} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{107BA364-35B3-4983-892A-3593A83DD88A} = {4C6675B2-3119-4725-B928-D3C65E6B9DB3}
+		{5799CC47-6D4F-4EE1-AFFE-2EEB4F2CD90A} = {6D032405-FEE0-4C89-92B4-463052DACAD9}
+		{EDE27C53-D241-4A21-A309-A50D027660FF} = {6D032405-FEE0-4C89-92B4-463052DACAD9}
+		{4B2DCEC6-5173-46EF-9164-57A91432CF43} = {6D032405-FEE0-4C89-92B4-463052DACAD9}
+		{BD0B9604-4934-41FC-AC5F-5A6B795E5DA9} = {D52008B9-D4E4-47CC-BFF6-3D1F0A31B94C}
+		{F7E9C10E-107D-4D09-9A2B-AB3F431B4F3E} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{6A2E0EFF-7BEF-4279-AC68-CAAC9F04055C} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{C60F673A-A9B4-4BF0-A892-7E55E68F2955} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{DF3740B2-0A1D-4BFD-BFC0-4662D7895010} = {C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C}
+		{A862E729-4109-48CD-8EC8-2387B4887B6F} = {77812481-ACED-46EE-BC18-A3AE1F3E8682}
+		{B1169595-365F-435E-A491-566492AD3C13} = {C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C}
+		{A339DDC7-9436-4FAC-9F53-A93EAE3606AF} = {A36BBAB4-71CD-4600-8C0A-08828321E157}
+		{D1A250AE-24E6-4151-8B51-F39D6A3DFA6C} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{91F93402-B45F-474B-99FB-4BEBECA98869} = {6D032405-FEE0-4C89-92B4-463052DACAD9}
+		{49C9404B-E2CD-4322-B07F-BA4DB44F56E6} = {5B411DA5-8432-42D4-8538-8948B218AE7E}
+		{67CFDEBF-EC66-48AA-BE88-4CDD9FCA1523} = {C70CED82-A857-43A3-85F4-BAB8DA1DE13C}
+		{928FBD8B-B4E8-4688-9982-BBE269E5D321} = {9F68FE52-E02D-45C0-A90C-5E86926B9202}
+		{0E89CA31-3C18-4CAA-A421-3D60F9D021FD} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{4DB2A95E-706A-4843-AF0B-04C2CA83F990} = {A36BBAB4-71CD-4600-8C0A-08828321E157}
+		{CD034815-6025-41F7-86CE-385B384F4794} = {6D032405-FEE0-4C89-92B4-463052DACAD9}
+		{4E19D62B-1841-4C85-8CE1-58A9531D5F1A} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{A6D8E499-8E1B-49D4-A2D3-1DD402176D65} = {A36BBAB4-71CD-4600-8C0A-08828321E157}
+		{7943FC81-2760-40EC-8E0F-D3771139FAA8} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{0B1A1520-61CD-4B23-AB1A-FCDC6D694C2D} = {CF3233CC-242E-4AD5-B8E4-8D8216FDF0F6}
+		{D484E4DF-00C1-4BA0-8E88-5E7B82FC8986} = {9F10122D-DD3D-4CF4-B600-1C96626F86F3}
+		{C53CAB03-0C04-45A9-B02B-684C7BFC9F33} = {C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C}
+		{EC9F1031-502A-491E-A0FB-371BC65D9D26} = {6D032405-FEE0-4C89-92B4-463052DACAD9}
+		{18C8266D-17E2-4BA4-BB43-FCFD98099693} = {C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C}
+		{E078CE13-6BAB-4E50-BBAA-43434E46CD36} = {CF3233CC-242E-4AD5-B8E4-8D8216FDF0F6}
+		{8B0D6881-BF33-4CFF-A8CE-495BC6F69AB9} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{5E1823FA-736C-411B-A263-95D7C47FBE1B} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{BF11D695-1B7A-4BEA-B0FD-FD3587A36C1D} = {D52008B9-D4E4-47CC-BFF6-3D1F0A31B94C}
+		{ACDB1477-DD5F-4C08-8A79-52D246766E10} = {D52008B9-D4E4-47CC-BFF6-3D1F0A31B94C}
+		{DB367365-DD4E-45DE-9B34-0C93129F4F68} = {77812481-ACED-46EE-BC18-A3AE1F3E8682}
+		{A9F557FA-6681-4FEC-8A31-B6D1B2FF8D30} = {77812481-ACED-46EE-BC18-A3AE1F3E8682}
+		{CB919A85-C7AE-43F3-9EA4-44C7D96BF10A} = {77812481-ACED-46EE-BC18-A3AE1F3E8682}
+		{7473B6D6-C689-4E7C-AA7C-808EB926CEB4} = {72840A0B-EC58-4718-A3B1-F10B67C5A758}
+		{6640D5C8-F692-4D30-9398-57A72665F69C} = {0B2779F9-72F9-468D-AAB7-A29180D9C7C1}
+		{4CA069EA-522F-44C8-928D-E81BA489B336} = {C70CED82-A857-43A3-85F4-BAB8DA1DE13C}
+		{23D234B2-FF36-465E-9C78-040FF6D3F737} = {77812481-ACED-46EE-BC18-A3AE1F3E8682}
+		{E22AF092-2338-4BBC-93E6-D2A2586176CB} = {239C4D54-7FCE-4FC6-9BF2-0A1A3A3A9523}
+		{3B911061-35E4-4134-9A92-5E2460BBA6A7} = {FDA7B0BF-64C1-4BD8-98B5-55F2D372089F}
+		{A4109CF5-1BB4-4CFF-B708-D3EB3E7B4558} = {9F10122D-DD3D-4CF4-B600-1C96626F86F3}
+		{F6F83708-D4C6-4C36-A694-2E0420C0A783} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{D409BB76-C7A8-463C-B8E0-A5CCC6D1C238} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{FF1A6388-2E7E-466C-B9B3-58ED77AFAE85} = {A36BBAB4-71CD-4600-8C0A-08828321E157}
+		{CEBECD95-538F-4842-A79B-F7952E5508B5} = {6D032405-FEE0-4C89-92B4-463052DACAD9}
+		{2177AED1-54F8-4BAF-9764-0881AC84EED5} = {C8DB7F2B-70B8-4E4F-8286-CF2EC9C75F3C}
+		{7370B44A-752E-4AE0-A9AD-7A6BDE5417D4} = {A36BBAB4-71CD-4600-8C0A-08828321E157}
+		{ED8332D6-0FDA-4D84-8283-2004BB4B0D8A} = {7370B44A-752E-4AE0-A9AD-7A6BDE5417D4}
+		{147B614A-3C10-4744-A1FF-96EFF3D4CF49} = {5B411DA5-8432-42D4-8538-8948B218AE7E}
+		{0FEEDF43-581A-4C3C-894A-B2BC8F1840DE} = {BF11D695-1B7A-4BEA-B0FD-FD3587A36C1D}
+		{086D7C99-4826-47FA-B333-8538B3EEDA9B} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{19997C91-756D-4087-BEF6-2B3B333F256F} = {086D7C99-4826-47FA-B333-8538B3EEDA9B}
+		{215D6D72-4F81-41AE-8889-BA456640614A} = {086D7C99-4826-47FA-B333-8538B3EEDA9B}
+		{F0D7B941-CEE5-4061-8726-7DA04C4439A1} = {086D7C99-4826-47FA-B333-8538B3EEDA9B}
+		{B0F61B58-3E56-4F17-AC0A-84FA47EBF8FE} = {F0D7B941-CEE5-4061-8726-7DA04C4439A1}
+		{27DD4843-AD6A-437F-89B5-3636591468E0} = {086D7C99-4826-47FA-B333-8538B3EEDA9B}
+		{F1FF0ECE-E6A9-4D59-AA73-D9FFEC9A43B6} = {F0D7B941-CEE5-4061-8726-7DA04C4439A1}
+		{66B594FF-909E-456B-AAA1-D9131E023A38} = {F0D7B941-CEE5-4061-8726-7DA04C4439A1}
+		{7F9BD023-CBAE-4617-9BE8-A11EC496F876} = {F0D7B941-CEE5-4061-8726-7DA04C4439A1}
+		{5BA40F49-FFE6-4ED6-99F8-61446DDCE268} = {239C4D54-7FCE-4FC6-9BF2-0A1A3A3A9523}
+		{29C2D23D-128C-484D-839B-238C45ABE41E} = {ACDB1477-DD5F-4C08-8A79-52D246766E10}
+		{111A05DC-4976-4F7D-8BEF-C28BAA5CC414} = {F0D7B941-CEE5-4061-8726-7DA04C4439A1}
+		{2C9DDB71-DD90-4EE8-81F2-C4E26C3DA75B} = {F0D7B941-CEE5-4061-8726-7DA04C4439A1}
+		{94EDBE3B-A163-4CBF-B865-4033DEA3C267} = {3EE487D3-2AD2-4D54-8D4D-3CB05C012334}
+		{A5D45E35-3235-43E1-9C5E-7B682CD7348F} = {A36BBAB4-71CD-4600-8C0A-08828321E157}
+		{33BE4E2F-D7E0-4D5A-B919-130E0F142BFE} = {FDC712F4-D9F9-431D-8ABB-2F08BF2059AD}
+		{8A492F0C-06B0-465C-AF65-71D6A059528A} = {33BE4E2F-D7E0-4D5A-B919-130E0F142BFE}
+		{52555B0F-07C7-479B-9E4A-7F9C45CA8DDA} = {8A492F0C-06B0-465C-AF65-71D6A059528A}
+		{4C73AEBC-B240-4BA3-8116-2030D605103F} = {33BE4E2F-D7E0-4D5A-B919-130E0F142BFE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = Packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;Packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 89
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://simsprimarydevelopment.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WebDriverRunner\\WebDriverRunner.csproj
+		SccProjectTopLevelParentUniqueName1 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName1 = WebDriverRunner
+		SccLocalPath1 = WebDriverRunner
+		SccProjectUniqueName2 = TestRunner\\TestRunner.csproj
+		SccProjectTopLevelParentUniqueName2 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName2 = TestRunner
+		SccLocalPath2 = TestRunner
+		SccProjectUniqueName3 = WebDriverRunnerTests\\WebDriverRunnerTests.csproj
+		SccProjectTopLevelParentUniqueName3 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName3 = WebDriverRunnerTests
+		SccLocalPath3 = WebDriverRunnerTests
+		SccProjectUniqueName4 = Areas\\SharedServices\\SharedServices.Components\\SharedServices.Components.csproj
+		SccProjectTopLevelParentUniqueName4 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName4 = Areas/SharedServices/SharedServices.Components
+		SccLocalPath4 = Areas\\SharedServices\\SharedServices.Components
+		SccProjectUniqueName5 = Areas\\SharedServices\\Tests\\SharedServices.Tests\\SharedServices.Tests.csproj
+		SccProjectTopLevelParentUniqueName5 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName5 = Areas/SharedServices/Tests/SharedServices.Tests
+		SccLocalPath5 = Areas\\SharedServices\\Tests\\SharedServices.Tests
+		SccProjectUniqueName6 = Areas\\Facilities\\Facilities.Components\\Facilities.Components.csproj
+		SccProjectTopLevelParentUniqueName6 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName6 = Areas/Facilities/Facilities.Components
+		SccLocalPath6 = Areas\\Facilities\\Facilities.Components
+		SccProjectUniqueName7 = Areas\\Facilities\\Tests\\Facilities.Tests\\Facilities.Tests.csproj
+		SccProjectTopLevelParentUniqueName7 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName7 = Areas/Facilities/Tests/Facilities.Tests
+		SccLocalPath7 = Areas\\Facilities\\Tests\\Facilities.Tests
+		SccProjectUniqueName8 = Areas\\DataExchange\\DataExchange.Components\\DataExchange.Components.csproj
+		SccProjectTopLevelParentUniqueName8 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName8 = Areas/DataExchange/DataExchange.Components
+		SccLocalPath8 = Areas\\DataExchange\\DataExchange.Components
+		SccProjectUniqueName9 = Areas\\DataExchange\\Tests\\DataExchange.Tests\\DataExchange.Tests.csproj
+		SccProjectTopLevelParentUniqueName9 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName9 = Areas/DataExchange/Tests/DataExchange.Tests
+		SccLocalPath9 = Areas\\DataExchange\\Tests\\DataExchange.Tests
+		SccProjectUniqueName10 = Areas\\Attendance\\Attendance.Components\\Attendance.Components.csproj
+		SccProjectTopLevelParentUniqueName10 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName10 = Areas/Attendance/Attendance.Components
+		SccLocalPath10 = Areas\\Attendance\\Attendance.Components
+		SccProjectUniqueName11 = Areas\\Staff\\Staff.Components\\Staff.Components.csproj
+		SccProjectTopLevelParentUniqueName11 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName11 = Areas/Staff/Staff.Components
+		SccLocalPath11 = Areas\\Staff\\Staff.Components
+		SccProjectUniqueName12 = Areas\\Assessment\\Assessment.Components\\Assessment.Components.csproj
+		SccProjectTopLevelParentUniqueName12 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName12 = Areas/Assessment/Assessment.Components
+		SccLocalPath12 = Areas\\Assessment\\Assessment.Components
+		SccProjectUniqueName13 = Areas\\Common\\SharedComponents.csproj
+		SccProjectTopLevelParentUniqueName13 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName13 = Areas/Common
+		SccLocalPath13 = Areas\\Common
+		SccProjectUniqueName14 = Areas\\Pupil\\Pupil.Components\\Pupil.Components.csproj
+		SccProjectTopLevelParentUniqueName14 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName14 = Areas/Pupil/Pupil.Components
+		SccLocalPath14 = Areas\\Pupil\\Pupil.Components
+		SccProjectUniqueName15 = Areas\\Pupil\\Tests\\Pupil.PupilRecords.Tests\\Pupil.PupilRecords.Tests.csproj
+		SccProjectTopLevelParentUniqueName15 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName15 = Areas/Pupil/Tests/Pupil.PupilRecords.Tests
+		SccLocalPath15 = Areas\\Pupil\\Tests\\Pupil.PupilRecords.Tests
+		SccProjectUniqueName16 = SonarXMLReport\\SonarXMLReport.csproj
+		SccProjectTopLevelParentUniqueName16 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName16 = SonarXMLReport
+		SccLocalPath16 = SonarXMLReport
+		SccProjectUniqueName17 = HtmlReport\\HtmlReport.csproj
+		SccProjectTopLevelParentUniqueName17 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName17 = HtmlReport
+		SccLocalPath17 = HtmlReport
+		SccProjectUniqueName18 = Areas\\Pupil\\Tests\\Pupil.PupilLog.Tests\\Pupil.PupilLog.Tests.csproj
+		SccProjectTopLevelParentUniqueName18 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName18 = Areas/Pupil/Tests/Pupil.PupilLog.Tests
+		SccLocalPath18 = Areas\\Pupil\\Tests\\Pupil.PupilLog.Tests
+		SccProjectUniqueName19 = Areas\\Pupil\\Tests\\Pupil.BulkUpdate.Tests\\Pupil.BulkUpdate.Tests.csproj
+		SccProjectTopLevelParentUniqueName19 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName19 = Areas/Pupil/Tests/Pupil.BulkUpdate.Tests
+		SccLocalPath19 = Areas\\Pupil\\Tests\\Pupil.BulkUpdate.Tests
+		SccProjectUniqueName20 = DataExample\\GetDataViaWebServices\\GetDataViaWebServices.csproj
+		SccProjectTopLevelParentUniqueName20 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName20 = DataExample/GetDataViaWebServices
+		SccLocalPath20 = DataExample\\GetDataViaWebServices
+		SccProjectUniqueName21 = DataExample\\GetDataViaNdbUnit\\GetDataViaNdbUnit.csproj
+		SccProjectTopLevelParentUniqueName21 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName21 = DataExample/GetDataViaNdbUnit
+		SccLocalPath21 = DataExample\\GetDataViaNdbUnit
+		SccProjectUniqueName22 = AddressBook.Test\\AddressBook.Test.csproj
+		SccProjectTopLevelParentUniqueName22 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName22 = AddressBook.Test
+		SccLocalPath22 = AddressBook.Test
+		SccProjectUniqueName23 = TRXReport\\TRXReport.csproj
+		SccProjectTopLevelParentUniqueName23 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName23 = TRXReport
+		SccLocalPath23 = TRXReport
+		SccProjectUniqueName24 = ConsoleReport\\ConsoleReport.csproj
+		SccProjectTopLevelParentUniqueName24 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName24 = ConsoleReport
+		SccLocalPath24 = ConsoleReport
+		SccProjectUniqueName25 = LogStashReporter\\LogStashReporter.csproj
+		SccProjectTopLevelParentUniqueName25 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName25 = LogStashReporter
+		SccLocalPath25 = LogStashReporter
+		SccProjectUniqueName26 = Areas\\Attendance\\Tests\\Attendance.AttendancePattern.Tests\\Attendance.AttendancePattern.Tests.csproj
+		SccProjectTopLevelParentUniqueName26 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName26 = Areas/Attendance/Tests/Attendance.AttendancePattern.Tests
+		SccLocalPath26 = Areas\\Attendance\\Tests\\Attendance.AttendancePattern.Tests
+		SccProjectUniqueName27 = Areas\\Attendance\\Tests\\Attendance.EditMarks.Tests\\Attendance.EditMarks.Tests.csproj
+		SccProjectTopLevelParentUniqueName27 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName27 = Areas/Attendance/Tests/Attendance.EditMarks.Tests
+		SccLocalPath27 = Areas\\Attendance\\Tests\\Attendance.EditMarks.Tests
+		SccProjectUniqueName28 = Areas\\Attendance\\Tests\\Attendance.ExceptionalCircumstances.Tests\\Attendance.ExceptionalCircumstances.Tests.csproj
+		SccProjectTopLevelParentUniqueName28 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName28 = Areas/Attendance/Tests/Attendance.ExceptionalCircumstances.Tests
+		SccLocalPath28 = Areas\\Attendance\\Tests\\Attendance.ExceptionalCircumstances.Tests
+		SccProjectUniqueName29 = Areas\\Pupil\\Tests\\Pupil.Smoke.Tests\\Pupil.Smoke.Tests.csproj
+		SccProjectTopLevelParentUniqueName29 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName29 = Areas/Pupil/Tests/Pupil.Smoke.Tests
+		SccLocalPath29 = Areas\\Pupil\\Tests\\Pupil.Smoke.Tests
+		SccProjectUniqueName30 = AddressBook.CurrentPupil.Test\\AddressBook.CurrentPupil.Test.csproj
+		SccProjectTopLevelParentUniqueName30 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName30 = AddressBook.CurrentPupil.Test
+		SccLocalPath30 = AddressBook.CurrentPupil.Test
+		SccProjectUniqueName31 = AddressBook.PupilContact.Test\\AddressBook.PupilContact.Test.csproj
+		SccProjectTopLevelParentUniqueName31 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName31 = AddressBook.PupilContact.Test
+		SccLocalPath31 = AddressBook.PupilContact.Test
+		SccProjectUniqueName32 = AddressBook.CurrentStaff.Test\\AddressBook.CurrentStaff.Test.csproj
+		SccProjectTopLevelParentUniqueName32 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName32 = AddressBook.CurrentStaff.Test
+		SccLocalPath32 = AddressBook.CurrentStaff.Test
+		SccProjectUniqueName33 = TestSettings\\TestSettings.csproj
+		SccProjectName33 = TestSettings
+		SccLocalPath33 = TestSettings
+		SccProjectUniqueName34 = Areas\\Facilities\\Tests\\Facilities.ManageKPI.Tests\\Facilities.ManageKPI.Tests.csproj
+		SccProjectTopLevelParentUniqueName34 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName34 = Areas/Facilities/Tests/Facilities.ManageKPI.Tests
+		SccLocalPath34 = Areas\\Facilities\\Tests\\Facilities.ManageKPI.Tests
+		SccProjectUniqueName35 = Assessment.DEA.Tests\\Assessment.DEA.Tests.csproj
+		SccProjectTopLevelParentUniqueName35 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName35 = Assessment.DEA.Tests
+		SccLocalPath35 = Assessment.DEA.Tests
+		SccProjectUniqueName36 = Areas\\Facilities\\Tests\\SchoolSiteandBuildingTests\\SchoolSiteandBuildingTests.csproj
+		SccProjectTopLevelParentUniqueName36 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName36 = Areas/Facilities/Tests/SchoolSiteandBuildingTests
+		SccLocalPath36 = Areas\\Facilities\\Tests\\SchoolSiteandBuildingTests
+		SccProjectUniqueName37 = Agents.Components\\Agents.Components.csproj
+		SccProjectTopLevelParentUniqueName37 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName37 = Agents.Components
+		SccLocalPath37 = Agents.Components
+		SccProjectUniqueName38 = ManageAgents.Test\\ManageAgents.Test.csproj
+		SccProjectTopLevelParentUniqueName38 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName38 = ManageAgents.Test
+		SccLocalPath38 = ManageAgents.Test
+		SccProjectUniqueName39 = Areas\\Attendance\\Tests\\Attendance.EarlyYearsProvisions.Tests\\Attendance.EarlyYearsProvisions.Tests.csproj
+		SccProjectTopLevelParentUniqueName39 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName39 = Areas/Attendance/Tests/Attendance.EarlyYearsProvisions.Tests
+		SccLocalPath39 = Areas\\Attendance\\Tests\\Attendance.EarlyYearsProvisions.Tests
+		SccProjectUniqueName40 = Areas\\Staff\\Staff.POM\\Staff.POM.csproj
+		SccProjectTopLevelParentUniqueName40 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName40 = Areas/Staff/Staff.POM
+		SccLocalPath40 = Areas\\Staff\\Staff.POM
+		SccProjectUniqueName41 = Areas\\Staff\\Tests\\Staff.Tests\\Staff.Tests.csproj
+		SccProjectTopLevelParentUniqueName41 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName41 = Areas/Staff/Tests/Staff.Tests
+		SccLocalPath41 = Areas\\Staff\\Tests\\Staff.Tests
+		SccProjectUniqueName42 = Areas\\Attendance\\Attendance.POM\\Attendance.POM.csproj
+		SccProjectTopLevelParentUniqueName42 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName42 = Areas/Attendance/Attendance.POM
+		SccLocalPath42 = Areas\\Attendance\\Attendance.POM
+		SccProjectUniqueName43 = Areas\\Communication\\Communication_OldScreens.Tests\\Communication_OldScreens.Tests.csproj
+		SccProjectTopLevelParentUniqueName43 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName43 = Areas/Communication/Communication_OldScreens.Tests
+		SccLocalPath43 = Areas\\Communication\\Communication_OldScreens.Tests
+		SccProjectUniqueName44 = Areas\\Communication\\Communications.POM\\Communications.POM.csproj
+		SccProjectTopLevelParentUniqueName44 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName44 = Areas/Communication/Communications.POM
+		SccLocalPath44 = Areas\\Communication\\Communications.POM
+		SccProjectUniqueName45 = Areas\\Attendance\\Tests\\Attendance.ApplyMarkOverDateRange.Tests\\Attendance.ApplyMarkOverDateRange.Tests.csproj
+		SccProjectTopLevelParentUniqueName45 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName45 = Areas/Attendance/Tests/Attendance.ApplyMarkOverDateRange.Tests
+		SccLocalPath45 = Areas\\Attendance\\Tests\\Attendance.ApplyMarkOverDateRange.Tests
+		SccProjectUniqueName46 = ManageTemplate.Test\\ManageTemplate.Test.csproj
+		SccProjectTopLevelParentUniqueName46 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName46 = ManageTemplate.Test
+		SccLocalPath46 = ManageTemplate.Test
+		SccProjectUniqueName47 = Template.Components\\Template.Components.csproj
+		SccProjectTopLevelParentUniqueName47 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName47 = Template.Components
+		SccLocalPath47 = Template.Components
+		SccProjectUniqueName48 = Areas\\Pupil\\Tests\\Pupil.ClassLog.Tests\\Pupil.ClassLog.Tests.csproj
+		SccProjectTopLevelParentUniqueName48 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName48 = Areas/Pupil/Tests/Pupil.ClassLog.Tests
+		SccLocalPath48 = Areas\\Pupil\\Tests\\Pupil.ClassLog.Tests
+		SccProjectUniqueName49 = Areas\\Pupil\\Pupil.POM\\POM.csproj
+		SccProjectTopLevelParentUniqueName49 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName49 = Areas/Pupil/Pupil.POM
+		SccLocalPath49 = Areas\\Pupil\\Pupil.POM
+		SccProjectUniqueName50 = Areas\\Facilities\\Facilities.POM\\Facilities.POM.csproj
+		SccProjectTopLevelParentUniqueName50 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName50 = Areas/Facilities/Facilities.POM
+		SccLocalPath50 = Areas\\Facilities\\Facilities.POM
+		SccProjectUniqueName51 = Areas\\Facilities\\Tests\\Faclities.LogigearTests\\Faclities.LogigearTests.csproj
+		SccProjectTopLevelParentUniqueName51 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName51 = Areas/Facilities/Tests/Faclities.LogigearTests
+		SccLocalPath51 = Areas\\Facilities\\Tests\\Faclities.LogigearTests
+		SccProjectUniqueName52 = Areas\\Attendance\\Tests\\Attendance.DealWithSpecificMarks.Tests\\Attendance.DealWithSpecificMarks.Tests.csproj
+		SccProjectTopLevelParentUniqueName52 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName52 = Areas/Attendance/Tests/Attendance.DealWithSpecificMarks.Tests
+		SccLocalPath52 = Areas\\Attendance\\Tests\\Attendance.DealWithSpecificMarks.Tests
+		SccProjectUniqueName53 = Areas\\Facilities\\Tests\\CurriculumSchemeDetailsTest\\CurriculumSchemeDetailsTest.csproj
+		SccProjectTopLevelParentUniqueName53 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName53 = Areas/Facilities/Tests/CurriculumSchemeDetailsTest
+		SccLocalPath53 = Areas\\Facilities\\Tests\\CurriculumSchemeDetailsTest
+		SccProjectUniqueName54 = Areas\\Pupil\\Pupil.Data\\Pupil.Data.csproj
+		SccProjectTopLevelParentUniqueName54 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName54 = Areas/Pupil/Pupil.Data
+		SccLocalPath54 = Areas\\Pupil\\Pupil.Data
+		SccProjectUniqueName55 = Areas\\Pupil\\Tests\\Pupil.PupilContact.Tests\\Pupil.PupilContacts.Tests.csproj
+		SccProjectTopLevelParentUniqueName55 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName55 = Areas/Pupil/Tests/Pupil.PupilContact.Tests
+		SccLocalPath55 = Areas\\Pupil\\Tests\\Pupil.PupilContact.Tests
+		SccProjectUniqueName56 = Areas\\Pupil\\Tests\\Pupil.PupilSENRecord.Tests\\Pupil.SENRecords.Tests.csproj
+		SccProjectTopLevelParentUniqueName56 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName56 = Areas/Pupil/Tests/Pupil.PupilSENRecord.Tests
+		SccLocalPath56 = Areas\\Pupil\\Tests\\Pupil.PupilSENRecord.Tests
+		SccProjectUniqueName57 = Areas\\Assessment\\Tests\\Assessment.CNR.OtherScreens.Tests\\Assessment.CNR.OtherScreens.Tests.csproj
+		SccProjectTopLevelParentUniqueName57 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName57 = Areas/Assessment/Tests/Assessment.CNR.OtherScreens.Tests
+		SccLocalPath57 = Areas\\Assessment\\Tests\\Assessment.CNR.OtherScreens.Tests
+		SccProjectUniqueName58 = Areas\\Assessment\\Tests\\Assessment.Tests\\Assessment.CNR.CreateMarksheet.Tests.csproj
+		SccProjectTopLevelParentUniqueName58 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName58 = Areas/Assessment/Tests/Assessment.Tests
+		SccLocalPath58 = Areas\\Assessment\\Tests\\Assessment.Tests
+		SccProjectUniqueName59 = Areas\\Assessment\\Tests\\Assessment.CNR.POSMarksheet.Tests\\Assessment.CNR.POSMarksheet.Tests.csproj
+		SccProjectTopLevelParentUniqueName59 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName59 = Areas/Assessment/Tests/Assessment.CNR.POSMarksheet.Tests
+		SccLocalPath59 = Areas\\Assessment\\Tests\\Assessment.CNR.POSMarksheet.Tests
+		SccProjectUniqueName60 = Areas\\DataExchange\\DataExchange.POM\\DataExchange.POM.csproj
+		SccProjectTopLevelParentUniqueName60 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName60 = Areas/DataExchange/DataExchange.POM
+		SccLocalPath60 = Areas\\DataExchange\\DataExchange.POM
+		SccProjectUniqueName61 = Areas\\DataExchange\\Tests\\Census.Tests\\Census.Tests.csproj
+		SccProjectTopLevelParentUniqueName61 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName61 = Areas/DataExchange/Tests/Census.Tests
+		SccLocalPath61 = Areas\\DataExchange\\Tests\\Census.Tests
+		SccProjectUniqueName62 = FeatureBee\\FeatureBee.csproj
+		SccProjectTopLevelParentUniqueName62 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName62 = FeatureBee
+		SccLocalPath62 = FeatureBee
+		SccProjectUniqueName63 = SharedServices.TestData\\SharedServices.TestData.csproj
+		SccProjectTopLevelParentUniqueName63 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName63 = SharedServices.TestData
+		SccLocalPath63 = SharedServices.TestData
+		SccProjectUniqueName64 = BatchInitialise\\BatchInitialise.csproj
+		SccProjectTopLevelParentUniqueName64 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName64 = BatchInitialise
+		SccLocalPath64 = BatchInitialise
+		SccProjectUniqueName65 = Areas\\Facilities\\Facilities.Data\\Facilities.Data.csproj
+		SccProjectTopLevelParentUniqueName65 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName65 = Areas/Facilities/Facilities.Data
+		SccLocalPath65 = Areas\\Facilities\\Facilities.Data
+		SccProjectUniqueName66 = Areas\\Pupil\\Tests\\Pupil.PupilPremium.Tests\\Pupil.PupilPremium.Tests.csproj
+		SccProjectTopLevelParentUniqueName66 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName66 = Areas/Pupil/Tests/Pupil.PupilPremium.Tests
+		SccLocalPath66 = Areas\\Pupil\\Tests\\Pupil.PupilPremium.Tests
+		SccProjectUniqueName67 = Communications\\ParentalReporting.Template.Test\\ParentalReporting.Template.Test.csproj
+		SccProjectTopLevelParentUniqueName67 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName67 = Communications/ParentalReporting.Template.Test
+		SccLocalPath67 = Communications\\ParentalReporting.Template.Test
+		SccProjectUniqueName68 = Communications\\ParentalReporting.Components\\ParentalReporting.Components.csproj
+		SccProjectTopLevelParentUniqueName68 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName68 = Communications/ParentalReporting.Components
+		SccLocalPath68 = Communications\\ParentalReporting.Components
+		SccProjectUniqueName69 = Attendance.EarlyYearSessionPattern.Tests\\Attendance.EarlyYearSessionPattern.Tests.csproj
+		SccProjectTopLevelParentUniqueName69 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName69 = Attendance.EarlyYearSessionPattern.Tests
+		SccLocalPath69 = Attendance.EarlyYearSessionPattern.Tests
+		SccProjectUniqueName70 = Areas\\Facilities\\Tests\\Calendar.Tests\\Calendar.Tests.csproj
+		SccProjectTopLevelParentUniqueName70 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName70 = Areas/Facilities/Tests/Calendar.Tests
+		SccLocalPath70 = Areas\\Facilities\\Tests\\Calendar.Tests
+		SccProjectUniqueName71 = Areas\\Communications\\Communications.Components\\AddressBook.Components\\AddressBook.Components.csproj
+		SccProjectTopLevelParentUniqueName71 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName71 = Areas/Communications/Communications.Components/AddressBook.Components
+		SccLocalPath71 = Areas\\Communications\\Communications.Components\\AddressBook.Components
+		SccProjectUniqueName72 = Areas\\Staff\\Tests\\Staff.NonDestructive\\Staff.NonDestructive.csproj
+		SccProjectTopLevelParentUniqueName72 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName72 = Areas/Staff/Tests/Staff.NonDestructive
+		SccLocalPath72 = Areas\\Staff\\Tests\\Staff.NonDestructive
+		SccProjectUniqueName73 = Areas\\Pupil\\Tests\\Pupil.Conduct.Tests\\Pupil.Conduct.Tests.csproj
+		SccProjectTopLevelParentUniqueName73 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName73 = Areas/Pupil/Tests/Pupil.Conduct.Tests
+		SccLocalPath73 = Areas\\Pupil\\Tests\\Pupil.Conduct.Tests
+		SccProjectUniqueName74 = Areas\\Admissions\\PageObjectModel\\PageObjectModel.csproj
+		SccProjectTopLevelParentUniqueName74 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName74 = Areas/Admissions/PageObjectModel
+		SccLocalPath74 = Areas\\Admissions\\PageObjectModel
+		SccProjectUniqueName75 = Areas\\Admissions\\Admissions.data\\Admissions.Data.csproj
+		SccProjectTopLevelParentUniqueName75 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName75 = Areas/Admissions/Admissions.data
+		SccLocalPath75 = Areas\\Admissions\\Admissions.data
+		SccProjectUniqueName76 = Areas\\Admissions\\Admissions.Component\\Admissions.Component.csproj
+		SccProjectTopLevelParentUniqueName76 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName76 = Areas/Admissions/Admissions.Component
+		SccLocalPath76 = Areas\\Admissions\\Admissions.Component
+		SccProjectUniqueName77 = Areas\\Admissions\\Tests\\Admissions.Application.Tests\\Admissions.Application.Tests.csproj
+		SccProjectTopLevelParentUniqueName77 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName77 = Areas/Admissions/Tests/Admissions.Application.Tests
+		SccLocalPath77 = Areas\\Admissions\\Tests\\Admissions.Application.Tests
+		SccProjectUniqueName78 = Areas\\Admissions\\Tests\\Admissions.SchoolIntake.Tests\\Admissions.SchoolIntake.Tests.csproj
+		SccProjectTopLevelParentUniqueName78 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName78 = Areas/Admissions/Tests/Admissions.SchoolIntake.Tests
+		SccLocalPath78 = Areas\\Admissions\\Tests\\Admissions.SchoolIntake.Tests
+		SccProjectUniqueName79 = Areas\\Admissions\\Tests\\Admissions.Smoke.Tests\\Admissions.Smoke.Tests.csproj
+		SccProjectTopLevelParentUniqueName79 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName79 = Areas/Admissions/Tests/Admissions.Smoke.Tests
+		SccLocalPath79 = Areas\\Admissions\\Tests\\Admissions.Smoke.Tests
+		SccProjectUniqueName80 = Areas\\Admissions\\Tests\\Admissions.BulkUpdate.Tests\\Admissions.BulkUpdate.Tests.csproj
+		SccProjectTopLevelParentUniqueName80 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName80 = Areas/Admissions/Tests/Admissions.BulkUpdate.Tests
+		SccLocalPath80 = Areas\\Admissions\\Tests\\Admissions.BulkUpdate.Tests
+		SccProjectUniqueName81 = Areas\\SharedServices\\Tests\\SharedServices.NonDestructive\\SharedServices.NonDestructive.csproj
+		SccProjectTopLevelParentUniqueName81 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName81 = Areas/SharedServices/Tests/SharedServices.NonDestructive
+		SccLocalPath81 = Areas\\SharedServices\\Tests\\SharedServices.NonDestructive
+		SccProjectUniqueName82 = Areas\\Pupil\\Tests\\PupilAddressTests2\\Pupil.PupilAddress.Tests.csproj
+		SccProjectTopLevelParentUniqueName82 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName82 = Areas/Pupil/Tests/PupilAddressTests2
+		SccLocalPath82 = Areas\\Pupil\\Tests\\PupilAddressTests2
+		SccProjectUniqueName83 = Areas\\Admissions\\Tests\\Admissions.Enquiries.Tests\\Admissions.Enquiries.Tests.csproj
+		SccProjectTopLevelParentUniqueName83 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName83 = Areas/Admissions/Tests/Admissions.Enquiries.Tests
+		SccLocalPath83 = Areas\\Admissions\\Tests\\Admissions.Enquiries.Tests
+		SccProjectUniqueName84 = CommunicationLog.Test\\CommunicationLog.Test.csproj
+		SccProjectTopLevelParentUniqueName84 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName84 = CommunicationLog.Test
+		SccLocalPath84 = CommunicationLog.Test
+		SccProjectUniqueName85 = CommunicationLog.Components\\CommunicationLog.Components.csproj
+		SccProjectTopLevelParentUniqueName85 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName85 = CommunicationLog.Components
+		SccLocalPath85 = CommunicationLog.Components
+		SccProjectUniqueName86 = Areas\\Admissions\\Tests\\Admissions.Policy.Tests\\Admissions.Policy.Tests.csproj
+		SccProjectTopLevelParentUniqueName86 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName86 = Areas/Admissions/Tests/Admissions.Policy.Tests
+		SccLocalPath86 = Areas\\Admissions\\Tests\\Admissions.Policy.Tests
+		SccProjectUniqueName87 = Areas\\Migration\\Migration.POM\\Migration.POM.csproj
+		SccProjectTopLevelParentUniqueName87 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName87 = Areas/Migration/Migration.POM
+		SccLocalPath87 = Areas\\Migration\\Migration.POM
+		SccProjectUniqueName88 = Areas\\Migration\\Tests\\Migration.Tests\\Migration.Tests.csproj
+		SccProjectTopLevelParentUniqueName88 = iSIMSSeleniumTestFrameWork.sln
+		SccProjectName88 = Areas/Migration/Tests/Migration.Tests
+		SccLocalPath88 = Areas\\Migration\\Tests\\Migration.Tests
+	EndGlobalSection
+EndGlobal

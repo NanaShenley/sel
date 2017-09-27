@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SecurityTokenService" targetNamespace="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="https://lab-two.sims8.com/iSIMSAuthorisationServerFarm1/iSIMSSTS.UnsignedUserName.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice/Imports">
+      <xsd:import schemaLocation="https://lab-two.sims8.com/iSIMSAuthorisationServerFarm1/iSIMSSTS.UnsignedUserName.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="https://lab-two.sims8.com/iSIMSAuthorisationServerFarm1/iSIMSSTS.UnsignedUserName.svc?xsd=xsd1" namespace="http://docs.oasis-open.org/ws-sx/ws-trust/200512" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWSTrust13Sync_Trust13Cancel_InputMessage">
+    <wsdl:part xmlns:q1="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="message" element="q1:RequestSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrust13Sync_Trust13Cancel_OutputMessage">
+    <wsdl:part xmlns:q2="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="Trust13CancelResult" element="q2:RequestSecurityTokenResponseCollection" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrust13Sync_Trust13Issue_InputMessage">
+    <wsdl:part xmlns:q3="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="message" element="q3:RequestSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrust13Sync_Trust13Issue_OutputMessage">
+    <wsdl:part xmlns:q4="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="Trust13IssueResult" element="q4:RequestSecurityTokenResponseCollection" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrust13Sync_Trust13Renew_InputMessage">
+    <wsdl:part xmlns:q5="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="message" element="q5:RequestSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrust13Sync_Trust13Renew_OutputMessage">
+    <wsdl:part xmlns:q6="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="Trust13RenewResult" element="q6:RequestSecurityTokenResponseCollection" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrust13Sync_Trust13Validate_InputMessage">
+    <wsdl:part xmlns:q7="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="message" element="q7:RequestSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrust13Sync_Trust13Validate_OutputMessage">
+    <wsdl:part xmlns:q8="http://docs.oasis-open.org/ws-sx/ws-trust/200512" name="Trust13ValidateResult" element="q8:RequestSecurityTokenResponseCollection" />
+  </wsdl:message>
+  <wsdl:portType name="IWSTrust13Sync">
+    <wsdl:operation name="Trust13Cancel">
+      <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Cancel" message="tns:IWSTrust13Sync_Trust13Cancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/CancelFinal" message="tns:IWSTrust13Sync_Trust13Cancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Trust13Issue">
+      <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue" message="tns:IWSTrust13Sync_Trust13Issue_InputMessage" />
+      <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTRC/IssueFinal" message="tns:IWSTrust13Sync_Trust13Issue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Trust13Renew">
+      <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Renew" message="tns:IWSTrust13Sync_Trust13Renew_InputMessage" />
+      <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/RenewFinal" message="tns:IWSTrust13Sync_Trust13Renew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Trust13Validate">
+      <wsdl:input wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Validate" message="tns:IWSTrust13Sync_Trust13Validate_InputMessage" />
+      <wsdl:output wsaw:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/ValidateFinal" message="tns:IWSTrust13Sync_Trust13Validate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="SecurityTokenService">
+    <wsdl:port name="uncompressedSignedHttps_x0028_UserNameSignature_x0029__IWSTrust13Sync" binding="i0:uncompressedSignedHttps_x0028_UserNameSignature_x0029__IWSTrust13Sync">
+      <soap12:address location="https://lab-two.sims8.com/iSIMSAuthorisationServerFarm1/iSIMSSTS.UnsignedUserName.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://lab-two.sims8.com/iSIMSAuthorisationServerFarm1/iSIMSSTS.UnsignedUserName.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
