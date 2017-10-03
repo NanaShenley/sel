@@ -128,6 +128,7 @@
     <Compile Include="VisualStudioUnitTesting\BrowserFactory\LocalCaps.cs" />
     <Compile Include="VisualStudioUnitTesting\BrowserFactory\RemoteCaps.cs" />
     <Compile Include="VisualStudioUnitTesting\BrowserFactory\SeleniumGridManager.cs" />
+    <Compile Include="VisualStudioUnitTesting\MsBasePrePostConditions.cs" />
     <Compile Include="VisualStudioUnitTesting\SeLogger.cs" />
     <Compile Include="VisualStudioUnitTesting\SeSettings.cs" />
     <Compile Include="testfinder\AfterSuiteWebTestFinder.cs" />

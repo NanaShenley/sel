@@ -134,6 +134,7 @@
     <Compile Include="Components\Conduct\Pages\Exclusions\ExclusionSearchPage.cs" />
     <Compile Include="Components\Conduct\Pages\Exclusions\ExclusionTriplet.cs" />
     <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardDetail.cs" />
+    <Compile Include="Components\Conduct\Dialogs\ReportCards\ReportCardOutcomeDialog.cs" />
     <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardRecordPage.cs" />
     <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardSearchPage.cs" />
     <Compile Include="Components\Conduct\Pages\ReportCards\ReportCardSearchResults.cs" />
@@ -348,9 +349,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\Conduct\Dialogs\ReportCards\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,19 +8,23 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WebDriverRunner.webdriver;
 
 namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
 {
     public class SeleniumGridManager
     {
 
+        private Process _hubProcess;
+        private Process _nodeProcess;
+        private const string seleniumExistanceURL = "http://localhost:4444/selenium-server/";
+        private const string seleniumHubShutDownEndpoint = "http://localhost:4444/lifecycle-manager/LifecycleServlet?action=shutdown";
+        private const string seleniumNodeShutDownEndpoint = "http://localhost:5555/extra/LifecycleServlet?action=shutdown";
 
-        private const string seleniumExistanceURL = "http://localhost:4444/selenium-server/driver/?cmd=getLogMessages";
-        private const string seleniumShutdownURL = "http://localhost:4444/selenium-server/driver/?cmd=shutDownSeleniumServer";
         /// <summary>
         /// Checks if selenium server is running locally
         /// </summary>
-        private static bool SeleniumRunning
+        private bool SeleniumRunning
         {
             get
             {
@@ -45,17 +49,21 @@ namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
         public void InitialiseTestRun()
         {
             Debug.WriteLine("Test run starting. Current directory = " + Directory.GetCurrentDirectory());
-            bool seleniumDetected = SeleniumRunning;
-            // If it's not running already
-            if (!seleniumDetected)
+            if (!SeleniumRunning)
             {
                 StartSeleniumHubAndNode();
             }
         }
 
 
+        public void CloseSeleniumGrid()
+        {
+            if (SeleniumRunning)
+                StopSeleniumHubAndNode();
+        }
 
-        private static string GetSolutionPath()
+
+        private string GetSolutionPath()
         {
             var directory = Directory.GetCurrentDirectory();
             var startDirectory = Directory.GetParent(directory).Parent?.Parent?.Parent?.Parent?.Parent?.FullName;
@@ -66,55 +74,99 @@ namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
 
         private string GetBatFilePath(string batFileName)
         {
-            var yourApplicationPath = GetSolutionPath() + $"\\WebDriverRunner\\SeleniumServer\\{batFileName}.bat";
-            return yourApplicationPath;
+            return GetSolutionPath() + $"\\WebDriverRunner\\SeleniumServer\\{batFileName}.bat";
         }
 
         private void StartSeleniumHubAndNode()
         {
             var hubPath = GetBatFilePath("SeleniumServerHub");
             var nodePath = GetBatFilePath("SeleniumServerNode");
-            CreateAndWriteBatFile(nodePath);
-                        Process batProcess = Process.Start(nodePath);
+            CreateAndWriteBatFile(hubPath, GetHubCommand("3.5.3"));
+            CreateAndWriteBatFile(nodePath, GetNodeCommand());
 
-            //var process = new Process();
-            //process.StartInfo.FileName = hubPath;
-            //process.StartInfo.UseShellExecute = false;
-            //process.StartInfo.WorkingDirectory = Path.GetDirectoryName(hubPath);
-            //process.StartInfo.RedirectStandardInput = true;
-            //process.StartInfo.RedirectStandardOutput = true;
-            //process.StartInfo.RedirectStandardError = true;
-            //process.StartInfo.StandardErrorEncoding = Encoding.UTF8;
-            //process.StartInfo.StandardOutputEncoding = Encoding.UTF8;
-            //process.EnableRaisingEvents = true;
-            //Process.Start(process.StartInfo);
-            ////process.Start();
-            //Thread.Sleep(TimeSpan.FromSeconds(2));
-            //Process nodeProcess = Process.Start(nodePath);
-            //Thread.Sleep(TimeSpan.FromSeconds(2));
+            _hubProcess = Process.Start(hubPath);
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+
+            _nodeProcess = Process.Start(nodePath);
+            Thread.Sleep(TimeSpan.FromSeconds(2));
         }
 
 
-
-        public string GetNodeCommand()
+        private void StopSeleniumHubAndNode()
         {
-            var packagePath  = GetSolutionPath() + "\\packages\\";
-            return $"java -Dwebdriver.ie.driver={packagePath}Selenium.WebDriver.IEDriver.3.6.0\\driver\\IEDriverServer.exe -Dwebdriver.chrome.driver={packagePath}Selenium.WebDriver.ChromeDriver.2.32.0.0\\driver\\chromedriver.exe -Dwebdriver.gecko.driver={packagePath}Selenium.WebDriver.GeckoDriver.Win64.0.19.0\\driver\\geckodriver.exe -jar selenium-server-standalone-3.5.3.jar -port 5555 -role node -debug -hub http://localhost:4444/grid/register -browser \"browserName=firefox,maxInstances=20,platform=WINDOWS,seleniumProtocol=WebDriver\" -browser \"browserName=internet explorer,version=11,platform=WINDOWS,maxInstances=20\" -browser \"browserName=chrome,version=ANY,maxInstances=20,platform=WINDOWS\"";
+            ShutdownSelenium(seleniumNodeShutDownEndpoint);
+            ShutdownSelenium(seleniumHubShutDownEndpoint);
+            KillTestProcesses("chrome");
+        }
+
+        private void ShutdownSelenium(string shutDownEndpoint) 
+        {
+            bool isShutDown = false;  
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(shutDownEndpoint);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                isShutDown = (response.StatusCode == HttpStatusCode.OK);
+            }
+            catch (Exception webEx)
+            {
+                isShutDown = false;
+                Debug.WriteLine("Selenium not shutdown : " + webEx.Message);
+            }
+        }
+
+        private void KillTestProcesses(string processName)
+        {
+
+            try
+            {
+                foreach (var process in HaltProcess(processName))
+                process.Kill();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        private Process[] HaltProcess(string localIisExpress)
+        {
+            return Process.GetProcessesByName(localIisExpress);
         }
 
 
-        private  void CreateAndWriteBatFile(string nodeBatFilePath)
+
+
+
+        private void CreateAndWriteBatFile(string batFilePath, string command)
         {
             StreamWriter sw;
-            if (!File.Exists(nodeBatFilePath)) sw = new StreamWriter(nodeBatFilePath);
+            if (!File.Exists(batFilePath)) sw = new StreamWriter(batFilePath);
             else
             {
-                File.Delete(nodeBatFilePath);
-                sw = new StreamWriter(nodeBatFilePath);
+                File.Delete(batFilePath);
+                sw = new StreamWriter(batFilePath);
             }
-            sw.WriteLine(GetNodeCommand());
+            var seleniumServerPath = Path.GetDirectoryName(batFilePath);
+            sw.WriteLine($"cd {seleniumServerPath}");
+            sw.WriteLine(command);
             sw.Close();
             sw.Dispose();
+        }
+
+
+
+
+        private string GetHubCommand(string jarVersion)
+        {
+            return $"java -jar selenium-server-standalone-{jarVersion}.jar -role hub";
+        }
+
+
+        private string GetNodeCommand()
+        {
+            var packagePath = GetSolutionPath() + "\\packages\\";
+            return $"java -Dwebdriver.ie.driver={packagePath}Selenium.WebDriver.IEDriver.3.6.0\\driver\\IEDriverServer.exe -Dwebdriver.chrome.driver={packagePath}Selenium.WebDriver.ChromeDriver.2.32.0\\driver\\win32\\chromedriver.exe -Dwebdriver.gecko.driver={packagePath}Selenium.WebDriver.GeckoDriver.Win64.0.19.0\\driver\\geckodriver.exe -jar selenium-server-standalone-3.5.3.jar -port 5555 -role node -hub http://localhost:4444/grid/register -servlet org.openqa.grid.web.servlet.LifecycleServlet -browser \"browserName=firefox,maxInstances=20,platform=WINDOWS,seleniumProtocol=WebDriver\" -browser \"browserName=internet explorer,version=11,platform=WINDOWS,maxInstances=20\" -browser \"browserName=chrome,version=ANY,maxInstances=20,platform=WINDOWS\"";
         }
     }
 }

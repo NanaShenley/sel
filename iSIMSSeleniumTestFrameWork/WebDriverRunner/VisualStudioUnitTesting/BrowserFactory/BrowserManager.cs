@@ -11,16 +11,33 @@ namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
     public class BrowserManager
     {
         private WebDriverTestAttribute webDriverAttr;
-        private Proxy useProxy;
 
-        public BrowserManager(WebDriverTestAttribute webDriverAttr, Proxy useProxy)
+
+        public BrowserManager(WebDriverTestAttribute webDriverAttr)
         {
             this.webDriverAttr = webDriverAttr;
-            this.useProxy = useProxy;
         }
 
 
-        public DesiredCapabilities ChooseRequiredBrowser(DesiredCapabilities caps, string browserName)
+        public Proxy CheckAndSetUpProxy()
+        {
+            // Check the proxy settings
+            Proxy useProxy = null;
+            if (!string.IsNullOrEmpty(TestDefaults.Default.Proxy))
+            {
+                useProxy = new Proxy();
+                string proxy = TestDefaults.Default.Proxy;
+                useProxy.HttpProxy = proxy;
+                useProxy.FtpProxy = proxy;
+                useProxy.SslProxy = proxy;
+                useProxy.IsAutoDetect = false;
+                useProxy.Kind = ProxyKind.Manual;
+            }
+            return useProxy;
+        }
+
+
+        public DesiredCapabilities ChooseRequiredBrowser(DesiredCapabilities caps, string browserName, Proxy useProxy)
         {
 
             switch (browserName)

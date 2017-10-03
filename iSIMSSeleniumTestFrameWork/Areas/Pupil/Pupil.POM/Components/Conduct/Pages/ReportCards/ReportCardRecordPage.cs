@@ -1,7 +1,9 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using POM.Base;
+using POM.Components.Conduct.Dialogs.ReportCards;
 using POM.Helper;
+using SeSugar.Automation;
 using WebDriverRunner.webdriver;
 using SimsBy = POM.Helper.SimsBy;
 // ReSharper disable ConvertPropertyToExpressionBody
@@ -51,6 +53,12 @@ namespace POM.Components.Conduct.Pages.ReportCards
         /// </summary>
         [FindsBy(How = How.CssSelector, Using = "[data-automation-id='add_button']")]
         private IWebElement _addButton;
+
+        /// <summary>
+        /// The Record Outcome button
+        /// </summary>
+        [FindsBy(How = How.CssSelector, Using = "[data-automation-id='record_outcome_button']")]
+        private IWebElement _recordOutcomeButton;
 
         /// <summary>
         /// The _action button
@@ -110,6 +118,18 @@ namespace POM.Components.Conduct.Pages.ReportCards
         public void ClickAdd()
         {
             _addButton.ClickByJS();
+        }
+
+        public ReportCardOutcomeDialog ClickRecordOutcome()
+        {
+            _recordOutcomeButton.ClickByJS();
+            return new ReportCardOutcomeDialog();
+        }
+
+        public bool IsSaved()
+        {
+            AutomationSugar.WaitForAjaxCompletion();
+            return SeleniumHelper.IsElementExists(SimsBy.AutomationId("status_success"));
         }
 
         #endregion

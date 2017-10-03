@@ -41,6 +41,10 @@ namespace POM.Components.Conduct.Pages.ReportCards
 
         public override By ComponentIdentifier => SimsBy.AutomationId("pupil_reportcard_detail");
 
+        public string Outcome;
+
+        public string Comments;
+
         #endregion
 
 

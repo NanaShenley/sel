@@ -183,6 +183,7 @@ namespace Pupil.Components.Common
         {
             public const string Page = "ReportCards";
             public const string ReportCardSearch = "ReportCardSearch";
+            public const string RecordOutcome = "RecordOutcome";
         }
     }
 }

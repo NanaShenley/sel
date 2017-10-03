@@ -62,22 +62,10 @@ namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
             var words = domainuser.Split(delimiterChars);
             var user = words[1];
             DesiredCapabilities caps = null;
-
-            // Check the proxy settings
-            Proxy useProxy = null;
-            if (!String.IsNullOrEmpty(TestDefaults.Default.Proxy))
-            {
-                useProxy = new Proxy();
-                string proxy = TestDefaults.Default.Proxy;
-                useProxy.HttpProxy = proxy;
-                useProxy.FtpProxy = proxy;
-                useProxy.SslProxy = proxy;
-                useProxy.IsAutoDetect = false;
-                useProxy.Kind = ProxyKind.Manual;
-            }
             
-            BrowserManager manager = new BrowserManager(webDriverAttr, useProxy);
-            caps = manager.ChooseRequiredBrowser(caps, browserName);
+            BrowserManager manager = new BrowserManager(webDriverAttr);
+            Proxy proxy = manager.CheckAndSetUpProxy();
+            caps = manager.ChooseRequiredBrowser(caps, browserName, proxy);
             // Set common capabilities
             caps.SetCapability("user", user);
             caps.SetCapability("method", testName);
@@ -100,8 +88,9 @@ namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
             // And a result
             ITestResult result = new UnitTestResult(testMethodInstance);
 
+
             // Now run the remote web driver based on all the parameters
-            IWebDriver driver = new RemoteWebDriver(configuration.Hub, caps, configuration.BrowserResponseTimeout);
+            IWebDriver driver = new RemoteWebDriver(configuration.Hub, caps, configuration.BrowserResponseTimeout); 
             {
                 WebDriverContext webDriverContext = new WebDriverContext(driver, testMethodInstance, result,
                     configuration.Output);

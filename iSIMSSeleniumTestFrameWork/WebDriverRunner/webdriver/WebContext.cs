@@ -18,6 +18,7 @@
 * KIND, either express or implied.  
 */
 using System;
+using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Threading;

@@ -21,34 +21,37 @@ namespace TestRunner
     /// </summary>
     public static class VSSeleniumTest
     {
-//        private static IEnumerable<object[]> GetParamsFromDataProvider(object obj, MethodInfo method, TestMethodBaseAttribute attr)
-//        {
-//            // find the method.
-//            var name = attr.DataProvider;
-//            if (name == null)
-//            {
-//                throw new WebDriverRunner.internals.DataProviderException("expected a data provider for " + method);
-//            }
-//            var provider = obj.GetType().GetMethod(name);
-//            if (provider == null)
-//            {
-//                throw new WebDriverRunner.internals.DataProviderException("No dataprovider method with name " + name);
-//            }
-//            return (List<object[]>)provider.Invoke(obj, null);
-//        }
-//
-//
-//
-//        private static IEnumerable<object[]> FindParameters(object obj, MethodInfo method, TestMethodBaseAttribute attribute)
-//        {
-//            // get the method parameters
-//            if (attribute.DataProvider != null)
-//            {
-//                return GetParamsFromDataProvider(obj, method, attribute);
-//            }
-//            return new List<object[]> { null };
-//        }
-        
+
+        private static SeleniumGridManager gridManager = new SeleniumGridManager();
+
+        //        private static IEnumerable<object[]> GetParamsFromDataProvider(object obj, MethodInfo method, TestMethodBaseAttribute attr)
+        //        {
+        //            // find the method.
+        //            var name = attr.DataProvider;
+        //            if (name == null)
+        //            {
+        //                throw new WebDriverRunner.internals.DataProviderException("expected a data provider for " + method);
+        //            }
+        //            var provider = obj.GetType().GetMethod(name);
+        //            if (provider == null)
+        //            {
+        //                throw new WebDriverRunner.internals.DataProviderException("No dataprovider method with name " + name);
+        //            }
+        //            return (List<object[]>)provider.Invoke(obj, null);
+        //        }
+        //
+        //
+        //
+        //        private static IEnumerable<object[]> FindParameters(object obj, MethodInfo method, TestMethodBaseAttribute attribute)
+        //        {
+        //            // get the method parameters
+        //            if (attribute.DataProvider != null)
+        //            {
+        //                return GetParamsFromDataProvider(obj, method, attribute);
+        //            }
+        //            return new List<object[]> { null };
+        //        }
+
         /// <summary>
         /// Initialises a unit test instance - typically called from TestInitialize, passing in the class instance and test context.
         /// </summary>
@@ -60,7 +63,6 @@ namespace TestRunner
             IWebDriver driver = null;
             if (placeToExec.ToLower().Contains("local"))
             {
-                SeleniumGridManager gridManager = new SeleniumGridManager();
                 gridManager.InitialiseTestRun();
                 driver = new LocalCaps(instance, testContext).RunOnCurrentMachine();
             }else if (placeToExec.ToLower().Contains("remote"))
@@ -79,6 +81,16 @@ namespace TestRunner
         /// </summary>
         public static void Cleanup(TestContext testContext)
         {
+            var placeToExec = TestDefaults.Default.MethodOfExecution;
+            IWebDriver driver = null;
+            if (placeToExec.ToLower().Contains("local"))
+            {
+                gridManager.CloseSeleniumGrid();
+            }
+            else if (placeToExec.ToLower().Contains("remote"))
+            {
+                //driver = new RemoteCaps(instance, testContext).RunOnRemoteMachine();
+            }
             WebDriverContext context = WebContext.GetThreadLocalContext();
             context.Driver.Quit();
             context.Result.StopWatch();

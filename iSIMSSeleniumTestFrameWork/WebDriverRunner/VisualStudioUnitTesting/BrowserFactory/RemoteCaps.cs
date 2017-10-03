@@ -54,6 +54,10 @@ namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
                     browserName = BrowserDefaults.Chrome;
                 else if (webDriverAttr is IeUiTestAttribute)
                     browserName = BrowserDefaults.Ie;
+                //                else if (webDriverAttr is )
+                //                    browserName = BrowserDefaults.Firefox;
+                //                else if (webDriverAttr is )
+                //                    browserName = BrowserDefaults.Firefox;
             }
             Assert.IsNotNull(browserName, "No browser name");
 
@@ -67,21 +71,10 @@ namespace WebDriverRunner.VisualStudioUnitTesting.BrowserFactory
             var user = words[1];
             DesiredCapabilities caps = null;
 
-            // Check the proxy settings
-            Proxy useProxy = null;
-            if (!String.IsNullOrEmpty(TestDefaults.Default.Proxy))
-            {
-                useProxy = new Proxy();
-                string proxy = TestDefaults.Default.Proxy;
-                useProxy.HttpProxy = proxy;
-                useProxy.FtpProxy = proxy;
-                useProxy.SslProxy = proxy;
-                useProxy.IsAutoDetect = false;
-                useProxy.Kind = ProxyKind.Manual;
-            }
+            BrowserManager manager = new BrowserManager(webDriverAttr);
+            Proxy proxy = manager.CheckAndSetUpProxy();
+            caps = manager.ChooseRequiredBrowser(caps, browserName, proxy);
 
-            BrowserManager manager = new BrowserManager(webDriverAttr, useProxy);
-            caps = manager.ChooseRequiredBrowser(caps, browserName);
             // Set common capabilities
             caps.SetCapability("user", user);
             caps.SetCapability("method", testName);
